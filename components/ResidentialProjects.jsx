@@ -52,8 +52,8 @@ const PackageDetails = ({ title, sections }) => {
 const ConstructionPackages = () => {
   const standardPackage = {
     title: {
-      name: "Standard Package",
-      price: "2099"
+      name: "name Package",
+      price: "000"
     },
     sections: [
       {
@@ -189,8 +189,8 @@ const ConstructionPackages = () => {
 
   const premiumPackage = {
     title: {
-      name: "Premium Package",
-      price: "2499"
+      name: "sample Package",
+      price: "000"
     },
     sections: [
       {
@@ -325,8 +325,8 @@ const ConstructionPackages = () => {
 
   const ultraLuxuryPackage = {
     title: {
-      name: "Ultra Luxury Package",
-      price: "2999"
+      name: "sample Package",
+      price: "000"
     },
     sections: [
       {
