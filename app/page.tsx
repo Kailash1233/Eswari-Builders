@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import WhyChooseUs from "@/components/why-choose-us";
 import FeaturedProjects from "@/components/featured-projects";
+import  ConstructionPackages from "@/components/ResidentialProjects"
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
@@ -237,6 +238,7 @@ export default function Home() {
 
       {/* Featured Projects Section */}
       <FeaturedProjects />
+
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white">

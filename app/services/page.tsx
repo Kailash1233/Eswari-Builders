@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import ConstructionPackages from "@/components/ResidentialProjects"
 import {
   Building,
   Calculator,
@@ -15,6 +16,9 @@ import {
   PenTool,
   Armchair,
 } from "lucide-react"
+
+
+
 
 const constructionServices = [
   {
@@ -96,6 +100,10 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
+
+
+    <ConstructionPackages />
+
 
       {/* Construction Services */}
       <section className="py-20 bg-white">
