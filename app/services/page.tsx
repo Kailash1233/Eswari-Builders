@@ -36,55 +36,55 @@ const constructionServices = [
     title: "Contracting Work",
     description: "Professional contracting services for all types of construction projects.",
   },
-  {
-    icon: <Home className="h-10 w-10" />,
-    title: "Budget & Luxury Homes",
-    description: "Custom home construction solutions for every budget and preference.",
-  },
-  {
-    icon: <Factory className="h-10 w-10" />,
-    title: "Residential / Industrial & Commercial Buildings",
-    description: "Specialized construction services for residential, industrial, and commercial projects.",
-  },
-  {
-    icon: <CreditCard className="h-10 w-10" />,
-    title: "Home Loan Assistance",
-    description: "Guidance and support in securing home loans for your construction project.",
-  },
+  // {
+  //   icon: <Home className="h-10 w-10" />,
+  //   title: "Budget & Luxury Homes",
+  //   description: "Custom home construction solutions for every budget and preference.",
+  // },
+  // {
+  //   icon: <Factory className="h-10 w-10" />,
+  //   title: "Residential / Industrial & Commercial Buildings",
+  //   description: "Specialized construction services for residential, industrial, and commercial projects.",
+  // },
+  // {
+  //   icon: <CreditCard className="h-10 w-10" />,
+  //   title: "Home Loan Assistance",
+  //   description: "Guidance and support in securing home loans for your construction project.",
+  // },
 ]
 
-const interiorServices = [
-  {
-    icon: <Home className="h-10 w-10" />,
-    title: "Residential Interiors",
-    description: "Transform your home with our custom residential interior design services.",
-  },
-  {
-    icon: <Building2 className="h-10 w-10" />,
-    title: "Commercial Interiors",
-    description: "Create impressive commercial spaces that reflect your brand identity.",
-  },
-  {
-    icon: <Flower2 className="h-10 w-10" />,
-    title: "Balcony Ideas",
-    description: "Innovative balcony design solutions to maximize your outdoor space.",
-  },
-  {
-    icon: <Wifi className="h-10 w-10" />,
-    title: "Home Automation",
-    description: "Smart home automation solutions for modern, convenient living.",
-  },
-  {
-    icon: <PenTool className="h-10 w-10" />,
-    title: "Architectural Services",
-    description: "Expert architectural services to bring your vision to life.",
-  },
-  {
-    icon: <Armchair className="h-10 w-10" />,
-    title: "Exquisite Furniture",
-    description: "Custom furniture solutions to complement your interior design.",
-  },
-]
+// const interiorServices = [
+//   {
+//     icon: <Home className="h-10 w-10" />,
+//     title: "Residential Interiors",
+//     description: "Transform your home with our custom residential interior design services.",
+//   },
+//   {
+//     icon: <Building2 className="h-10 w-10" />,
+//     title: "Commercial Interiors",
+//     description: "Create impressive commercial spaces that reflect your brand identity.",
+//   },
+//   {
+//     icon: <Flower2 className="h-10 w-10" />,
+//     title: "Balcony Ideas",
+//     description: "Innovative balcony design solutions to maximize your outdoor space.",
+//   },
+//   {
+//     icon: <Wifi className="h-10 w-10" />,
+//     title: "Home Automation",
+//     description: "Smart home automation solutions for modern, convenient living.",
+//   },
+//   {
+//     icon: <PenTool className="h-10 w-10" />,
+//     title: "Architectural Services",
+//     description: "Expert architectural services to bring your vision to life.",
+//   },
+//   {
+//     icon: <Armchair className="h-10 w-10" />,
+//     title: "Exquisite Furniture",
+//     description: "Custom furniture solutions to complement your interior design.",
+//   },
+// ]
 
 export default function ServicesPage() {
   return (
@@ -126,7 +126,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Interior & Design Services */}
-      <section className="py-20 bg-black text-white">
+      {/* <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4 text-center">Interior & Design Services</h2>
           <h3 className="text-xl font-medium mb-12 text-center text-white/80">under 'Neela's Trend My Space'</h3>
@@ -141,7 +141,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Service Process */}
       <section className="py-20 bg-white">
