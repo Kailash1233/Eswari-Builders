@@ -1,6 +1,6 @@
 export default function WhyChooseUs() {
   return (
-    <section className="pb-16 md:py-24 px-4 md:px-8 mx-auto container">
+    <section className="pb-16 md:py-18 px-4 items-center md:px-8 mx-auto container">
       <div className="mb-16">
         <div className="flex items-center gap-4">
           <div className="w-12 h-0.5 bg-black"></div>

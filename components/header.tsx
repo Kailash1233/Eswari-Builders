@@ -94,7 +94,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 
 const navigation = [
@@ -121,7 +121,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white backdrop-blur-md" : "bg-transparent"
+        isScrolled ? "bg-white shadow-xl backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -142,7 +142,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-300 ${
+                className={`font-medium hover:text-violet-600 transition-colors duration-300 ${
                   isScrolled ? "text-black" : "text-white"
                 }`}
               >
@@ -162,7 +162,7 @@ export default function Header() {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6 text-white" />
+              <Menu className={`h-6 w-6 transition-colors ${isScrolled ? "text-black" : "text-white"}`} />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
@@ -191,10 +191,8 @@ export default function Header() {
                 <nav className="flex flex-col space-y-6">
                   {navigation.map((item) => (
                     <Link
-                      key={item.name}
                       href={item.href}
-                      className="text-xl font-medium"
-                      onClick={() => setIsOpen(false)}
+                      className="text-xl hover:text-violet-600 font-medium"
                     >
                       {item.name}
                     </Link>

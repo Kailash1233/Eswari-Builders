@@ -1,9 +1,9 @@
-import Link from "next/link"
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+import Link from "next/link";
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-[#121212] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo and Tagline */}
@@ -12,8 +12,8 @@ export default function Footer() {
               ESWARI BUILDERS
             </Link>
             <p className="mt-4 text-white/80">
-              Building dreams with strength and style since 2008. Premium residential and commercial construction in
-              Pondicherry.
+              Building dreams with strength and style since 2008. Premium
+              residential and commercial construction in Pondicherry.
             </p>
             <div className="flex space-x-4 mt-6">
               <Link href="#" className="text-white hover:text-white/80">
@@ -36,25 +36,36 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-            <nav className="flex flex-col space-y-3">
-              <Link href="/" className="text-white/80 hover:text-white">
-                Home
-              </Link>
-              <Link href="/about" className="text-white/80 hover:text-white">
-                About Us
-              </Link>
-              <Link href="/services" className="text-white/80 hover:text-white">
-                Our Services
-              </Link>
-              <Link href="/portfolio" className="text-white/80 hover:text-white">
-                Our Portfolio
-              </Link>
-              <Link href="/contact" className="text-white/80 hover:text-white">
-                Contact Us
-              </Link>
-            </nav>
+          <div className="md:flex md:justify-center">
+            <div className="text-center md:text-left">
+              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+              <nav className="flex flex-col space-y-3">
+                <Link href="/" className="text-white/80 hover:text-white">
+                  Home
+                </Link>
+                <Link href="/about" className="text-white/80 hover:text-white">
+                  About Us
+                </Link>
+                <Link
+                  href="/services"
+                  className="text-white/80 hover:text-white"
+                >
+                  Our Services
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="text-white/80 hover:text-white"
+                >
+                  Our Portfolio
+                </Link>
+                <Link
+                  href="/contact"
+                  className="text-white/80 hover:text-white"
+                >
+                  Contact Us
+                </Link>
+              </nav>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -71,7 +82,8 @@ export default function Footer() {
 
         <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            &copy; {new Date().getFullYear()} Eswari Builders. All rights reserved.
+            &copy; {new Date().getFullYear()} Eswari Builders. All rights
+            reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="text-white/60 text-sm hover:text-white">
@@ -84,5 +96,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

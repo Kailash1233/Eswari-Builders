@@ -95,7 +95,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[50vh] w-full">
+      <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
           src="/slider/5_slide.jpg"
@@ -212,7 +212,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-black text-white">
+      <section className="py-16 bg-[#121212] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">
             Ready to Start Your Project?

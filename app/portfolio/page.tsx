@@ -8,7 +8,7 @@ export default function PortfolioPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[50vh] w-full">
+      <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
           src="/slider/4_slide.jpg"
@@ -40,25 +40,13 @@ export default function PortfolioPage() {
               variant="outline"
               className="border-black text-black hover:bg-black hover:text-white"
             >
-              Residential
+              OnGoing Project
             </Button>
             <Button
               variant="outline"
               className="border-black text-black hover:bg-black hover:text-white"
             >
-              Commercial
-            </Button>
-            <Button
-              variant="outline"
-              className="border-black text-black hover:bg-black hover:text-white"
-            >
-              Interior Design
-            </Button>
-            <Button
-              variant="outline"
-              className="border-black text-black hover:bg-black hover:text-white"
-            >
-              Renovation
+              Completed Project
             </Button>
           </div>
 

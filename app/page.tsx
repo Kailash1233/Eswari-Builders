@@ -124,7 +124,7 @@ export default function Home() {
         </div>
 
         {/* Desktop Nav Arrows */}
-        <div className="hidden sm:block absolute top-1/2 left-4 z-20 -translate-y-1/2">
+        {/* <div className="hidden sm:block absolute top-1/2 left-4 z-20 -translate-y-1/2">
           <Button
             variant="ghost"
             size="icon"
@@ -143,7 +143,7 @@ export default function Home() {
           >
             <ChevronRight className="w-6 h-6" />
           </Button>
-        </div>
+        </div> */}
 
         {/* Indicators */}
         <div className="absolute bottom-5 left-1/2 z-20 -translate-x-1/2 flex gap-2">
@@ -162,7 +162,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <motion.h1
               key={slides[current].title}
-              className="text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-2 sm:mb-4 font-merriweather-sans md:tracking-tighter"
+              className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-2 sm:mb-4 font-merriweather-sans md:tracking-tighter"
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -193,9 +193,10 @@ export default function Home() {
         </div>
       </section>
 
-      <ProfileCard />
+      <FeaturedProjects />
+      <WhyChooseUs />
 
-      <section className="md:pb-20 pb-20 bg-white text-black">
+      <section className="md:pb-20 md:p-16 pb-20 bg-white text-black">
         <div className="container mx-auto px-4">
           <h2 className="md:text-5xl text-4xl font-bold mb-12 font-merriweather-sans">
             What Our Customers
@@ -247,8 +248,6 @@ export default function Home() {
         </div>
       </section>
 
-      <WhyChooseUs />
-
       {/* <section className="relative py-20 bg-[#121212] overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#1e1e1e_1px,transparent_1px)] [background-size:40px_40px]" />
 
@@ -285,10 +284,10 @@ export default function Home() {
       </section> */}
 
       {/* Featured Projects Section */}
-      <FeaturedProjects />
+      <ProfileCard />
 
       {/* CTA Section */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-[#121212] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Your Dream Project?

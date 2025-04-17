@@ -47,7 +47,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[40vh] w-full">
+      <section className="relative h-[70vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
           src="/slider/3.jpg"
@@ -68,6 +68,7 @@ export default function ContactPage() {
       {/* Contact Form & Info */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
+          {/* Two-Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
@@ -77,7 +78,7 @@ export default function ContactPage() {
                 possible.
               </p>
 
-              {isSubmitted ? (
+              {isSubmitted && (
                 <div className="bg-black text-white p-6 mb-6">
                   <h3 className="text-xl font-bold mb-2">Thank You!</h3>
                   <p>
@@ -85,9 +86,10 @@ export default function ContactPage() {
                     you shortly.
                   </p>
                 </div>
-              ) : null}
+              )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name */}
                 <div>
                   <label
                     htmlFor="name"
@@ -105,6 +107,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Email */}
                 <div>
                   <label
                     htmlFor="email"
@@ -123,6 +126,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Phone */}
                 <div>
                   <label
                     htmlFor="phone"
@@ -141,6 +145,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Message */}
                 <div>
                   <label
                     htmlFor="message"
@@ -158,6 +163,7 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {/* Submit Button */}
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -177,6 +183,7 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-6">
+                {/* Address */}
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -189,6 +196,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Phone */}
                 <div className="flex items-start">
                   <Phone className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -198,6 +206,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Email */}
                 <div className="flex items-start">
                   <Mail className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -207,6 +216,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Working Hours */}
                 <div className="flex items-start">
                   <Clock className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -219,16 +229,65 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Google Maps Embed */}
-              <div className="mt-8 h-[300px] w-full relative">
-                <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                  <p className="text-gray-500">Google Maps Embed</p>
-                  {/* In a real implementation, you would add the Google Maps iframe here */}
-                </div>
-              </div>
             </div>
           </div>
+
+          <div className="mt-16 relative w-full h-[300px]">
+            <iframe
+              className="w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.508996069529!2d79.82641087482334!3d11.939219988289313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53613b8cfeabb5%3A0x8e1334839830a206!2sEswari%20Builders!5e0!3m2!1sen!2sin!4v1744910307470!5m2!1sen!2sin"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen={true}
+            /> 
+          </div>
+          
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-4 text-center">
+              <h2 className="text-2xl font-semibold mb-10">
+                Visit Our Experience Center @
+              </h2>
+
+              <div className="grid grid-cols-1 text-white sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+                {[
+                  {
+                    city: "Chennai",
+                    location: "Chromepet & ECR",
+                    // icon: "/icons/chennai.svg",
+                  },
+                  {
+                    city: "Coimbatore",
+                    location: "Peelamedu",
+                    // icon: "/icons/coimbatore.svg",
+                  },
+                  {
+                    city: "Villupuram",
+                    location: "..",
+                    // icon: "/icons/hyderabad.svg",
+                  },
+                  {
+                    city: "Pondicherry",
+                    location: "Anna Salai",
+                    // icon: "/icons/pondicherry.svg",
+                  },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-[#121212] rounded-xl shadow-md hover:shadow-lg transition-shadow p-4 text-center"
+                  >
+                    {/* <img
+                      src={item.icon}
+                      alt={item.city}
+                      className="mx-auto mb-3 h-10"
+                    /> */}
+                    <h3 className="text-lg font-semibold">{item.city}</h3>
+                    <p className="text-sm">{item.location}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
       </section>
     </div>
