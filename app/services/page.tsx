@@ -23,18 +23,18 @@ import {
 const constructionServices = [
   {
     icon: <ClipboardList className="h-10 w-10" />,
-    title: "Planning",
-    description: "Comprehensive planning services to lay the foundation for your construction project.",
+    title: "Architecture",
+    description: "Innovative and functional design solutions to shape the blueprint of your dream space.",
   },
   {
     icon: <Calculator className="h-10 w-10" />,
-    title: "Estimation",
-    description: "Accurate cost estimation to help you budget your construction project effectively.",
+    title: "Interior",
+    description: "Creative interior design services that blend aesthetics with functionality for modern living.",
   },
   {
     icon: <Building className="h-10 w-10" />,
-    title: "Contracting Work",
-    description: "Professional contracting services for all types of construction projects.",
+    title: "construction",
+    description: "Reliable and efficient construction services to bring your architectural visions to life.",
   },
   // {
   //   icon: <Home className="h-10 w-10" />,
