@@ -10,7 +10,7 @@ export default function AboutPage() {
       <section className="relative h-[50vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/placeholder.svg?height=800&width=1920"
+          src="/slider/6_slide.jpg"
           alt="About Eswari Builders"
           fill
           className="object-cover"
@@ -53,7 +53,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[400px] w-full order-1 md:order-2">
               <Image
-                src="/placeholder.svg?height=800&width=600"
+                src="/slider/7_slide.jpg"
                 alt="Eswari Builders History"
                 fill
                 className="object-cover"

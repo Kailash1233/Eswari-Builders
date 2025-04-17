@@ -1,8 +1,7 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
-import ConstructionPackages from "@/components/ResidentialProjects"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import {
   Building,
   Calculator,
@@ -15,10 +14,8 @@ import {
   Wifi,
   PenTool,
   Armchair,
-} from "lucide-react"
-
-
-
+} from "lucide-react";
+import ConstructionPackages from "@/components/ResidentialProjects";
 
 const constructionServices = [
   {
@@ -39,40 +36,47 @@ const constructionServices = [
   // {
   //   icon: <Home className="h-10 w-10" />,
   //   title: "Budget & Luxury Homes",
-  //   description: "Custom home construction solutions for every budget and preference.",
+  //   description:
+  //     "Custom home construction solutions for every budget and preference.",
   // },
   // {
   //   icon: <Factory className="h-10 w-10" />,
   //   title: "Residential / Industrial & Commercial Buildings",
-  //   description: "Specialized construction services for residential, industrial, and commercial projects.",
+  //   description:
+  //     "Specialized construction services for residential, industrial, and commercial projects.",
   // },
   // {
   //   icon: <CreditCard className="h-10 w-10" />,
   //   title: "Home Loan Assistance",
-  //   description: "Guidance and support in securing home loans for your construction project.",
+  //   description:
+  //     "Guidance and support in securing home loans for your construction project.",
   // },
-]
+];
 
 // const interiorServices = [
 //   {
 //     icon: <Home className="h-10 w-10" />,
 //     title: "Residential Interiors",
-//     description: "Transform your home with our custom residential interior design services.",
+//     description:
+//       "Transform your home with our custom residential interior design services.",
 //   },
 //   {
 //     icon: <Building2 className="h-10 w-10" />,
 //     title: "Commercial Interiors",
-//     description: "Create impressive commercial spaces that reflect your brand identity.",
+//     description:
+//       "Create impressive commercial spaces that reflect your brand identity.",
 //   },
 //   {
 //     icon: <Flower2 className="h-10 w-10" />,
 //     title: "Balcony Ideas",
-//     description: "Innovative balcony design solutions to maximize your outdoor space.",
+//     description:
+//       "Innovative balcony design solutions to maximize your outdoor space.",
 //   },
 //   {
 //     icon: <Wifi className="h-10 w-10" />,
 //     title: "Home Automation",
-//     description: "Smart home automation solutions for modern, convenient living.",
+//     description:
+//       "Smart home automation solutions for modern, convenient living.",
 //   },
 //   {
 //     icon: <PenTool className="h-10 w-10" />,
@@ -82,9 +86,10 @@ const constructionServices = [
 //   {
 //     icon: <Armchair className="h-10 w-10" />,
 //     title: "Exquisite Furniture",
-//     description: "Custom furniture solutions to complement your interior design.",
+//     description:
+//       "Custom furniture solutions to complement your interior design.",
 //   },
-// ]
+// ];
 
 export default function ServicesPage() {
   return (
@@ -92,30 +97,40 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
-        <Image src="/placeholder.svg?height=800&width=1920" alt="Our Services" fill className="object-cover" />
+        <Image
+          src="/slider/5_slide.jpg"
+          alt="Our Services"
+          fill
+          className="object-cover"
+        />
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Our Services
+          </h1>
           <p className="text-xl text-white/90 max-w-2xl">
-            Comprehensive construction and interior design services tailored to your needs.
+            Comprehensive construction and interior design services tailored to
+            your needs.
           </p>
         </div>
       </section>
-
-
-    <ConstructionPackages />
-
-
+      <ConstructionPackages />
       {/* Construction Services */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4 text-center">Construction Services</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">
+            Construction Services
+          </h2>
           <p className="text-gray-700 max-w-3xl mx-auto text-center mb-12">
-            From planning to execution, we offer a complete range of construction services to bring your vision to life.
+            From planning to execution, we offer a complete range of
+            construction services to bring your vision to life.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {constructionServices.map((service, index) => (
-              <div key={index} className="border border-gray-200 p-8 transition-all hover:shadow-md">
+              <div
+                key={index}
+                className="border border-gray-200 p-8 transition-all hover:shadow-md"
+              >
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-gray-700">{service.description}</p>
@@ -128,12 +143,19 @@ export default function ServicesPage() {
       {/* Interior & Design Services */}
       {/* <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-4 text-center">Interior & Design Services</h2>
-          <h3 className="text-xl font-medium mb-12 text-center text-white/80">under 'Neela's Trend My Space'</h3>
+          <h2 className="text-3xl font-bold mb-4 text-center">
+            Interior & Design Services
+          </h2>
+          <h3 className="text-xl font-medium mb-12 text-center text-white/80">
+            under 'Neela's Trend My Space'
+          </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {interiorServices.map((service, index) => (
-              <div key={index} className="border border-white/20 p-8 transition-all hover:bg-white/5">
+              <div
+                key={index}
+                className="border border-white/20 p-8 transition-all hover:bg-white/5"
+              >
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-white/80">{service.description}</p>
@@ -146,29 +168,35 @@ export default function ServicesPage() {
       {/* Service Process */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Service Process</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Our Service Process
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
                 number: "01",
                 title: "Consultation",
-                description: "We begin with a detailed consultation to understand your needs and vision.",
+                description:
+                  "We begin with a detailed consultation to understand your needs and vision.",
               },
               {
                 number: "02",
                 title: "Planning & Design",
-                description: "Our experts create a comprehensive plan and design for your project.",
+                description:
+                  "Our experts create a comprehensive plan and design for your project.",
               },
               {
                 number: "03",
                 title: "Execution",
-                description: "We execute the project with precision, keeping you informed at every step.",
+                description:
+                  "We execute the project with precision, keeping you informed at every step.",
               },
               {
                 number: "04",
                 title: "Delivery",
-                description: "We deliver the completed project on time and within budget.",
+                description:
+                  "We deliver the completed project on time and within budget.",
               },
             ].map((step, index) => (
               <div key={index} className="text-center">
@@ -186,11 +214,18 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Start Your Project?
+          </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-8">
-            Contact us today to discuss your construction and interior design needs.
+            Contact us today to discuss your construction and interior design
+            needs.
           </p>
-          <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
+          <Button
+            asChild
+            size="lg"
+            className="bg-white text-black hover:bg-white/90"
+          >
             <Link href="/contact">
               Contact Us Now <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
@@ -198,5 +233,5 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
