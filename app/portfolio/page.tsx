@@ -1,10 +1,28 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import PortfolioGallery from "@/components/portfolio-gallery";
+import { projects } from "@/components/portfolioData"
+import React, { useState } from "react";
+
+
 
 export default function PortfolioPage() {
+
+  const [filteredProject, setFilterProject] = useState(projects);
+
+  const handleFilter = (type: string) => {
+    if(type === "All"){
+      setFilterProject(projects);
+    }else {
+      const result = projects.filter((project) => project.mapTitle === type);
+      setFilterProject(result)
+    }
+  }
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -31,18 +49,21 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button
+              onClick={() => handleFilter("All")}
               variant="outline"
               className="border-black text-black hover:bg-black hover:text-white"
             >
               All Projects
             </Button>
             <Button
+              onClick={() => handleFilter("ongoing")}
               variant="outline"
               className="border-black text-black hover:bg-black hover:text-white"
             >
               OnGoing Project
             </Button>
             <Button
+              onClick={() => handleFilter("completed")}
               variant="outline"
               className="border-black text-black hover:bg-black hover:text-white"
             >
@@ -50,7 +71,7 @@ export default function PortfolioPage() {
             </Button>
           </div>
 
-          <PortfolioGallery />
+          <PortfolioGallery  projects = {filteredProject} />
         </div>
       </section>
 

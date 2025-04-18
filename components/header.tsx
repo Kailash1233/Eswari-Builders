@@ -140,7 +140,7 @@ export default function Header() {
             {/* <img
               src="/logo.png"
               alt="Eswari Builders Logo"
-              className="h-10 w-10 md:h-20 md:w-20 object-contain"
+              className="h-10 w-10 md:h-20 md:w-20 bg-white rounded-full object-contain"
             /> */}
             <span
               className={`font-bold text-2xl transition-colors duration-300 ${
@@ -157,7 +157,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium hover:text-violet-600 transition-colors duration-300 ${
+                className={`font-medium transition-colors hover:text-yellow-600 duration-300 ${
                   isScrolled ? "text-black" : "text-white"
                 }`}
               >
@@ -187,7 +187,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[300px] sm:w-[400px] bg-white text-black font-merriweather-sans"
+               className="w-[300px] sm:w-[400px] bg-white/20 backdrop-blur-lg text-white font-merriweather-sans border-l border-white/10 shadow-lg"
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-8">
