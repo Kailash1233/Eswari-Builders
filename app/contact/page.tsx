@@ -253,22 +253,22 @@ export default function ContactPage() {
                 {[
                   {
                     city: "Chennai",
-                    location: "Chromepet & ECR",
+                    location: "",
                     // icon: "/icons/chennai.svg",
                   },
                   {
                     city: "Coimbatore",
-                    location: "Peelamedu",
+                    location: "",
                     // icon: "/icons/coimbatore.svg",
                   },
                   {
                     city: "Villupuram",
-                    location: "..",
+                    location: "",
                     // icon: "/icons/hyderabad.svg",
                   },
                   {
                     city: "Pondicherry",
-                    location: "Anna Salai",
+                    location: "",
                     // icon: "/icons/pondicherry.svg",
                   },
                 ].map((item, idx) => (

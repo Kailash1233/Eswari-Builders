@@ -36,8 +36,8 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="md:flex md:justify-center">
-            <div className="text-center md:text-left">
+          <div className="md:flex  md:justify-center">
+            <div className="md:text-left">
               <h3 className="font-bold text-lg mb-4">Quick Links</h3>
               <nav className="flex flex-col space-y-3">
                 <Link href="/" className="text-white/80 hover:text-white">

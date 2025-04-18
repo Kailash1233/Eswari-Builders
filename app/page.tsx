@@ -104,7 +104,7 @@ export default function Home() {
 
         {/* Slide Navigation Arrows */}
         {/* Mobile Nav Arrows */}
-        <div className="sm:hidden absolute bottom-12 z-20 w-full flex justify-between px-8">
+        {/* <div className="sm:hidden absolute bottom-12 z-20 w-full flex justify-between px-8">
           <Button
             variant="ghost"
             size="icon"
@@ -121,7 +121,7 @@ export default function Home() {
           >
             <ChevronRight className="w-6 h-6" />
           </Button>
-        </div>
+        </div> */}
 
         {/* Desktop Nav Arrows */}
         {/* <div className="hidden sm:block absolute top-1/2 left-4 z-20 -translate-y-1/2">

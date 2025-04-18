@@ -94,7 +94,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 
 const navigation = [
@@ -108,6 +113,10 @@ const navigation = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const handletoggle = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,13 +136,19 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className={`font-bold text-2xl transition-colors duration-300 ${
-              isScrolled ? "text-black" : "text-white"
-            }`}
-          >
-            ESWARI BUILDERS
+          <Link href="/" className="flex items-center space-x-2">
+            {/* <img
+              src="/logo.png"
+              alt="Eswari Builders Logo"
+              className="h-10 w-10 md:h-20 md:w-20 object-contain"
+            /> */}
+            <span
+              className={`font-bold text-2xl transition-colors duration-300 ${
+                isScrolled ? "text-black" : "text-white"
+              }`}
+            >
+              ESWARI BUILDERS
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -162,7 +177,11 @@ export default function Header() {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className={`h-6 w-6 transition-colors ${isScrolled ? "text-black" : "text-white"}`} />
+                <Menu
+                  className={`h-6 w-6 transition-colors ${
+                    isScrolled ? "text-black" : "text-white"
+                  }`}
+                />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
@@ -184,13 +203,14 @@ export default function Header() {
                     size="icon"
                     onClick={() => setIsOpen(false)}
                   >
-                    <X className="h-6 w-6" />
+                    {/* <X className="h-6 w-6" /> */}
                     <span className="sr-only">Close menu</span>
                   </Button>
                 </div>
                 <nav className="flex flex-col space-y-6">
                   {navigation.map((item) => (
                     <Link
+                      onClick={handletoggle}
                       href={item.href}
                       className="text-xl hover:text-violet-600 font-medium"
                     >
