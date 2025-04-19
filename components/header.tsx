@@ -157,7 +157,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-300 ${
+                className={`font-medium transition-colors hover:text-yellow-600 duration-300 ${
                   isScrolled ? "text-black" : "text-white"
                 }`}
               >
