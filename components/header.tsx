@@ -157,7 +157,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors hover:text-yellow-600 duration-300 ${
+                className={`font-medium transition-colors duration-300 ${
                   isScrolled ? "text-black" : "text-white"
                 }`}
               >
@@ -187,7 +187,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-               className="w-[300px] sm:w-[400px] bg-white/20 backdrop-blur-lg text-white font-merriweather-sans border-l border-white/10 shadow-lg"
+              className="w-[300px] sm:w-[400px] bg-white/20 backdrop-blur-lg text-white font-merriweather-sans border-l border-white/10 shadow-lg"
             >
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-8">
@@ -212,22 +212,12 @@ export default function Header() {
                     <Link
                       onClick={handletoggle}
                       href={item.href}
-                      className="text-xl hover:text-violet-600 font-medium"
+                      className="text-xl hover:text-yellow-600 font-medium"
                     >
                       {item.name}
                     </Link>
                   ))}
                 </nav>
-                {/* <div className="mt-auto pt-8">
-                  <Button
-                    asChild
-                    className="w-full bg-black text-white hover:bg-black/90"
-                  >
-                    <Link href="/contact" onClick={() => setIsOpen(false)}>
-                      Get a Quote
-                    </Link>
-                  </Button>
-                </div> */}
               </div>
             </SheetContent>
           </Sheet>
