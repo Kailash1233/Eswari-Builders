@@ -1,7 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const fadeInBottom = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const fadeInTop = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function AboutPage() {
   return (
@@ -14,15 +37,27 @@ export default function AboutPage() {
           alt="About Eswari Builders"
           fill
           className="object-cover"
+          priority={true}
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <motion.h1
+            variants={fadeInTop}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-white mb-4"
+          >
             About Eswari Builders
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 0.3 }}
+            className="text-xl text-white/90 max-w-2xl"
+          >
             Building excellence through innovation, integrity, and exceptional
             craftsmanship since 2008.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -30,7 +65,14 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
+            <motion.div
+              variants={fadeInLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="order-2 md:order-1"
+            >
               <h2 className="text-3xl font-bold mb-6">Our History & Values</h2>
               <p className="text-gray-700 mb-4">
                 Founded in 2008, Eswari Builders began as a small construction
@@ -46,19 +88,24 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-700">
                 We value integrity, excellence, innovation, and sustainability
-                in every project we undertake. Our team works with precision and
-                passion to deliver spaces that exceed expectations and stand the
-                test of time.
+                in every project we undertake.
               </p>
-            </div>
-            <div className="relative h-[400px] w-full order-1 md:order-2">
+            </motion.div>
+            <motion.div
+              variants={fadeInRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative h-[400px] w-full order-1 md:order-2"
+            >
               <Image
                 src="/slider/7_slide.jpg"
                 alt="Eswari Builders History"
                 fill
                 className="object-cover"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -67,23 +114,34 @@ export default function AboutPage() {
       <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="bg-white/10 p-8 md:p-12">
+            <motion.div
+              variants={fadeInLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/10 p-8 md:p-12"
+            >
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-white/80">
                 To deliver exceptional construction services that transform our
-                clients' visions into reality, creating spaces that inspire,
-                function perfectly, and exceed expectations in quality and
-                design.
+                clients' visions into reality.
               </p>
-            </div>
-            <div className="bg-white/10 p-8 md:p-12">
+            </motion.div>
+            <motion.div
+              variants={fadeInRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white/10 p-8 md:p-12"
+            >
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-white/80">
                 To be the most trusted and innovative construction company in
-                Pondicherry, setting new standards in architectural excellence,
-                sustainable building practices, and client satisfaction.
+                Pondicherry.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -91,40 +149,51 @@ export default function AboutPage() {
       {/* Meet the Founder */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+          <motion.h2
+            variants={fadeInBottom}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold mb-12 text-center"
+          >
             Meet the Founder
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[600px] w-full">
+            <motion.div
+              variants={fadeInLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative h-[600px] w-full"
+            >
               <Image
                 src="/team/Founder.jpg"
                 alt="Founder of Eswari Builders"
                 fill
                 className="object-cover rounded-lg"
               />
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={fadeInRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
               <h3 className="text-2xl font-bold mb-2">Mr. Balasubramaniam</h3>
               <p className="text-gray-500 mb-6">Founder</p>
               <p className="text-gray-700 mb-4">
-                Founder of Eswari Builders, with a focus on visionary leadership
-                and strategic planning in the construction sector.
-              </p>
-              <p className="text-gray-700 mb-4">
-                With his profound expertise in architectural design,
-                construction management, and business leadership,
+                With profound expertise in design and business leadership,
                 BalaSubramaniam has been the driving force behind Eswari
-                Builders' growth and success. Under his leadership, the company
-                has delivered several iconic projects, solidifying its
-                reputation for quality and excellence.
+                Builders' growth and success.
               </p>
               <p className="text-gray-700">
-                Driven by a commitment to innovation, BalaSubramaniam ensures
-                that every project reflects the highest standards of quality and
-                customer satisfaction — values that are at the heart of Eswari
-                Builders' success.
+                Driven by innovation, he ensures every project reflects the
+                highest standards.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -132,87 +201,65 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+          <motion.h2
+            variants={fadeInBottom}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold mb-12 text-center"
+          >
             Our Expert Team
-          </h2>
+          </motion.h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Sathya - Managing Director */}
-            <div className="bg-white p-6 shadow-sm">
-              <div className="relative h-[300px] w-full mb-4">
-                <Image
-                  src="/team/Sathya.jpg"
-                  alt="Sathya"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-1">Sathya</h3>
-              <p className="text-gray-500 mb-4">Managing Director</p>
-              <p className="text-gray-700 text-sm">
-                Sathya leads operations and ensures the seamless execution of
-                all projects, maintaining a high standard of quality and client
-                satisfaction.
-              </p>
-            </div>
-
-            {/* Prabhu Ram N - CEO, Operations Head */}
-            <div className="bg-white p-6 shadow-sm">
-              <div className="relative h-[300px] w-full mb-4">
-                <Image
-                  src="/team/Prabhu.jpg"
-                  alt="Prabhu Ram N"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-1">Prabhu Ram N</h3>
-              <p className="text-gray-500 mb-4">CEO, Operations Head</p>
-              <p className="text-gray-700 text-sm">
-                Prabhu Ram is responsible for the smooth operations of Eswari
-                Builders, overseeing project management, timelines, and quality
-                control.
-              </p>
-            </div>
-
-            {/* Raam - Strategic Partner in Interior */}
-            <div className="bg-white p-6 shadow-sm">
-              <div className="relative h-[300px] w-full mb-4">
-                <Image
-                  src="/team/Raam.jpg"
-                  alt="Raam"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-1">Raam</h3>
-              <p className="text-gray-500 mb-4">
-                Strategic Partner in Interior
-              </p>
-              <p className="text-gray-700 text-sm">
-                Raam brings innovative interior design solutions to Eswari
-                Builders, enhancing the aesthetic value and functionality of
-                every project.
-              </p>
-            </div>
-
-            {/* Rajendran - Site Engineer */}
-            <div className="bg-white p-6 shadow-sm">
-              <div className="relative h-[300px] w-full mb-4">
-                <Image
-                  src="/team/Rajendran.jpg"
-                  alt="Rajendran"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-1">Rajendran</h3>
-              <p className="text-gray-500 mb-4">Site Engineer</p>
-              <p className="text-gray-700 text-sm">
-                Rajendran is responsible for overseeing on-site operations,
-                ensuring that each project is completed on time and with
-                precision.
-              </p>
-            </div>
+            {[
+              {
+                name: "Sathya",
+                role: "Managing Director",
+                desc: "Leads operations and ensures quality and client satisfaction.",
+                image: "/team/Sathya.jpg",
+              },
+              {
+                name: "Prabhu Ram N",
+                role: "CEO, Operations Head",
+                desc: "Oversees project management, timelines, and quality control.",
+                image: "/team/Prabhu.jpg",
+              },
+              {
+                name: "Raam",
+                role: "Strategic Partner in Interior",
+                desc: "Brings innovative interior solutions to each project.",
+                image: "/team/Raam.jpg",
+              },
+              {
+                name: "Rajendran",
+                role: "Site Engineer",
+                desc: "Ensures on-site operations are smooth and precise.",
+                image: "/team/Rajendran.jpg",
+              },
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInBottom}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 shadow-sm"
+              >
+                <div className="relative h-[300px] w-full mb-4">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                <p className="text-gray-500 mb-4">{member.role}</p>
+                <p className="text-gray-700 text-sm">{member.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -220,22 +267,44 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-[#121212] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+          <motion.h2
+            variants={fadeInBottom}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold mb-6"
+          >
             Ready to Work with Our Expert Team?
-          </h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8">
+          </motion.h2>
+          <motion.p
+            variants={fadeInBottom}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-white/80 max-w-2xl mx-auto mb-8"
+          >
             Contact us today to discuss your construction needs and experience
             the Eswari Builders difference.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-white text-black hover:bg-white/90"
+          </motion.p>
+          <motion.div
+            variants={fadeInBottom}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Link href="/contact">
-              Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-black hover:bg-white/90"
+            >
+              <Link href="/contact">
+                Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
     </div>

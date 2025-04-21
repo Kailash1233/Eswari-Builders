@@ -54,6 +54,7 @@ export default function ContactPage() {
           alt="Contact Us"
           fill
           className="object-cover"
+          priority={true}
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -240,9 +241,9 @@ export default function ContactPage() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen={true}
-            /> 
+            />
           </div>
-          
+
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-2xl font-semibold mb-10">

@@ -1,27 +1,25 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import PortfolioGallery from "@/components/portfolio-gallery";
-import { projects } from "@/components/portfolioData"
+import { projects } from "@/components/portfolioData";
 import React, { useState } from "react";
-
-
+import { motion } from "framer-motion";
 
 export default function PortfolioPage() {
-
   const [filteredProject, setFilterProject] = useState(projects);
 
   const handleFilter = (type: string) => {
-    if(type === "All"){
+    if (type === "All") {
       setFilterProject(projects);
-    }else {
+    } else {
       const result = projects.filter((project) => project.mapTitle === type);
-      setFilterProject(result)
+      setFilterProject(result);
     }
-  }
+  };
 
   return (
     <div className="flex flex-col">
@@ -33,58 +31,112 @@ export default function PortfolioPage() {
           alt="Our Portfolio"
           fill
           className="object-cover"
+          priority={true}
         />
         <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="text-4xl md:text-5xl font-bold text-white mb-4"
+          >
             Our Portfolio
-          </h1>
-          <p className="text-xl text-white/90 max-w-2xl">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 0.3 }}
+            className="text-xl text-white/90 max-w-2xl"
+          >
             Explore our completed projects and see the quality of our work.
-          </p>
+          </motion.p>
         </div>
       </section>
 
       {/* Portfolio Categories */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button
-              onClick={() => handleFilter("All")}
-              variant="outline"
-              className="border-black text-black hover:bg-black hover:text-white"
-            >
-              All Projects
-            </Button>
-            <Button
-              onClick={() => handleFilter("ongoing")}
-              variant="outline"
-              className="border-black text-black hover:bg-black hover:text-white"
-            >
-              OnGoing Project
-            </Button>
-            <Button
-              onClick={() => handleFilter("completed")}
-              variant="outline"
-              className="border-black text-black hover:bg-black hover:text-white"
-            >
-              Completed Project
-            </Button>
-          </div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.15 },
+              },
+            }}
+            className="flex flex-wrap justify-center gap-4 mb-12"
+          >
+            {["All", "ongoing", "completed"].map((type) => (
+              <motion.div
+                key={type}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                <Button
+                  onClick={() => handleFilter(type)}
+                  variant="outline"
+                  className="border-black text-black hover:bg-black hover:text-white"
+                >
+                  {type === "ongoing"
+                    ? "OnGoing Project"
+                    : type === "completed"
+                    ? "Completed Project"
+                    : "All Projects"}
+                </Button>
+              </motion.div>
+            ))}
+          </motion.div>
 
-          <PortfolioGallery  projects = {filteredProject} />
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <PortfolioGallery projects={filteredProject} />
+          </motion.div>
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="py-20 bg-[#121212] text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-3xl font-bold mb-12 text-center"
+          >
             What Our Clients Say
-          </h2>
+          </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
             {[1, 2, 3].map((item) => (
-              <div key={item} className="border border-white/20 p-8">
+              <motion.div
+                key={item}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="border border-white/20 p-8"
+              >
                 <div className="flex items-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <svg
@@ -118,31 +170,47 @@ export default function PortfolioPage() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-3xl font-bold mb-6"
+          >
             Ready to Create Your Dream Space?
-          </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto mb-8">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-gray-700 max-w-2xl mx-auto mb-8"
+          >
             Contact us today to discuss your project and join our list of
             satisfied clients.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="bg-black text-white hover:bg-black/90"
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
           >
-            <Link href="/contact">
-              Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-black text-white hover:bg-black/90"
+            >
+              <Link href="/contact">
+                Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -9,6 +9,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import ProfileCard from "@/components/Profilecard";
 import WhyChooseUs from "@/components/why-choose-us";
+import BrandCarousel from "@/components/BrandCarousel"
+
 
 const slides = [
   {
@@ -95,7 +97,8 @@ export default function Home() {
                   alt="Hero Slide"
                   fill
                   className="object-cover w-full h-full"
-                  priority
+                  // priority
+                  priority={true}
                 />
               </motion.div>
             );
@@ -192,7 +195,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <BrandCarousel />
       <FeaturedProjects />
       <WhyChooseUs />
 
