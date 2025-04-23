@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -56,6 +57,8 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        header:"hsl(var(--header-bg))",
+        headerforeground: "hsl(var(--header-text))"
       },
       borderRadius: {
         lg: "var(--radius)",

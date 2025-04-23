@@ -98,7 +98,6 @@ import {
   Sheet,
   SheetContent,
   SheetTrigger,
-  SheetClose,
 } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 
@@ -127,10 +126,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white rounded-b-lg shadow-xl backdrop-blur-md" : "bg-transparent"
+        isScrolled ? "bg-header text-header-foreground shadow-xl" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -144,7 +145,7 @@ export default function Header() {
             /> */}
             <span
               className={`font-bold text-2xl transition-colors duration-300 ${
-                isScrolled ? "text-black" : "text-white"
+                isScrolled ? "text-headerforeground" : "text-white"
               }`}
             >
               ESWARI BUILDERS
@@ -158,7 +159,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`font-medium transition-colors hover:text-yellow-600 duration-300 ${
-                  isScrolled ? "text-black" : "text-white"
+                  isScrolled ? "text-headerforeground" : "text-white"
                 }`}
               >
                 {item.name}

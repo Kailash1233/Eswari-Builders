@@ -10,7 +10,7 @@ export const projects = [
     mapTitle: "completed",
     location: "Pondicherry",
     category: "Residential",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/completed-project-1.jpg",
     description:
       "A contemporary 3-bedroom residence with open floor plan and minimalist design.",
   },
@@ -20,7 +20,7 @@ export const projects = [
     mapTitle: "completed",
     location: "Chennai",
     category: "Commercial",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/completed-project-2.jpg",
     description:
       "A multi-story commercial complex with modern amenities and sustainable features.",
   },
@@ -30,7 +30,7 @@ export const projects = [
     mapTitle: "completed",
     location: "Pondicherry",
     category: "Residential",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/completed-project-3.jpg",
     description:
       "A luxurious 5-bedroom villa with swimming pool and landscaped gardens.",
   },
@@ -40,7 +40,7 @@ export const projects = [
     mapTitle: "completed",
     location: "Bangalore",
     category: "Commercial",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/completed-project-4.jpg",
     description:
       "Complete renovation of a corporate office space with modern interiors.",
   },
@@ -50,7 +50,7 @@ export const projects = [
     mapTitle: "ongoing",
     location: "Pondicherry",
     category: "Residential",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/Ongoing-project-1.png",
     description:
       "A 12-unit apartment building with contemporary design and community spaces.",
   },
@@ -60,7 +60,7 @@ export const projects = [
     mapTitle: "completed",
     location: "Chennai",
     category: "Commercial",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/completed-project-5.jpg",
     description:
       "A high-end retail store with custom interiors and display solutions.",
   },
@@ -70,7 +70,7 @@ export const projects = [
     mapTitle: "onging",
     location: "Pondicherry",
     category: "Residential",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/Ongoing-project-2.jpg",
     description:
       "A modern beach house with panoramic ocean views and sustainable design.",
   },
@@ -90,7 +90,7 @@ export const projects = [
     title: "Duplex Home",
     location: "Chennai",
     category: "Residential",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/projectStatus/Ongoing-project-3.jpg",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },

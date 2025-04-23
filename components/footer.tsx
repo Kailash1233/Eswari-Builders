@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#121212] text-white">
+    <footer className="bg-header text-headerforeground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo and Tagline */}
@@ -11,7 +11,7 @@ export default function Footer() {
             <Link href="/" className="font-bold text-2xl">
               ESWARI BUILDERS
             </Link>
-            <p className="mt-4 text-white/80">
+            <p className="mt-4 text-headerforeground">
               Building dreams with strength and style since 2008. Premium
               residential and commercial construction in Pondicherry.
             </p>
@@ -38,29 +38,37 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="md:flex  md:justify-center">
             <div className="md:text-left">
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+              <h3 className="font-bold text-headerforeground text-lg mb-4">
+                Quick Links
+              </h3>
               <nav className="flex flex-col space-y-3">
-                <Link href="/" className="text-white/80 hover:text-white">
+                <Link
+                  href="/"
+                  className="text-headerforeground/80 hover:text-white"
+                >
                   Home
                 </Link>
-                <Link href="/about" className="text-white/80 hover:text-white">
+                <Link
+                  href="/about"
+                  className="text-headerforeground/80 hover:text-white"
+                >
                   About Us
                 </Link>
                 <Link
                   href="/services"
-                  className="text-white/80 hover:text-white"
+                  className="text-headerforeground/80 hover:text-white"
                 >
                   Our Services
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="text-white/80 hover:text-white"
+                  className="text-headerforeground/80 hover:text-white"
                 >
                   Our Portfolio
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-white/80 hover:text-white"
+                  className="text-headerforeground/80 hover:text-white"
                 >
                   Contact Us
                 </Link>
@@ -70,11 +78,16 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Contact Information</h3>
-            <address className="not-italic text-white/80 space-y-3">
-              <p>123 Construction Avenue, Pondicherry, 605001, India</p>
-              <p>Phone: +91 98765 43210</p>
-              <p>Email: info@eswaribuilders.com</p>
+            <h3 className="font-bold text-headerforeground text-lg mb-4">
+              Contact Information
+            </h3>
+            <address className="not-italic text-headerforeground/80 space-y-3">
+              <p>
+                112, Kamatchi Amman Kovil St, Heritage Town, Puducherry, 605001
+                India
+              </p>
+              <p>Phone: +91 90920 97190</p>
+              <p>Email: eswaribuilders2018@gmail.com</p>
               <p>Working Hours: Mon-Fri 9:00 AM - 6:00 PM</p>
             </address>
           </div>

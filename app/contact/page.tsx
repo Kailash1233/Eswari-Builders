@@ -190,8 +190,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Address</h3>
                     <p className="text-gray-700">
-                      123 Construction Avenue, <br />
-                      Pondicherry, 605001, <br />
+                      112, Kamatchi Amman Kovil St, <br />
+                      Heritage Town, Puducherry, 605001
+                      <br />
                       India
                     </p>
                   </div>
@@ -202,8 +203,8 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 mr-4 mt-1" />
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <p className="text-gray-700">+91 98765 43210</p>
-                    <p className="text-gray-700">+91 98765 43211</p>
+                    <p className="text-gray-700">+91 90920 97190</p>
+                    <p className="text-gray-700">+91 87784 02742</p>
                   </div>
                 </div>
 
@@ -212,8 +213,10 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 mr-4 mt-1" />
                   <div>
                     <h3 className="font-bold mb-1">Email</h3>
-                    <p className="text-gray-700">info@eswaribuilders.com</p>
-                    <p className="text-gray-700">contact@eswaribuilders.com</p>
+                    <p className="text-gray-700">
+                      eswaribuilders2018@gmail.com
+                    </p>
+                    {/* <p className="text-gray-700">contact@eswaribuilders.com</p> */}
                   </div>
                 </div>
 
@@ -247,7 +250,7 @@ export default function ContactPage() {
           <section className="py-16 bg-white">
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-2xl font-semibold mb-10">
-                Visit Our Experience Center @
+                Our Office Locations
               </h2>
 
               <div className="grid grid-cols-1 text-white sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
@@ -255,33 +258,33 @@ export default function ContactPage() {
                   {
                     city: "Chennai",
                     location: "",
-                    // icon: "/icons/chennai.svg",
+                    icon: "/locations/chennai.png",
                   },
                   {
                     city: "Coimbatore",
                     location: "",
-                    // icon: "/icons/coimbatore.svg",
+                    icon: "/locations/coimbatore.png",
                   },
                   {
                     city: "Villupuram",
                     location: "",
-                    // icon: "/icons/hyderabad.svg",
+                    icon: "/locations/villupuram.png",
                   },
                   {
                     city: "Pondicherry",
                     location: "",
-                    // icon: "/icons/pondicherry.svg",
+                    icon: "/locations/pondicherry.png",
                   },
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="bg-[#121212] rounded-xl shadow-md hover:shadow-lg transition-shadow p-4 text-center"
+                    className="bg-header rounded-xl shadow-lg hover:shadow-lg transition-shadow p-4 text-center"
                   >
-                    {/* <img
+                    <img
                       src={item.icon}
                       alt={item.city}
-                      className="mx-auto mb-3 h-10"
-                    /> */}
+                      className="mx-auto mb-3 h-20 filter invert"
+                    />
                     <h3 className="text-lg font-semibold">{item.city}</h3>
                     <p className="text-sm">{item.location}</p>
                   </div>
