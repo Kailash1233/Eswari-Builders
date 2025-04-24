@@ -39,6 +39,7 @@ const BrandCarousel = () => {
   }, [isHovered, x]);
 
   return (
+    <section className="p-20">
       <div
         className="relative w-[270px] md:w-[700px] mx-auto overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
@@ -57,11 +58,12 @@ const BrandCarousel = () => {
               key={index}
               src={logo}
               alt={`Brand ${index + 1}`}
-              className="w-[80px] h-[80px] object-contain"
+              className="w-[90px] h-[90px] object-contain"
             />
           ))}
         </motion.div>
       </div>
+    </section>
   );
 };
 

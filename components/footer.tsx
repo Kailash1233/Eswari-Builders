@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-header text-headerforeground">
+    <footer className="bg-[#0E0E0E] text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo and Tagline */}
@@ -11,8 +11,8 @@ export default function Footer() {
             <Link href="/" className="font-bold text-2xl">
               ESWARI BUILDERS
             </Link>
-            <p className="mt-4 text-headerforeground">
-              Building dreams with strength and style since 2008. Premium
+            <p className="mt-4 text-[#f7f7f7]">
+              Building dreams with strength and style since 2004. Premium
               residential and commercial construction in Pondicherry.
             </p>
             <div className="flex space-x-4 mt-6">
@@ -38,37 +38,37 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="md:flex  md:justify-center">
             <div className="md:text-left">
-              <h3 className="font-bold text-headerforeground text-lg mb-4">
+              <h3 className="font-bold text-[#f7f7f7] text-lg mb-4">
                 Quick Links
               </h3>
               <nav className="flex flex-col space-y-3">
                 <Link
                   href="/"
-                  className="text-headerforeground/80 hover:text-white"
+                  className="text-[#f7f7f7] hover:text-white"
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className="text-headerforeground/80 hover:text-white"
+                  className="text-[#f7f7f7] hover:text-white"
                 >
                   About Us
                 </Link>
                 <Link
                   href="/services"
-                  className="text-headerforeground/80 hover:text-white"
+                  className="text-[#f7f7f7] hover:text-white"
                 >
                   Our Services
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="text-headerforeground/80 hover:text-white"
+                  className="text-[#f7f7f7] hover:text-white"
                 >
                   Our Portfolio
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-headerforeground/80 hover:text-white"
+                  className="text-[#f7f7f7] hover:text-white"
                 >
                   Contact Us
                 </Link>
@@ -78,10 +78,10 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-bold text-headerforeground text-lg mb-4">
+            <h3 className="font-bold text-[#f7f7f7] text-lg mb-4">
               Contact Information
             </h3>
-            <address className="not-italic text-headerforeground/80 space-y-3">
+            <address className="not-italic text-[#f7f7f7] space-y-3">
               <p>
                 112, Kamatchi Amman Kovil St, Heritage Town, Puducherry, 605001
                 India

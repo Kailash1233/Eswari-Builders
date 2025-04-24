@@ -32,12 +32,21 @@ const constructionServices = [
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } },
 };
 
 const fadeInDown = {
   hidden: { opacity: 0, y: -40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
 };
 
 export default function ServicesPage() {
@@ -81,7 +90,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
-            variants={fadeInDown}
+            variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -102,7 +111,7 @@ export default function ServicesPage() {
 
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+            variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -126,7 +135,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
-            variants={fadeInDown}
+            variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -185,10 +194,10 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#121212] text-white">
+      <section className="py-16 bg-[#0E0E0E] text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
-            variants={fadeInDown}
+            variants={fadeInUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

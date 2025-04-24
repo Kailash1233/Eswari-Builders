@@ -56,13 +56,13 @@ export default function AboutPage() {
             className="text-xl text-white/90 max-w-2xl"
           >
             Building excellence through innovation, integrity, and exceptional
-            craftsmanship since 2008.
+            craftsmanship since 2004.
           </motion.p>
         </div>
       </section>
 
       {/* History & Values */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -74,19 +74,19 @@ export default function AboutPage() {
               className="order-2 md:order-1"
             >
               <h2 className="text-3xl font-bold mb-6">Our History & Values</h2>
-              <p className="text-primary-foreground mb-4">
+              <p className="text-black mb-4">
                 Founded in 2004, Eswari Builders began as a small construction
                 company with a big vision: to transform the architectural
                 landscape of Pondicherry with innovative, high-quality
                 construction solutions.
               </p>
-              <p className="text-primary-foreground mb-4">
+              <p className="text-black mb-4">
                 Over the years, we've grown into a premier construction company,
                 completing over 1000+ sq. ft. of residential and commercial
                 projects. Our success is built on our unwavering commitment to
                 quality, transparency, and customer satisfaction.
               </p>
-              <p className="text-primary-foreground">
+              <p className="text-black">
                 We value integrity, excellence, innovation, and sustainability
                 in every project we undertake.
               </p>
@@ -111,7 +111,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-[#0E0E0E] text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <motion.div
@@ -120,7 +120,7 @@ export default function AboutPage() {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white/10 p-8 md:p-12"
+              className="bg-white/10 p-8 md:p-12 rounded-xl"
             >
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-white/80">
@@ -134,7 +134,7 @@ export default function AboutPage() {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white/10 p-8 md:p-12"
+              className="bg-white/10 p-8 md:p-12 rounded-xl"
             >
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-white/80">
@@ -147,7 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founder */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             variants={fadeInBottom}
@@ -183,13 +183,13 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-bold mb-2">Mr. Balasubramaniam</h3>
-              <p className="text-primary-foreground mb-6">Founder</p>
-              <p className="text-primary-foreground mb-4">
+              <p className="text-black mb-6">Founder</p>
+              <p className="text-black mb-4">
                 With profound expertise in design and business leadership,
                 BalaSubramaniam has been the driving force behind Eswari
                 Builders' growth and success.
               </p>
-              <p className="text-primary-foreground">
+              <p className="text-black">
                 Driven by innovation, he ensures every project reflects the
                 highest standards.
               </p>
@@ -199,7 +199,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-beige-100">
+      <section className="py-20 bg-[#F7F7F7]">
         <div className="container mx-auto px-4">
           <motion.h2
             variants={fadeInBottom}
@@ -245,14 +245,14 @@ export default function AboutPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 shadow-sm"
+                className="bg-[#FFFFFF] rounded-2xl p-6 shadow-sm"
               >
                 <div className="relative h-[300px] w-full mb-4">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className="object-cover rounded-sm"
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
@@ -265,7 +265,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#121212] text-white">
+      <section className="py-16 bg-[#0E0E0E] text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             variants={fadeInBottom}
@@ -310,3 +310,6 @@ export default function AboutPage() {
     </div>
   );
 }
+
+
+// bg-[#121212]

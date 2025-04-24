@@ -23,6 +23,9 @@ const config = {
       fontFamily: {
         sans: ["var(--font-merriweather-sans)", "sans-serif"],
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(180deg, #deebfb -10%, #fff)',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

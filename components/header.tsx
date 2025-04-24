@@ -131,7 +131,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-header text-header-foreground shadow-xl" : "bg-transparent"
+        isScrolled ? "bg-[#FAFAFAB2] shadow-xl backdrop-blur-xl" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -145,7 +145,7 @@ export default function Header() {
             /> */}
             <span
               className={`font-bold text-2xl transition-colors duration-300 ${
-                isScrolled ? "text-headerforeground" : "text-white"
+                isScrolled ? "text-black" : "text-white"
               }`}
             >
               ESWARI BUILDERS
@@ -159,7 +159,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`font-medium transition-colors hover:text-yellow-600 duration-300 ${
-                  isScrolled ? "text-headerforeground" : "text-white"
+                  isScrolled ? "text-black" : "text-white"
                 }`}
               >
                 {item.name}

@@ -161,7 +161,7 @@ const slides = [
             <div className="max-w-3xl">
               <motion.h1
                 key={slides[current].title}
-                className="text-5xl sm:text-6xl md:text-7xl font-bold text-headerforeground mb-2 sm:mb-4 font-merriweather-sans md:tracking-tighter"
+                className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-2 sm:mb-4 font-merriweather-sans md:tracking-tighter"
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -171,7 +171,7 @@ const slides = [
   
               <motion.p
                 key={slides[current].subtitle}
-                className="text-lg sm:text-xl md:text-2xl text-headerforeground/90 mb-4 sm:mb-8"
+                className="text-lg sm:text-xl md:text-2xl text-white mb-4 sm:mb-8"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -182,7 +182,7 @@ const slides = [
               <Button
                 asChild
                 size="lg"
-                className="bg-primary text-black hover:bg-primary/80 text-sm sm:text-base"
+                className="bg-white text-black hover:bg-white/80 text-sm sm:text-base"
               >
                 <Link href="/portfolio">
                   Explore Our Work <ArrowRight className="ml-2 h-4 w-4" />

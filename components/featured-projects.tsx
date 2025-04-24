@@ -36,21 +36,21 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="py-4 bg-white">
+    <section className="py-4 pt-16 pb-16 bg-[#0E0E0E]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl text-white md:text-4xl font-bold mb-4">
             Featured Projects
           </h2>
-          <p className="text-gray-700 max-w-2xl mx-auto">
+          <p className="text-white max-w-2xl mx-auto">
             Explore some of our recent construction and interior design projects
             that showcase our expertise and quality.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9">
           {projects.map((project) => (
-            <div key={project.id} className="bg-gray-100 group overflow-hidden">
+            <div key={project.id} className="bg-gray-100 rounded-md group overflow-hidden">
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.svg"}
@@ -80,7 +80,7 @@ export default function FeaturedProjects() {
           <Button
             asChild
             variant="outline"
-            className="border-black text-black hover:bg-black hover:text-white"
+            className="bg-white text-black px-6 py-3 rounded-lg font-semibold shadow-md transition duration-300 hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.6)]"
           >
             <Link href="/portfolio">
               View All Projects <ArrowRight className="ml-2 h-4 w-4" />
