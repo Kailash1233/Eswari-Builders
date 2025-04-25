@@ -91,20 +91,26 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Our Services", href: "/services" },
+  {
+    name: "Our Services",
+    href: "/services",
+    dropdown: true,
+    subItems: [
+      { name: "Residential Construction", href: "/services/residential" },
+      { name: "Commercial Projects", href: "/services/commercial" },
+      { name: "Renovation", href: "/services/renovation" },
+      { name: "Interior Design", href: "/services/interior" },
+    ],
+  },
   { name: "Our Portfolio", href: "/portfolio" },
   { name: "Contact Us", href: "/contact" },
 ];
@@ -112,6 +118,8 @@ const navigation = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropDown, setActiveDropDown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const handletoggle = () => {
     setIsOpen(false);
@@ -126,17 +134,37 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
+  const toggleDropDown = (indx: string) => {
+    if (activeDropDown === indx) {
+      setActiveDropDown(null);
+    } else {
+      setActiveDropDown(indx);
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setActiveDropDown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[#FAFAFAB2] shadow-xl backdrop-blur-xl" : "bg-transparent"
+        isScrolled
+          ? "bg-[#FAFAFAB2] shadow-xl backdrop-blur-xl"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             {/* <img
               src="/logo.png"
@@ -154,16 +182,61 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
+            {navigation.map((item, index) => (
+              <div
                 key={item.name}
-                href={item.href}
-                className={`font-medium transition-colors hover:text-yellow-600 duration-300 ${
-                  isScrolled ? "text-black" : "text-white"
-                }`}
+                className="relative"
+                ref={item.dropdown ? dropdownRef : null}
               >
-                {item.name}
-              </Link>
+                {item.dropdown ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation(); // prevent closing on body click
+                      toggleDropDown(item.name);
+                    }}
+                    className={`flex items-center space-x-1 font-medium transition-colors duration-300 hover:text-yellow-600 ${
+                      isScrolled ? "text-black" : "text-white"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                    <ChevronDown
+                      className={`ml-1 transition-transform duration-300 ${
+                        activeDropDown === item.name ? "rotate-180" : "rotate-0"
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`font-medium transition-colors duration-300 hover:text-yellow-600 ${
+                      isScrolled ? "text-black" : "text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+
+                {item.dropdown && (
+                  <div
+                    className={`absolute top-full left-0 mt-2 w-60 p-6 rounded-md bg-white shadow-lg origin-top transform transition-all duration-300 ease-in-out z-50 ${
+                      activeDropDown === item.name
+                        ? "opacity-100 translate-y-0 scale-y-100"
+                        : "opacity-0 -translate-y-4 scale-y-95 pointer-events-none"
+                    }`}
+                  >
+                    {item.subItems?.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className="block py-2 px-2 rounded  hover:bg-gray-100 text-sm"
+                        onClick={() => setActiveDropDown(null)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
