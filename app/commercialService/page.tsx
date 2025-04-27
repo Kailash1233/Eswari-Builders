@@ -128,7 +128,7 @@ export default function ServicesPage() {
                   className="object-cover rounded-lg shadow-lg w-full h-auto hover:scale-105 transition-transform duration-500"
                 />
             </div>
-            <div className="bg-gray-100 p-8 rounded-lg shadow-md   order-1 md:order-2">
+            <div className="bg-gray-100 p-8 rounded-lg shadow-md order-1 md:order-2">
               <h3 className="text-2xl font-bold mb-4">Banks</h3>
               <p className="text-gray-700 ">
                 <strong>Financial Hubs:</strong> We understand the unique

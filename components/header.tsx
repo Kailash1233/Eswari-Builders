@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -6,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -52,6 +52,11 @@ export default function Header() {
     }
   };
 
+  const handleSubLinkClick = () => {
+    setActiveDropDown(null);
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -64,6 +69,8 @@ export default function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  const router = useRouter();
 
   return (
     <header
@@ -92,7 +99,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item, index) => (
+            {navigation.map((item) => (
               <div
                 key={item.name}
                 className="relative"
@@ -150,13 +157,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          {/* <div className="hidden md:block">
-            <Button asChild className="bg-white text-black hover:bg-white/90">
-              <Link href="/contact">Get a Quote</Link>
-            </Button>
-          </div> */}
-
           {/* Mobile Menu Button */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -169,6 +169,7 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
+
             <SheetContent
               side="right"
               className="w-[300px] sm:w-[400px] bg-white/20 backdrop-blur-lg text-white font-merriweather-sans border-l border-white/10 shadow-lg"
@@ -187,19 +188,100 @@ export default function Header() {
                     size="icon"
                     onClick={() => setIsOpen(false)}
                   >
-                    {/* <X className="h-6 w-6" /> */}
                     <span className="sr-only">Close menu</span>
                   </Button>
                 </div>
+
                 <nav className="flex flex-col space-y-6">
                   {navigation.map((item) => (
-                    <Link
-                      onClick={handletoggle}
-                      href={item.href}
-                      className="text-xl hover:text-yellow-600 font-medium"
-                    >
-                      {item.name}
-                    </Link>
+                    <div key={item.name} className="flex flex-col">
+                      {item.dropdown ? (
+                        <>
+                          <button
+                            onClick={() => toggleDropDown(item.name)}
+                            className="text-xl font-medium flex items-center justify-between hover:text-yellow-600"
+                          >
+                            {item.name}
+                            <span className="ml-2">
+                              <ChevronDown
+                                className={`transition-transform duration-300 ${
+                                  activeDropDown === item.name
+                                    ? "rotate-180"
+                                    : "rotate-0"
+                                }`}
+                              />
+                            </span>
+                          </button>
+
+                          {activeDropDown === item.name && (
+                            <div className="mt-2 pl-4 flex flex-col space-y-2">
+                              {/* {item.subItems?.map((sub) => (
+                                <button
+                                  key={sub.name}
+                                  onClick={() => {
+                                    setActiveDropDown(null);
+                                    setIsOpen(false);
+                                    setTimeout(() =>
+                                      router.push(sub.href))
+                                  }}
+                                  className="text-base text-left hover:text-yellow-600"
+                                >
+                                  {sub.name}
+                                </button>
+                              ))} */}
+                              <Link
+                                href="/services"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setActiveDropDown(null);
+                                }}
+                                className="text-base text-left hover:text-yellow-600"
+                              >
+                                Residential
+                              </Link>
+                              <Link
+                                href="/commercialService"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setActiveDropDown(null);
+                                }}
+                                className="text-base text-left hover:text-yellow-600"
+                              >
+                                Commercial
+                              </Link>
+                              <Link
+                                href="/renovation"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setActiveDropDown(null);
+                                }}
+                                className="text-base text-left hover:text-yellow-600"
+                              >
+                                Renovation
+                              </Link>
+                              <Link
+                                href="/interiorService"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setActiveDropDown(null);
+                                }}
+                                className="text-base text-left hover:text-yellow-600"
+                              >
+                                Interior
+                              </Link>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="text-xl hover:text-yellow-600 font-medium"
+                        >
+                          {item.name}
+                        </Link>
+                      )}
+                    </div>
                   ))}
                 </nav>
               </div>
