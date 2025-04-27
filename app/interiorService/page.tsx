@@ -24,7 +24,7 @@ export default function ServicesCategoryFilter() {
       id: 1,
       title: "Office Buildings",
       category: "commercial",
-      image: "/api/placeholder/800/600",
+      image: "/interiorImage/img 12.jpg",
       description:
         "<strong>Elevating Workspaces:</strong> Our office buildings are more than just spaces to work; they are the epicenter of corporate innovation. We design and construct modern offices that foster productivity, collaboration, and strategic thinking.",
       link: "/services/commercial/office-buildings",
@@ -33,99 +33,129 @@ export default function ServicesCategoryFilter() {
       id: 2,
       title: "IT Offices",
       category: "commercial",
-      image: "/api/placeholder/800/600",
+      image: "/interiorImage/img 11.jpg",
       description:
         "<strong>Tech-Ready Spaces:</strong> IT businesses demand cutting-edge infrastructure. We specialize in creating IT office spaces with the technological capabilities and telecommunication infrastructure required for the digital age.",
       link: "/services/commercial/it-offices",
     },
+    
     {
       id: 3,
-      title: "Banks",
-      category: "commercial",
-      image: "/api/placeholder/800/600",
-      description:
-        "<strong>Financial Hubs:</strong> We understand the unique requirements of banks and financial institutions. Our designs and layouts cater to the essential functions of ATMs, deposits, cashier services, loan sections, and back-office operations.",
-      link: "/services/commercial/banks",
-    },
-    {
-      id: 4,
       title: "Medical Centers",
       category: "commercial",
-      image: "/api/placeholder/800/600",
+      image: "/interiorImage/img 13.jpg",
       description:
         "<strong>Healthcare Spaces:</strong> From hospitals and clinics to testing laboratories, we support the establishment of medical enterprises by adhering to government regulations and accreditation standards, ensuring a safe and functional healthcare environment.",
       link: "/services/commercial/medical-centers",
     },
     {
-      id: 5,
+      id: 4,
       title: "Sports Centers",
       category: "commercial",
-      image: "/api/placeholder/800/600",
+      image: "/interiorImage/img 14.jpg",
       description:
         "<strong>Active Lifestyles:</strong> We contribute to the growing demand for sports and recreation centers by creating facilities such as indoor cricket venues, badminton courts, and multipurpose recreational activity centers—all under one roof.",
       link: "/services/commercial/sports-centers",
     },
     {
-      id: 6,
+      id: 5,
       title: "Luxury Villas",
       category: "residential",
-      image: "/api/placeholder/800/600",
+      image: "/interiorImage/residencial 1.jpg",
       description:
         "<strong>Premium Living:</strong> Our luxury villas represent the pinnacle of residential comfort and elegance. We create bespoke homes with attention to detail, premium materials, and innovative design elements.",
       link: "/services/residential/luxury-villas",
     },
     {
-      id: 7,
+      id: 6,
       title: "Apartments",
       category: "residential",
-      image: "/api/placeholder/800/600",
+      image: "/interiorImage/residencial 2.jpg",
       description:
-        "<strong>Modern Living:</strong> Our apartment projects blend functionality with style, creating efficient and comfortable living spaces designed for modern lifestyles.",
+        "<strong>Modern Living:</strong>Our apartment designs combine style and functionality, creating efficient, comfortable spaces that fit modern lifestyles. Thoughtfully laid out to maximize space and light, these homes offer the perfect balance of comfort and contemporary design.",
       link: "/services/residential/apartments",
     },
     {
-      id: 8,
+      id: 7,
       title: "Independent Houses",
       category: "residential",
-      image: "/api/placeholder/800/600",
+      image: "/interiorImage/residencial 3.jpg",
       description:
         "<strong>Your Dream Home:</strong> We build custom independent houses that reflect your personality and meet your unique needs, from foundations to finishing touches.",
       link: "/services/residential/independent-houses",
     },
     {
-      id: 9,
-      title: "Warehouses",
-      category: "industrial",
-      image: "/api/placeholder/800/600",
+      id: 8,
+      title: "Built for Your Life",
+      category: "Turnkey Projects",
+      image: "/interiorImage/turnkey 1.jpg",
       description:
-        "<strong>Storage Solutions:</strong> Our industrial warehouses feature optimal storage configurations, loading facilities, and durable construction for long-term operational efficiency.",
+        "<strong>Built for Your Life:</strong> Our turnkey services are designed to turn your vision into reality. We carefully craft every detail — from concept to completion — creating spaces that reflect your unique style and lifestyle. With us, your dream space is ready when you are.",
       link: "/services/industrial/warehouses",
     },
     {
-      id: 10,
-      title: "Manufacturing Plants",
-      category: "industrial",
-      image: "/api/placeholder/800/600",
+      id: 9,
+      title: "Your Space, Your Story",
+      category: "Turnkey Projects",
+      image: "/interiorImage/turnkey 2.jpg",
       description:
-        "<strong>Production Power:</strong> We design and build manufacturing facilities that optimize workflow, equipment placement, and worker safety to maximize productivity.",
+        "<strong>Your Space, Your Story:</strong> Every space tells a unique story, and our turnkey services bring that vision to life. From design to final touches, we ensure your space reflects your personality and lifestyle, offering a seamless experience from start to finish.",
       link: "/services/industrial/manufacturing-plants",
     },
     {
-      id: 11,
-      title: "Home Remodeling",
-      category: "renovation",
-      image: "/api/placeholder/800/600",
+      id: 10,
+      title: "Effortless Turnkey Solutions",
+      category: "Turnkey Projects",
+      image: "/interiorImage/turnkey 3.jpg",
       description:
-        "<strong>Refresh Your Space:</strong> Our home renovation services breathe new life into existing properties, enhancing functionality, updating aesthetics, and increasing property value.",
+        "<strong>Effortless Turnkey Solutions:</strong> We manage every step of creating your ideal space, from design to final finishes. Enjoy a stress-free, move-in-ready space that reflects your vision, with no surprises or delays. Our attention to detail ensures your dream space is brought to life with quality and efficiency.",
       link: "/services/renovation/home-remodeling",
     },
     {
-      id: 12,
-      title: "Commercial Retrofitting",
-      category: "renovation",
-      image: "/api/placeholder/800/600",
+      id: 11,
+      title: "Balcony Retreat",
+      category: "Balcony ideas",
+      image: "/interiorImage/Balcony 1.jpg",
       description:
-        "<strong>Business Transformation:</strong> We specialize in retrofitting existing commercial spaces for new purposes, optimizing layout and infrastructure for your business needs.",
+        "<strong>Beauty of Home : </strong>  Create a peaceful outdoor sanctuary with cozy seating, lush plants, and soft lighting. A perfect space to unwind and enjoy fresh air.",
+      link: "/services/renovation/commercial-retrofitting",
+    },
+
+    {
+      id: 12,
+      title: "Reimagine Your Home",
+      category: "Home Decors",
+      image: "/interiorImage/Home Decors 1.jpg",
+      description:
+        "<strong>Reimagine Your Home:</strong> Our decor solutions transform your interiors with fresh ideas, tasteful designs, and a focus on what makes a house truly feel like home.",
+      link: "/services/renovation/commercial-retrofitting",
+    },
+
+    {
+      id: 13,
+      title: "Dream Home Realized",
+      category: "Home Decors",
+      image: "/interiorImage/Home Decors 2.jpg",
+      description:
+      "<strong>Transform Your Living Space:</strong> Our home decor solutions bring style, comfort, and personality to your interiors. From elegant furnishings to creative wall designs, we craft spaces that truly feel like home.",
+      link: "/services/renovation/commercial-retrofitting",
+    },
+    {
+      id: 14,
+      title: "Urban Escape",
+      category: "Balcony ideas",
+      image: "/interiorImage/Balcony 2.jpg",
+      description:
+        "<strong>Stylish Spaces with Stunning City Views Transformation:</strong> Maximize your city views by adding modern furniture, lush greenery, and stylish decorative touches, transforming your balcony into a chic, cozy escape that feels like an extension of your home.",
+      link: "/services/renovation/commercial-retrofitting",
+    },
+    {
+      id: 15,
+      title: "Garden Balcony",
+      category: "Balcony ideas",
+      image: "/interiorImage/Balcony 3.jpg",
+      description:
+        "<strong>Bring Nature to Your Home:</strong> Transform your balcony into a lush mini garden filled with vibrant plants and colorful flowers, creating a serene green space that brings the beauty of nature right to your doorstep.",
       link: "/services/renovation/commercial-retrofitting",
     },
   ];
@@ -267,7 +297,7 @@ export default function ServicesCategoryFilter() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.7 }}
               >
                 {/* Image */}
                 <div className="md:w-1/2 w-full">
@@ -275,7 +305,7 @@ export default function ServicesCategoryFilter() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="object-cover w-full h-80 hover:scale-105 transition-transform duration-500"
+                      className="object-cover w-full h-96 hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>

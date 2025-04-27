@@ -16,8 +16,9 @@ const navigation = [
     subItems: [
       { name: "Residential Construction", href: "/services" },
       { name: "Commercial Projects", href: "/commercialService" },
-      { name: "Renovation", href: "/services" },
+      { name: "Renovation", href: "/renovationService" },
       { name: "Interior Design", href: "/interiorService" },
+      { name: "Achitectural Service", href: "/achitecturalService"},
     ],
   },
   { name: "Our Portfolio", href: "/portfolio" },
