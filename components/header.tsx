@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useRouter } from "next/navigation";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -31,10 +30,6 @@ export default function Header() {
   const [activeDropDown, setActiveDropDown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-  const handletoggle = () => {
-    setIsOpen(false);
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -52,11 +47,6 @@ export default function Header() {
     }
   };
 
-  const handleSubLinkClick = () => {
-    setActiveDropDown(null);
-    setIsOpen(false);
-  };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -69,8 +59,6 @@ export default function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const router = useRouter();
 
   return (
     <header
@@ -194,11 +182,18 @@ export default function Header() {
 
                 <nav className="flex flex-col space-y-6">
                   {navigation.map((item) => (
-                    <div key={item.name} className="flex flex-col">
+                    <div
+                      key={item.name}
+                      className="flex flex-col relative"
+                      ref={item.dropdown ? dropdownRef : null}
+                    >
                       {item.dropdown ? (
                         <>
                           <button
-                            onClick={() => toggleDropDown(item.name)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleDropDown(item.name);
+                            }}
                             className="text-xl font-medium flex items-center justify-between hover:text-yellow-600"
                           >
                             {item.name}
@@ -213,64 +208,30 @@ export default function Header() {
                             </span>
                           </button>
 
-                          {activeDropDown === item.name && (
-                            <div className="mt-2 pl-4 flex flex-col space-y-2">
-                              {/* {item.subItems?.map((sub) => (
-                                <button
+                          <div
+                            className={`overflow-hidden transition-all duration-300 ${
+                              activeDropDown === item.name
+                                ? "max-h-[500px] opacity-100 mt-2"
+                                : "max-h-0 opacity-0"
+                            }`}
+                          >
+                            <div className="pl-4 flex flex-col space-y-2">
+                              {item.subItems?.map((sub) => (
+                                <Link
                                   key={sub.name}
-                                  onClick={() => {
+                                  href={sub.href}
+                                  className="text-base hover:text-yellow-600"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
                                     setActiveDropDown(null);
                                     setIsOpen(false);
-                                    setTimeout(() =>
-                                      router.push(sub.href))
                                   }}
-                                  className="text-base text-left hover:text-yellow-600"
                                 >
                                   {sub.name}
-                                </button>
-                              ))} */}
-                              <Link
-                                href="/services"
-                                onClick={() => {
-                                  setIsOpen(false);
-                                  setActiveDropDown(null);
-                                }}
-                                className="text-base text-left hover:text-yellow-600"
-                              >
-                                Residential
-                              </Link>
-                              <Link
-                                href="/commercialService"
-                                onClick={() => {
-                                  setIsOpen(false);
-                                  setActiveDropDown(null);
-                                }}
-                                className="text-base text-left hover:text-yellow-600"
-                              >
-                                Commercial
-                              </Link>
-                              <Link
-                                href="/renovation"
-                                onClick={() => {
-                                  setIsOpen(false);
-                                  setActiveDropDown(null);
-                                }}
-                                className="text-base text-left hover:text-yellow-600"
-                              >
-                                Renovation
-                              </Link>
-                              <Link
-                                href="/interiorService"
-                                onClick={() => {
-                                  setIsOpen(false);
-                                  setActiveDropDown(null);
-                                }}
-                                className="text-base text-left hover:text-yellow-600"
-                              >
-                                Interior
-                              </Link>
+                                </Link>
+                              ))}
                             </div>
-                          )}
+                          </div>
                         </>
                       ) : (
                         <Link

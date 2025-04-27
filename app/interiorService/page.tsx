@@ -14,7 +14,7 @@ export default function ServicesCategoryFilter() {
     { id: "residential", name: "Residencial Interior" },
     { id: "Home Decors", name: "Home Decors Solutions" },
     { id: "Turnkey Projects", name: "Turnkey Projects" },
-    { id: "Balcony ideas" , name:  "Balcony ideas"},
+    { id: "Balcony ideas", name: "Balcony ideas" },
   ];
 
   const [activeCategory, setActiveCategory] = useState("all");
@@ -141,18 +141,24 @@ export default function ServicesCategoryFilter() {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: "easeOut" } },
-  };
-  
-  const fadeInDown = {
-    hidden: { opacity: 0, y: -40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.9, ease: "easeOut" },
+    },
   };
 
-  // Function to filter services based on active category
+  const fadeInDown = {
+    hidden: { opacity: 0, y: -40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   const getFilteredServices = () => {
     if (activeCategory === "all") {
-      // For "All Services", show one from each category
       const showcaseServices: Service[] = [];
       const serviceCategories = Array.from(
         new Set(services.map((service) => service.category))
@@ -221,17 +227,32 @@ export default function ServicesCategoryFilter() {
           {/* Category Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             {categories.map((category: any) => (
-              <button
+              <motion.div
                 key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? "bg-yellow-500 text-white shadow-lg"
-                    : "bg-white text-gray-800 border border-gray-300 hover:bg-yellow-100"
-                }`}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,  
+                  delay: 0.2,    
+                  ease: "easeOut"
+                }}
               >
-                {category.name}
-              </button>
+                <button
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-5 py-2 rounded-full text-sm font-semibold shadow-lg transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? "bg-black text-white shadow-lg"
+                      : "bg-white hover:text-white border border-gray-300 hover:bg-black"
+                  }`}
+                >
+                  {category.name}
+                </button>
+              </motion.div>
             ))}
           </div>
 

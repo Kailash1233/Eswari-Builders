@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 
 export default function PortfolioPage() {
   const [filteredProject, setFilterProject] = useState(projects);
+  const [activeFilter, setActiveFilter] = useState("All");
 
   const handleFilter = (type: string) => {
     if (type === "All") {
@@ -19,6 +20,7 @@ export default function PortfolioPage() {
       const result = projects.filter((project) => project.mapTitle === type);
       setFilterProject(result);
     }
+    setActiveFilter(type);
   };
 
   return (
@@ -74,11 +76,21 @@ export default function PortfolioPage() {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,  
+                  delay: 0.2,    
+                  ease: "easeOut"
+                }}
               >
                 <Button
                   onClick={() => handleFilter(type)}
                   variant="outline"
-                  className="border-black text-black hover:bg-black hover:text-white"
+                  className={`rounded-full shadow-lg border-gray-30 text-gray-800 hover:bg-black hover:text-white ${
+                    activeFilter === type ? "bg-black text-white" : ""
+                  }`}
                 >
                   {type === "ongoing"
                     ? "OnGoing Project"

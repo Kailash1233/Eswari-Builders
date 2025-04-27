@@ -83,117 +83,254 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-20 by-[#0E0E0E]">
+      <section className="py-16 by-[#0E0E0E]">
         <div className="container mx-auto px-4">
           <div className=" section-title text-center mb-10 p-6">
-            <h2 className="text-3xl font-bold mb-4">
+            <motion.h2
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-3xl font-bold mb-4"
+            >
               Our Commercial Constructions Service
-            </h2>
-            <p className="text-gray-600">
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-gray-600"
+            >
               Choose the perfect construction package for your dream home
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16 items-center">
-            <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4">IT Offices</h3>
-              <p className="text-gray-700">
-                <strong>Tech-Ready Spaces:</strong> IT businesses demand
-                cutting-edge infrastructure. We specialize in creating IT office
-                spaces with the technological capabilities and telecommunication
-                infrastructure required for the digital age.
+          <motion.div
+            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="bg-[#0E0E0E]/80 p-8 rounded-lg  h-full flex flex-col justify-center shadow-md"
+            >
+              <h3 className="text-3xl text-white font-bold mb-4">IT Offices</h3>
+              <p className="text-white ">
+                <strong>Tech-Ready Spaces:</strong> IT offices are designed to
+                inspire innovation and teamwork. We focus on creating modern,
+                adaptable spaces that support technology-driven work and
+                encourage collaboration, all while ensuring a comfortable and
+                efficient environment for your team.
               </p>
-              <Link href="/services/commercial/it-offices">
-                <span className="inline-block mt-4 px-6 py-2 bg-yellow-600 text-white font-medium rounded hover:bg-yellow-700 transition-colors">
-                  Learn More
-                </span>
-              </Link>
-            </div>
-            <div className=" w-full">
+            </motion.div>
+            <motion.div variants={fadeInUp} className=" w-full">
               <div className="overflow-hidden rounded-2xl shadow-md">
                 <img
                   src="/interiorImage/img 1.jpg"
                   alt="IT Office Space"
-                  className="object-cover rounded-lg shadow-lg w-full h-auto hover:scale-105 transition-transform duration-500"
+                  className="object-cover rounded-lg shadow-lg w-full h-80 md:h-96 hover:scale-105 transition-transform duration-500"
                 />
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center">
-            <div className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md">
-            <img
-                  src="/interiorImage/img 2.jpg"
-                  alt="IT Office Space"
-                  className="object-cover rounded-lg shadow-lg w-full h-auto hover:scale-105 transition-transform duration-500"
-                />
-            </div>
-            <div className="bg-gray-100 p-8 rounded-lg shadow-md order-1 md:order-2">
-              <h3 className="text-2xl font-bold mb-4">Banks</h3>
-              <p className="text-gray-700 ">
+          <motion.div
+            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md"
+              variants={fadeInUp}
+            >
+              <img
+                src="/interiorImage/img 2.jpg"
+                alt="IT Office Space"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+            <motion.div
+              className=" p-8 rounded-lg bg-gray-100  h-full flex flex-col justify-center shadow-md order-1 md:order-2"
+              variants={fadeInUp}
+            >
+              <h3 className="text-3xl font-bold mb-4">Banks</h3>
+              <p className="text-gray-600 ">
                 <strong>Financial Hubs:</strong> We understand the unique
                 requirements of banks and financial institutions. Our designs
                 and layouts cater to the essential functions of ATMs, deposits,
                 cashier services, loan sections, and back-office operations.
               </p>
-              <Link href="/services/commercial/banks">
-                <span className="inline-block mt-4 px-6 py-2 bg-yellow-600 text-white font-medium rounded hover:bg-yellow-700 transition-colors">
-                  Learn More
-                </span>
-              </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16 items-center">
-            <div className="bg-gray-100 p-8 rounded-lg shadow-md">
-              <h3 className="text-2xl font-bold mb-4">Medical Centers</h3>
-              <p className="text-gray-700">
+          <motion.div
+            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
+            >
+              <h3 className="text-3xl text-white font-bold mb-4">
+                Medical Centers
+              </h3>
+              <p className="text-white ">
                 <strong>Healthcare Spaces:</strong> From hospitals and clinics
                 to testing laboratories, we support the establishment of medical
                 enterprises by adhering to government regulations and
                 accreditation standards, ensuring a safe and functional
                 healthcare environment.
               </p>
-              <Link href="/services/commercial/medical-centers">
-                <span className="inline-block mt-4 px-6 py-2 bg-yellow-600 text-white font-medium rounded hover:bg-yellow-700 transition-colors">
-                  Learn More
-                </span>
-              </Link>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              variants={fadeInUp}
+              className="overflow-hidden rounded-2xl shadow-md"
+            >
               <img
-                // src="/api/placeholder/800/600"
+                src="/interiorImage/img 3.jpg"
                 alt="Medical Center"
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="order-2 md:order-1">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md"
+            >
               <img
-                // src="/api/placeholder/800/600"
+                src="/interiorImage/img 7.jpg"
                 alt="Sports Center"
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
-            </div>
-            <div className="bg-gray-100 p-8 rounded-lg shadow-md order-1 md:order-2">
-              <h3 className="text-2xl font-bold mb-4">
+            </motion.div>
+            <motion.div
+              variants={fadeInUp}
+              className="bg-gray-100 p-8 rounded-lg h-full flex flex-col justify-center shadow-md order-1 md:order-2"
+            >
+              <h3 className="text-3xl font-bold mb-4">
                 Sports and Recreation Centers
               </h3>
               <p className="text-gray-700">
-                <strong>Active Lifestyles:</strong> We contribute to the growing
-                demand for sports and recreation centers by creating facilities
-                such as indoor cricket venues, badminton courts, and
-                multipurpose recreational activity centers—all under one roof.
+                <strong>Active Lifestyles:</strong> From indoor gyms to
+                expansive parks and wellness centers, we create spaces that
+                support both athletic performance and community well-being. Our
+                designs focus on safety, accessibility, and functionality,
+                fostering environments that inspire health, fitness, and
+                recreation.
               </p>
-              <Link href="/services/commercial/sports-centers">
-                <span className="inline-block mt-4 px-6 py-2 bg-yellow-600 text-white font-medium rounded hover:bg-yellow-700 transition-colors">
-                  Learn More
-                </span>
-              </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
+          >
+            <motion.div 
+            variants={fadeInUp}
+            className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md">
+              <h3 className="text-3xl text-white font-bold mb-4">
+                Hotels / Resorts
+              </h3>
+              <p className="text-white">
+                <strong>Premium Retreats : </strong> We specialize in designing
+                hotels and resorts that turn every stay into a memorable
+                experience. Whether it’s a lavish getaway or a cozy retreat, our
+                spaces are crafted to offer comfort, style, and a warm,
+                welcoming atmosphere for all types of travelers.
+              </p>
+            </motion.div>
+            <motion.div 
+            variants={fadeInUp}
+            className="overflow-hidden rounded-2xl shadow-md">
+              <img
+                src="/interiorImage/img 3.jpg"
+                alt="Medical Center"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+          </motion.div>
+
+          <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center">
+            <motion.div 
+            variants={fadeInUp}
+            className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md">
+              <img
+                src="/interiorImage/img 6.jpg"
+                alt="Sports Center"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+            <motion.div 
+            variants={fadeInUp}
+            className="bg-gray-100 p-8 rounded-lg shadow-md h-full flex flex-col justify-center order-1 md:order-2">
+              <h3 className="text-3xl font-bold mb-4">
+                Restaurants/Coffee Shops
+              </h3>
+              <p className="text-gray-700">
+                <strong>Interactive Dining Spaces:</strong> Our designs bring
+                conceptual restaurants and coffee shops to life, blending the
+                latest trends with unique concepts. We focus on creating vibrant
+                spaces that deliver memorable dining experiences, attracting
+                customers and leaving a lasting impression.
+              </p>
+            </motion.div>
+          </motion.div>
+
+          <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center">
+            <motion.div 
+            variants={fadeInUp}
+            className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md">
+              <h3 className="text-3xl text-white font-bold mb-4">
+                Business Innovation Centers
+              </h3>
+              <p className="text-white">
+                <strong>Innovation Hubs and Incubators:</strong> We specialize
+                in designing spaces for educational institutions, government
+                offices, NGOs, trusts, and religious organizations. Our designs
+                are tailored to the unique needs of these institutions, creating
+                functional and inspiring environments that foster learning,
+                service, and community engagement.
+              </p>
+            </motion.div>
+            <motion.div 
+            variants={fadeInUp}
+            className="overflow-hidden rounded-2xl shadow-md">
+              <img
+                src="/interiorImage/img 3.jpg"
+                alt="Medical Center"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -231,9 +368,9 @@ export default function ServicesPage() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className="border border-gray-200 p-8 transition-all hover:shadow-md"
+                className="border border-gray-200 p-8  transition-all hover:shadow-md"
               >
-                <div className="mb-4">{service.icon}</div>
+                <div className="mb-4 ite">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-gray-700">{service.description}</p>
               </motion.div>
