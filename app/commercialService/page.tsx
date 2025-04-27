@@ -274,7 +274,7 @@ export default function ServicesPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-1 grid-cols-1 gap-8 mb-16 items-center place-item-center">
+          className="grid md:grid-cols-2 grid-cols-1 gap-8 mb-16 items-center place-item-center">
             <motion.div 
             variants={fadeInUp}
             className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md">
