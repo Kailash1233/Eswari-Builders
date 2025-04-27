@@ -262,7 +262,7 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="overflow-hidden rounded-2xl shadow-md">
               <img
-                src="/interiorImage/img 3.jpg"
+                src="/interiorImage/img 9.jpg"
                 alt="Medical Center"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
@@ -274,7 +274,7 @@ export default function ServicesPage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center">
+          className="grid md:grid-cols-1 grid-cols-1 gap-8 mb-16 items-center place-item-center">
             <motion.div 
             variants={fadeInUp}
             className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md">
@@ -295,7 +295,7 @@ export default function ServicesPage() {
                 conceptual restaurants and coffee shops to life, blending the
                 latest trends with unique concepts. We focus on creating vibrant
                 spaces that deliver memorable dining experiences, attracting
-                customers and leaving a lasting impression.
+                customers and leaving a lasting impression. 
               </p>
             </motion.div>
           </motion.div>
@@ -325,7 +325,7 @@ export default function ServicesPage() {
             variants={fadeInUp}
             className="overflow-hidden rounded-2xl shadow-md">
               <img
-                src="/interiorImage/img 3.jpg"
+                src="/interiorImage/img 5.jpg"
                 alt="Medical Center"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
