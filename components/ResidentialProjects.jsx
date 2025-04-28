@@ -55,7 +55,7 @@ const PackageDetails = ({ title, sections, activeSectionTitle, onToggleSection }
                   <div className="content">
                     <div className="text">
                       {section.type === "list" ? (
-                        <ul className="list-disc pl-5 space-y-1">
+                        <ul className="list-disc pl-5 py-4 space-y-1">
                           {section.items.map((item, i) => (
                             <li key={i} className="text-sm">
                               {item}
@@ -63,7 +63,7 @@ const PackageDetails = ({ title, sections, activeSectionTitle, onToggleSection }
                           ))}
                         </ul>
                       ) : (
-                        <p>{section.content}</p>
+                        <p className="py-4">{section.content}</p>
                       )}
                     </div>
                   </div>

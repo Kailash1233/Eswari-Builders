@@ -36,7 +36,8 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="py-4 pt-16 pb-16 bg-[#0E0E0E]">
+    <section className="relative py-4 pt-16 pb-16 overflow-hidden">
+      <div className="absolute inset-0 z-[-2] bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl text-white md:text-4xl font-bold mb-4">
@@ -91,3 +92,5 @@ export default function FeaturedProjects() {
     </section>
   );
 }
+
+

@@ -18,93 +18,65 @@ export default function RenovationCategoryFilter() {
     { id: "Tiles", name: "Tiles laying" },
   ];
 
-  const [activeCategory, setActiveCategory] = useState("all");
 
   const services = [
     {
       id: 1,
-      title: "Office Buildings",
-      category: "Tiles",
-      image: "/interiorImage/img 12.jpg",
+      title: " Plumbing Solutions",
+      // category: "Tiles",
+      image: "/interiorImage/plumbing 1.jpg",
       description:
-        "<strong>Elevating Workspaces:</strong> Our office buildings are more than just spaces to work; they are the epicenter of corporate innovation. We design and construct modern offices that foster productivity, collaboration, and strategic thinking.",
+        "<strong>Expert Plumbing Services:</strong> From fixing leaks to installing new pipelines, we ensure your water systems work flawlessly. Our skilled plumbers use the latest techniques to deliver durable and efficient solutions. Trust us for seamless water flow and lasting reliability.",
       link: "/services/commercial/office-buildings",
     },
     {
       id: 2,
-      title: "IT Offices",
-      category: "commercial",
-      image: "/interiorImage/img 11.jpg",
+      title: "Professional Painting",
+      // category: "Tiles",
+      image: "/interiorImage/painting.jpg",
       description:
-        "<strong>Tech-Ready Spaces:</strong> IT businesses demand cutting-edge infrastructure. We specialize in creating IT office spaces with the technological capabilities and telecommunication infrastructure required for the digital age.",
+        "<strong>Transform Your Space:</strong> Add new life to your walls with our expert painting services. We use premium materials and professional techniques to ensure a smooth, vibrant finish. Revitalize your environment with colors that inspire and energize.",
       link: "/services/commercial/it-offices",
     },
     
     {
       id: 3,
-      title: "Medical Centers",
-      category: "commercial",
-      image: "/interiorImage/img 13.jpg",
+      title: "Electrical Services",
+      // category: "painting",
+      image: "/interiorImage/electrical 1.jpg",
       description:
-        "<strong>Healthcare Spaces:</strong> From hospitals and clinics to testing laboratories, we support the establishment of medical enterprises by adhering to government regulations and accreditation standards, ensuring a safe and functional healthcare environment.",
+        "<strong>Powering Your Needs:</strong> Our certified electricians deliver safe and reliable electrical installations and repairs. We handle everything from switchboard setups to complete rewiring projects. Your safety and convenience are our top priorities. ",
       link: "/services/commercial/medical-centers",
     },
     {
       id: 4,
-      title: "Sports Centers",
-      category: "commercial",
-      image: "/interiorImage/img 14.jpg",
+      title: "Vastu Compliance Solutions",
+      // category: "painting",
+      image: "/interiorImage/vastu complaints.jpg",
       description:
-        "<strong>Active Lifestyles:</strong> We contribute to the growing demand for sports and recreation centers by creating facilities such as indoor cricket venues, badminton courts, and multipurpose recreational activity centers—all under one roof.",
+        "<strong>Balancing Energy Flows:</strong> Correct your space’s energy with our expert Vastu solutions. We analyze, recommend, and implement adjustments that align with ancient wisdom and modern living. Create a harmonious environment for prosperity and well-being.",
       link: "/services/commercial/sports-centers",
     },
     {
       id: 5,
-      title: "Luxury Villas",
-      category: "residential",
-      image: "/interiorImage/residencial 1.jpg",
+      title: "Demolition Services",
+      // category: "painting",
+      image: "/interiorImage/demolition 1.jpg",
       description:
-        "<strong>Premium Living:</strong> Our luxury villas represent the pinnacle of residential comfort and elegance. We create bespoke homes with attention to detail, premium materials, and innovative design elements.",
+        "<strong>Clearing the Way for New Beginnings:</strong> Our demolition services are precise, safe, and efficient, paving the way for your next project. Whether it's a small wall removal or a complete site clearance, we handle it all with care. Start fresh with confidence and a clear space.",
       link: "/services/residential/luxury-villas",
-    },
-    {
-      id: 6,
-      title: "Apartments",
-      category: "residential",
-      image: "/interiorImage/residencial 2.jpg",
-      description:
-        "<strong>Modern Living:</strong>Our apartment designs combine style and functionality, creating efficient, comfortable spaces that fit modern lifestyles. Thoughtfully laid out to maximize space and light, these homes offer the perfect balance of comfort and contemporary design.",
-      link: "/services/residential/apartments",
-    },
-    {
-      id: 7,
-      title: "Independent Houses",
-      category: "residential",
-      image: "/interiorImage/residencial 3.jpg",
-      description:
-        "<strong>Your Dream Home:</strong> We build custom independent houses that reflect your personality and meet your unique needs, from foundations to finishing touches.",
-      link: "/services/residential/independent-houses",
-    },
-    {
-      id: 8,
-      title: "Built for Your Life",
-      category: "Turnkey Projects",
-      image: "/interiorImage/turnkey 1.jpg",
-      description:
-        "<strong>Built for Your Life:</strong> Our turnkey services are designed to turn your vision into reality. We carefully craft every detail — from concept to completion — creating spaces that reflect your unique style and lifestyle. With us, your dream space is ready when you are.",
-      link: "/services/industrial/warehouses",
     },
     
   ];
 
-  type Service = {
-    id: number;
-    title: string;
-    category: string;
-    image: string;
-    description: string;
-    link: string;
-  };
+  // type Service = {
+  //   id: number;
+  //   title: string;
+  //   category: string;
+  //   image: string;
+  //   description: string;
+  //   link: string;
+  // };
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -124,29 +96,29 @@ export default function RenovationCategoryFilter() {
     },
   };
 
-  const getFilteredServices = () => {
-    if (activeCategory === "all") {
-      const showcaseServices: Service[] = [];
-      const serviceCategories = Array.from(
-        new Set(services.map((service) => service.category))
-      );
+  // const getFilteredServices = () => {
+  //   if (activeCategory === "all") {
+  //     const showcaseServices: Service[] = [];
+  //     const serviceCategories = Array.from(
+  //       new Set(services.map((service) => service.category))
+  //     );
 
-      serviceCategories.forEach((category) => {
-        const serviceOfCategory = services.find(
-          (service) => service.category === category
-        );
-        if (serviceOfCategory) {
-          showcaseServices.push(serviceOfCategory);
-        }
-      });
+  //     serviceCategories.forEach((category) => {
+  //       const serviceOfCategory = services.find(
+  //         (service) => service.category === category
+  //       );
+  //       if (serviceOfCategory) {
+  //         showcaseServices.push(serviceOfCategory);
+  //       }
+  //     });
 
-      return showcaseServices;
-    } else {
-      return services.filter((service) => service.category === activeCategory);
-    }
-  };
+  //     return showcaseServices;
+  //   } else {
+  //     return services.filter((service) => service.category === activeCategory);
+  //   }
+  // };
 
-  const filteredServices = getFilteredServices();
+  // const filteredServices = getFilteredServices();
 
   return (
     <div>
@@ -183,7 +155,7 @@ export default function RenovationCategoryFilter() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <motion.h2
-            className="text-4xl font-extrabold text-center mb-12"
+            className="text-4xl font-extrabold text-center mb-12 pb-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -192,7 +164,7 @@ export default function RenovationCategoryFilter() {
           </motion.h2>
 
           {/* Category Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {/* <div className="flex flex-wrap justify-center gap-4 mb-16">
             {categories.map((category: any) => (
               <motion.div
                 key={category.id}
@@ -221,11 +193,11 @@ export default function RenovationCategoryFilter() {
                 </button>
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
           {/* Services Grid */}
           <div className="grid gap-16">
-            {filteredServices.map((service: any, index: number) => (
+            {services.map((service: any, index: number) => (
               <motion.div
                 key={service.id}
                 className={`flex flex-col md:flex-row items-center ${
@@ -249,7 +221,7 @@ export default function RenovationCategoryFilter() {
 
                 {/* Text Content */}
                 <div className="md:w-1/2 w-full">
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  <h3 className="text-3xl font-bold mb-4">{service.title}</h3>
                   <p
                     className="text-gray-600 leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: service.description }}

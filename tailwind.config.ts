@@ -23,8 +23,11 @@ const config = {
       fontFamily: {
         sans: ["var(--font-merriweather-sans)", "sans-serif"],
       },
+      
       backgroundImage: {
         'custom-gradient': 'linear-gradient(180deg, #deebfb -10%, #fff)',
+        'windy-gradient': 'radial-gradient(circle at center, #e6eeff 0%, #c9d9f2 100%)',
+        'gradient-radial': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
       },
       colors: {
         border: "hsl(var(--border))",
@@ -32,6 +35,10 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        'windy-blue': {
+          50: '#e6eeff',
+          100: '#c9d9f2',
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -67,6 +74,15 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backdropBlur: {
+        'xs': '2px',
+        'sm': '4px',
+        'md': '8px',
+        'lg': '16px',
+        'xl': '24px',
+        '2xl': '40px',
+        '3xl': '64px',
       },
       keyframes: {
         "accordion-down": {
