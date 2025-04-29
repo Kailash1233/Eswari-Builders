@@ -55,7 +55,7 @@ export default function ServicesPage() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/5_slide.jpg"
+          src="/slider/10_slide.jpg"
           alt="Our Services"
           fill
           className="object-cover"
@@ -244,9 +244,10 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
           >
-            <motion.div 
-            variants={fadeInUp}
-            className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md">
+            <motion.div
+              variants={fadeInUp}
+              className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
+            >
               <h3 className="text-3xl text-white font-bold mb-4">
                 Hotels / Resorts
               </h3>
@@ -258,9 +259,10 @@ export default function ServicesPage() {
                 welcoming atmosphere for all types of travelers.
               </p>
             </motion.div>
-            <motion.div 
-            variants={fadeInUp}
-            className="overflow-hidden rounded-2xl shadow-md">
+            <motion.div
+              variants={fadeInUp}
+              className="overflow-hidden rounded-2xl shadow-md"
+            >
               <img
                 src="/interiorImage/img 9.jpg"
                 alt="Medical Center"
@@ -269,24 +271,27 @@ export default function ServicesPage() {
             </motion.div>
           </motion.div>
 
-          <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 grid-cols-1 gap-8 mb-16 items-center place-item-center">
-            <motion.div 
-            variants={fadeInUp}
-            className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 grid-cols-1 gap-8 mb-16 items-center place-item-center"
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md"
+            >
               <img
                 src="/interiorImage/img 6.jpg"
                 alt="Sports Center"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
             </motion.div>
-            <motion.div 
-            variants={fadeInUp}
-            className="bg-gray-100 p-8 rounded-lg shadow-md h-full flex flex-col justify-center order-1 md:order-2">
+            <motion.div
+              variants={fadeInUp}
+              className="bg-gray-100 p-8 rounded-lg shadow-md h-full flex flex-col justify-center order-1 md:order-2"
+            >
               <h3 className="text-3xl font-bold mb-4">
                 Restaurants/Coffee Shops
               </h3>
@@ -295,20 +300,22 @@ export default function ServicesPage() {
                 conceptual restaurants and coffee shops to life, blending the
                 latest trends with unique concepts. We focus on creating vibrant
                 spaces that deliver memorable dining experiences, attracting
-                customers and leaving a lasting impression. 
+                customers and leaving a lasting impression.
               </p>
             </motion.div>
           </motion.div>
 
-          <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center">
-            <motion.div 
-            variants={fadeInUp}
-            className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
+            >
               <h3 className="text-3xl text-white font-bold mb-4">
                 Business Innovation Centers
               </h3>
@@ -321,9 +328,10 @@ export default function ServicesPage() {
                 service, and community engagement.
               </p>
             </motion.div>
-            <motion.div 
-            variants={fadeInUp}
-            className="overflow-hidden rounded-2xl shadow-md">
+            <motion.div
+              variants={fadeInUp}
+              className="overflow-hidden rounded-2xl shadow-md"
+            >
               <img
                 src="/interiorImage/img 5.jpg"
                 alt="Medical Center"

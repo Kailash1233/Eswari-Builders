@@ -18,7 +18,6 @@ export default function RenovationCategoryFilter() {
     { id: "Tiles", name: "Tiles laying" },
   ];
 
-
   const services = [
     {
       id: 1,
@@ -38,7 +37,7 @@ export default function RenovationCategoryFilter() {
         "<strong>Transform Your Space:</strong> Add new life to your walls with our expert painting services. We use premium materials and professional techniques to ensure a smooth, vibrant finish. Revitalize your environment with colors that inspire and energize.",
       link: "/services/commercial/it-offices",
     },
-    
+
     {
       id: 3,
       title: "Electrical Services",
@@ -66,7 +65,6 @@ export default function RenovationCategoryFilter() {
         "<strong>Clearing the Way for New Beginnings:</strong> Our demolition services are precise, safe, and efficient, paving the way for your next project. Whether it's a small wall removal or a complete site clearance, we handle it all with care. Start fresh with confidence and a clear space.",
       link: "/services/residential/luxury-villas",
     },
-    
   ];
 
   // type Service = {
@@ -125,7 +123,7 @@ export default function RenovationCategoryFilter() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/5_slide.jpg"
+          src="/slider/9_slide.jpg"
           alt="Our Services"
           fill
           className="object-cover"
@@ -139,7 +137,7 @@ export default function RenovationCategoryFilter() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            Renovaion Service
+            Renovation Service
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}

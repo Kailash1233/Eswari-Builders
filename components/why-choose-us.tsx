@@ -1,113 +1,202 @@
-
+"use client";
 import Image from "next/image";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+import { useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const testimonials = [
+  {
+    name: "Thiyagu Raju",
+    project: "Home Construction, Local Market",
+    review:
+      "When we first met builder MD Prabhu Ram Sir, he explained about the company and services clearly. His thorough knowledge of home construction and the local market impressed us. He guided us through multiple inspections and negotiations. In the end, we found the perfect builder and are loving it so far.",
+  },
+  {
+    name: "Saranraj J",
+    project: "House Construction, Krishna Nagar, Pondicherry",
+    review:
+      "Referred by a family friend, I met Mr. Prabhu Ram who was very humble and responsive. I constructed my house in Krishna Nagar. The quality and timely delivery were top-notch. Mr. Rajendran, the site engineer, explained everything patiently. Highly recommended!",
+  },
+  {
+    name: "Raj Kumar",
+    project: "Residential Project",
+    review:
+      "Best builders I know. Affordability and quality is their mantra. I’ve been living in the house they built for over 5 years without any issues. They even offer post-handover service which is rare these days. Extremely happy with them.",
+  },
+  {
+    name: "Akalya Khalifa",
+    project: "House Construction, Cuddalore",
+    review:
+      "My experience with Eswari Builders has been awesome. Constructed a house in Cuddalore. Their quality of work, materials used, and payment flexibility are great. The work is progressing well, and they support customers in every aspect.",
+  },
+  {
+    name: "Kiran Balaji M",
+    project: "Custom Residential Project",
+    review:
+      "I'm glad my search ended with Eswari Builders. You made my dream come true! My parents were so happy with your approach and energy. You're customer-oriented, organized, and committed to quality. Highly recommend!",
+  },
+  {
+    name: "Mari Mari",
+    project: "Full-Service Home Construction",
+    review:
+      "Very friendly approach. They explain everything in detail, no hidden charges. The builder helped us a lot with paperwork, approvals, and the loan process. I highly recommend them to anyone building a new house.",
+  },
+  {
+    name: "Sammantham Sammantham",
+    project: "Planning & Design",
+    review:
+      "We found them on Google and they exceeded our expectations. Mr. Prabhu Ram and team translated our thoughts into a great plan. Excellent work!",
+  },
+];
 
 export default function WhyChooseUs() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    slides: {
+      perView: 1,
+      spacing: 16,
+    },
+    breakpoints: {
+      "(min-width: 768px)": {
+        slides: { perView: 2, spacing: 24 },
+      },
+      "(min-width: 1024px)": {
+        slides: { perView: 3, spacing: 32 },
+      },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
+    },
+  });
+
+  // Autoplay
+  useEffect(() => {
+    if (!instanceRef.current) return;
+
+    intervalRef.current = setInterval(() => {
+      instanceRef.current?.next();
+    }, 4000);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [instanceRef]);
+
   return (
     <>
-    <section className="pb-16 pt-16  md:py-18 px-4 items-center md:px-8 mx-auto container">
-      <div className="mb-16">
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-0.5 bg-black"></div>
-          <h2 className="text-3xl md:text-4xl font-bold font-merriweather-sans">
-            Why Us?
-          </h2>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-        {/* Lighting Design */}
-        <div className="space-y-4">
-          <div className="h-16 w-16">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-full h-full"
-            >
-              <path d="M9 18h6" />
-              <path d="M10 22h4" />
-              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold">Lighting Design</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Achieve the perfect balance of ambient, task, and accent lighting
-            for a functional atmosphere
-          </p>
-        </div>
-
-        {/* Interior Design */}
-        <div className="space-y-4">
-          <div className="h-16 w-16">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-full h-full"
-            >
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <path d="M3 9h18" />
-              <path d="M9 21V9" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold">Interior Design</h3>
-          <p className="text-gray-700 leading-relaxed">
-            From concept to completion, we oversee every detail to bring your
-            vision to life efficiently
-          </p>
-        </div>
-
-        {/* Outdoor Design */}
-        <div className="space-y-4">
-          <div className="h-16 w-16">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-full h-full"
-            >
-              <path d="M12 22c4.97 0 9-2.24 9-5s-4.03-5-9-5-9 2.24-9 5 4.03 5 9 5z" />
-              <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-              <path d="M7 15.64C7 13.5 9.24 12 12 12s5 1.5 5 3.64" />
-              <path d="M5 5v14" />
-              <path d="M19 5v14" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold">Outdoor Design</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Celebrate the changing seasons with our seasonal outdoor decor
-            services
-          </p>
-        </div>
-      </div>
-    </section>
-
-     <section className="md:pb-20 md:p-16 pb-20 bg-white text-black">
-          <div className="container mx-auto px-4">
-            <h2 className="md:text-5xl text-4xl font-bold mb-12 font-merriweather-sans">
-              What Our Customers
-              <br /> Say About Us
+      <section className="pb-16 pt-16  md:py-18 px-4 items-center md:px-8 mx-auto container">
+        <div className="mb-16">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-0.5 bg-black"></div>
+            <h2 className="text-3xl md:text-4xl font-bold font-merriweather-sans">
+              Why Us?
             </h2>
-    
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((item) => (
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          {/* Lighting Design */}
+          <div className="space-y-4">
+            <div className="h-16 w-16">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-full h-full"
+              >
+                <path d="M9 18h6" />
+                <path d="M10 22h4" />
+                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold">Lighting Design</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Achieve the perfect balance of ambient, task, and accent lighting
+              for a functional atmosphere
+            </p>
+          </div>
+
+          {/* Interior Design */}
+          <div className="space-y-4">
+            <div className="h-16 w-16">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-full h-full"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18" />
+                <path d="M9 21V9" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold">Interior Design</h3>
+            <p className="text-gray-700 leading-relaxed">
+              From concept to completion, we oversee every detail to bring your
+              vision to life efficiently
+            </p>
+          </div>
+
+          {/* Outdoor Design */}
+          <div className="space-y-4">
+            <div className="h-16 w-16">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-full h-full"
+              >
+                <path d="M12 22c4.97 0 9-2.24 9-5s-4.03-5-9-5-9 2.24-9 5 4.03 5 9 5z" />
+                <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path d="M7 15.64C7 13.5 9.24 12 12 12s5 1.5 5 3.64" />
+                <path d="M5 5v14" />
+                <path d="M19 5v14" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold">Outdoor Design</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Celebrate the changing seasons with our seasonal outdoor decor
+              services
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="md:pb-20 md:p-16 pb-20 bg-white text-black relative">
+        <div className="container mx-auto px-4">
+          <h2 className="md:text-5xl text-4xl font-bold mb-12 font-merriweather-sans">
+            What Our Customers
+            <br /> Say About Us
+          </h2>
+
+          <div className="relative">
+            <div ref={sliderRef} className="keen-slider">
+              {testimonials.map((t, index) => (
                 <div
-                  key={item}
-                  className="bg-[#121212] text-white border border-white/20 p-8 rounded-xl"
+                  key={index}
+                  className="keen-slider__slide bg-white text-black border border-gray-200 p-6 rounded-xl shadow-md"
                 >
                   <div className="flex items-center mb-4">
-                    {[1, 2, 3, 4, 5].map((star) => (
+                    {[...Array(5)].map((_, i) => (
                       <svg
-                        key={star}
+                        key={i}
                         className="h-5 w-5 fill-current text-yellow-400"
                         viewBox="0 0 24 24"
                       >
@@ -115,36 +204,72 @@ export default function WhyChooseUs() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-white/80 mb-6">
-                    "Eswari Builders exceeded our expectations in every way. Their
-                    attention to detail, quality of work, and professionalism made
-                    our dream home a reality. We couldn't be happier with the
-                    results."
-                  </p>
+                  <p className="text-black/80 mb-6">"{t.review}"</p>
                   <div className="flex items-center">
                     <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
                       <Image
-                        src="/placeholder.svg?height=100&width=100"
-                        alt={`Client ${item}`}
+                        src="/Pro.png"
+                        alt={`Client ${t.name}`}
                         fill
                         className="object-cover"
                       />
                     </div>
                     <div>
-                      <h4 className="font-bold">Client Name</h4>
-                      <p className="text-white/60 text-sm">
-                        Project Type, Location
-                      </p>
+                      <h4 className="font-bold">{t.name}</h4>
+                      <p className="text-black/60 text-sm">{t.project}</p>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* Arrows */}
+            {loaded && instanceRef.current && (
+              <>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    instanceRef.current?.prev();
+                  }}
+                  className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-md hover:bg-gray-800 z-10"
+                >
+                  <ChevronLeft />
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    instanceRef.current?.next();
+                  }}
+                  className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-md hover:bg-gray-800 z-10"
+                >
+                  <ChevronRight />
+                </button>
+              </>
+            )}
           </div>
-        </section>
 
-  </>
-
-    
+          {/* Dots */}
+          {loaded && instanceRef.current && (
+            <div className="flex justify-center mt-8 gap-2">
+              {[
+                ...Array(
+                  instanceRef.current.track.details.slides.length
+                ).keys(),
+              ].map((idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    instanceRef.current?.moveToIdx(idx);
+                  }}
+                  className={`h-3 w-3 rounded-full ${
+                    currentSlide === idx ? "bg-black" : "bg-gray-300"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    </>
   );
 }

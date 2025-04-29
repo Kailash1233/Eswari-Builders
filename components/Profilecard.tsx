@@ -38,8 +38,8 @@ export default function ProfileCard() {
               insight, strong project management, and a commitment to quality in
               every build.
             </p>
-            <button className="inline-block px-5 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-200 transition">
-              Read more
+            <button className="inline-block px-5 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-white hover:text-black hover:shadow-lg transition">
+              <a href="/about">Read more</a>
             </button>
           </div>
         </div>

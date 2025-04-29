@@ -38,7 +38,7 @@ export default function ServicesCategoryFilter() {
         "<strong>Tech-Ready Spaces:</strong> IT businesses demand cutting-edge infrastructure. We specialize in creating IT office spaces with the technological capabilities and telecommunication infrastructure required for the digital age.",
       link: "/services/commercial/it-offices",
     },
-    
+
     {
       id: 3,
       title: "Medical Centers",
@@ -137,7 +137,7 @@ export default function ServicesCategoryFilter() {
       category: "Home Decors",
       image: "/interiorImage/Home Decors 2.jpg",
       description:
-      "<strong>Transform Your Living Space:</strong> Our home decor solutions bring style, comfort, and personality to your interiors. From elegant furnishings to creative wall designs, we craft spaces that truly feel like home.",
+        "<strong>Transform Your Living Space:</strong> Our home decor solutions bring style, comfort, and personality to your interiors. From elegant furnishings to creative wall designs, we craft spaces that truly feel like home.",
       link: "/services/renovation/commercial-retrofitting",
     },
     {
@@ -216,7 +216,7 @@ export default function ServicesCategoryFilter() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/5_slide.jpg"
+          src="/slider/8_slide.jpg"
           alt="Our Services"
           fill
           className="object-cover"
@@ -267,9 +267,9 @@ export default function ServicesCategoryFilter() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.6,  
-                  delay: 0.2,    
-                  ease: "easeOut"
+                  duration: 0.6,
+                  delay: 0.2,
+                  ease: "easeOut",
                 }}
               >
                 <button

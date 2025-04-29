@@ -217,7 +217,7 @@ export default function AboutPage() {
                 name: "Sathya",
                 role: "Managing Director",
                 desc: "Leads operations and ensures quality and client satisfaction.",
-                image: "/team/Sathya.jpg",
+                image: "/team/MD2.png",
               },
               {
                 name: "Prabhu Ram N",
@@ -310,6 +310,5 @@ export default function AboutPage() {
     </div>
   );
 }
-
 
 // bg-[#121212]
