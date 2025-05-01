@@ -59,33 +59,24 @@ export default function ServicesCategoryFilter() {
     },
     {
       id: 5,
-      title: "Luxury Villas",
+      title: "Wardrobe",
       category: "residential",
-      image: "/interiorImage/residencial 1.jpg",
+      image: "/interiorImage/residential 1.jpg",
       description:
-        "<strong>Premium Living:</strong> Our luxury villas represent the pinnacle of residential comfort and elegance. We create bespoke homes with attention to detail, premium materials, and innovative design elements.",
-      link: "/services/residential/luxury-villas",
+        "<strong>Your Dream Home:</strong> We design wardrobes that blend seamlessly with your space, offering modern, space-saving storage solutions with personalized finishes.",
+      link: "/services/residential/wardrobe",
     },
     {
       id: 6,
-      title: "Apartments",
+      title: "TV Units & Paneling Works",
       category: "residential",
-      image: "/interiorImage/residencial 2.jpg",
+      image: "/interiorImage/residential 2.jpg",
       description:
-        "<strong>Modern Living:</strong>Our apartment designs combine style and functionality, creating efficient, comfortable spaces that fit modern lifestyles. Thoughtfully laid out to maximize space and light, these homes offer the perfect balance of comfort and contemporary design.",
-      link: "/services/residential/apartments",
+        "<strong>Your Dream Home:</strong> Custom TV units and wall paneling enhance your living space with elegance and function, hiding cables and showcasing your entertainment area.",
+      link: "/services/residential/tv-units-paneling",
     },
     {
       id: 7,
-      title: "Independent Houses",
-      category: "residential",
-      image: "/interiorImage/residencial 3.jpg",
-      description:
-        "<strong>Your Dream Home:</strong> We build custom independent houses that reflect your personality and meet your unique needs, from foundations to finishing touches.",
-      link: "/services/residential/independent-houses",
-    },
-    {
-      id: 8,
       title: "Built for Your Life",
       category: "Turnkey Projects",
       image: "/interiorImage/turnkey 1.jpg",
@@ -94,7 +85,7 @@ export default function ServicesCategoryFilter() {
       link: "/services/industrial/warehouses",
     },
     {
-      id: 9,
+      id: 8,
       title: "Your Space, Your Story",
       category: "Turnkey Projects",
       image: "/interiorImage/turnkey 2.jpg",
@@ -103,7 +94,7 @@ export default function ServicesCategoryFilter() {
       link: "/services/industrial/manufacturing-plants",
     },
     {
-      id: 10,
+      id: 9,
       title: "Effortless Turnkey Solutions",
       category: "Turnkey Projects",
       image: "/interiorImage/turnkey 3.jpg",
@@ -112,7 +103,7 @@ export default function ServicesCategoryFilter() {
       link: "/services/renovation/home-remodeling",
     },
     {
-      id: 11,
+      id: 10,
       title: "Balcony Retreat",
       category: "Balcony ideas",
       image: "/interiorImage/Balcony 1.jpg",
@@ -122,7 +113,7 @@ export default function ServicesCategoryFilter() {
     },
 
     {
-      id: 12,
+      id: 11,
       title: "Reimagine Your Home",
       category: "Home Decors",
       image: "/interiorImage/Home Decors 1.jpg",
@@ -132,7 +123,7 @@ export default function ServicesCategoryFilter() {
     },
 
     {
-      id: 13,
+      id: 12,
       title: "Dream Home Realized",
       category: "Home Decors",
       image: "/interiorImage/Home Decors 2.jpg",
@@ -141,7 +132,7 @@ export default function ServicesCategoryFilter() {
       link: "/services/renovation/commercial-retrofitting",
     },
     {
-      id: 14,
+      id: 13,
       title: "Urban Escape",
       category: "Balcony ideas",
       image: "/interiorImage/Balcony 2.jpg",
@@ -150,13 +141,94 @@ export default function ServicesCategoryFilter() {
       link: "/services/renovation/commercial-retrofitting",
     },
     {
-      id: 15,
+      id: 14,
       title: "Garden Balcony",
       category: "Balcony ideas",
       image: "/interiorImage/Balcony 3.jpg",
       description:
         "<strong>Bring Nature to Your Home:</strong> Transform your balcony into a lush mini garden filled with vibrant plants and colorful flowers, creating a serene green space that brings the beauty of nature right to your doorstep.",
       link: "/services/renovation/commercial-retrofitting",
+    },
+    {
+      id: 15,
+      title: "Modern False Ceiling Works",
+      category: "residential",
+      image: "/interiorImage/residential 3.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> False ceilings with cove lighting and geometric designs add depth, style, and insulation to your home interiors.",
+      link: "/services/residential/false-ceiling",
+    },
+    {
+      id: 16,
+      title: "Modular Kitchen",
+      category: "residential",
+      image: "/interiorImage/residential 4.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> Smart modular kitchens that maximize space with ergonomic layouts, premium finishes, and intelligent storage systems.",
+      link: "/services/residential/modular-kitchen",
+    },
+    {
+      id: 17,
+      title: "Pooja Room",
+      category: "residential",
+      image: "/interiorImage/residential 5.webp",
+      description:
+        "<strong>Your Dream Home:</strong> We craft serene pooja units and rooms with traditional charm or modern minimalism, aligned with Vastu and aesthetics.",
+      link: "/services/residential/pooja-room",
+    },
+    {
+      id: 18,
+      title: "Under Stair Closures",
+      category: "residential",
+      image: "/interiorImage/residential 6.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> Transform unused stair space into functional storage with custom-built drawers, cabinets, or display units.",
+      link: "/services/residential/under-stair-closures",
+    },
+    {
+      id: 19,
+      title: "Wall Partition",
+      category: "residential",
+      image: "/interiorImage/residential 7.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> Elegant partitions add privacy and style to open spaces—choose from wood, glass, or CNC-cut panels.",
+      link: "/services/residential/wall-partition",
+    },
+    {
+      id: 20,
+      title: "Vinely Flooring",
+      category: "residential",
+      image: "/interiorImage/residential 8.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> Vinely flooring offers a modern look with wood-like finishes that are water-resistant, pet-friendly, and long-lasting.",
+      link: "/services/residential/vinely-flooring",
+    },
+    {
+      id: 21,
+      title: "Curtains & Blinds",
+      category: "residential",
+      image: "/interiorImage/residential 9.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> Custom curtains and blinds elevate your interiors with a balance of privacy, light control, and style.",
+      link: "/services/residential/curtains-blinds",
+    },
+    {
+      id: 22,
+      title: "Furniture & Dining Table",
+      category: "residential",
+      image: "/interiorImage/residential 10.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> From designer sofas to handcrafted dining tables, we create furniture that complements your interior themes.",
+      link: "/services/residential/furniture-dining-table",
+    },
+    {
+      id: 23,
+      title: "Lighting Solutions",
+      category: "residential",
+      image: "/interiorImage/residential 11.jpg",
+      description:
+        "<strong>Your Dream Home:</strong> Ambient, task, and accent lighting designed to enhance every space with modern technology and elegant fixtures.",
+      link: "/services/residential/lighting-solutions",
     },
   ];
 
