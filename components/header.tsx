@@ -18,7 +18,7 @@ const navigation = [
       { name: "Commercial Projects", href: "/commercialService" },
       { name: "Renovation", href: "/renovationService" },
       { name: "Interior Design", href: "/interiorService" },
-      { name: "Achitectural Service", href: "/achitecturalService"},
+      { name: "Architectural Service", href: "/architecturalService"},
     ],
   },
   { name: "Our Portfolio", href: "/portfolio" },

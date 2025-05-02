@@ -36,7 +36,7 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="relative py-4 pt-16 pb-16 overflow-hidden">
+    <section className="relative py-4 pt-16 pb-16 mx-2 md:mx-6 overflow-hidden rounded-3xl z-10 shadow-[0_0_80px_30px_rgba(120,119,198,0.6)] before:absolute before:inset-0 before:-z-10 before:rounded-[inherit] before:bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,rgba(120,119,198,0.6),transparent)] before:blur-3xl before:opacity-80">
       <div className="absolute inset-0 z-[-2] bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">

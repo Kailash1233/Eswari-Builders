@@ -191,7 +191,7 @@ export default function WhyChooseUs() {
               {testimonials.map((t, index) => (
                 <div
                   key={index}
-                  className="keen-slider__slide bg-white text-black border border-gray-200 p-6 rounded-xl shadow-md"
+                  className="keen-slider__slide bg-[#F7F7F7] text-black border border-gray-200 p-6 rounded-xl shadow-xl"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(5)].map((_, i) => (

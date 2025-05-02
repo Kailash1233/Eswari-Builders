@@ -1,0 +1,41 @@
+import React from 'react';
+
+export default function StatisticsBar() {
+  const stats = [
+    {
+      value: "6m+",
+      description: "Views of our designs across the web"
+    },
+    {
+      value: "$11c+",
+      description: "Raised by our clients"
+    },
+    {
+      value: "200k+",
+      description: "Users we have shipped designs to"
+    }
+  ];
+
+  return (
+    <div className="w-full bg-white py-28 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col md:pt-6 md:flex-row justify-between items-center gap-8">
+        {stats.map((stat, index) => (
+          <React.Fragment key={index}>
+            <div className="flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0 px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0E0E0E] mb-2">
+                {stat.value}
+              </h2>
+              <p className="text-gray-700 text-lg">
+                {stat.description}
+              </p>
+            </div>
+            
+            {index < stats.length - 1 && (
+              <div className="hidden md:block h-16 w-px bg-gray-300 mx-4"></div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -371,19 +371,9 @@ export default function ServicesCategoryFilter() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
               >
-                {/* Image */}
-                <div className="md:w-1/2 w-full">
-                  <div className="overflow-hidden rounded-2xl shadow-md">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="object-cover w-full h-96 hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
 
-                {/* Text Content */}
-                <div className="md:w-1/2 w-full">
+                 {/* Text Content */}
+                 <div className="md:w-1/2 w-full">
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p
                     className="text-gray-600 leading-relaxed"
@@ -394,6 +384,17 @@ export default function ServicesCategoryFilter() {
                       Learn More
                     </span>
                   </Link> */}
+                </div>
+                
+                {/* Image */}
+                <div className="md:w-1/2 w-full">
+                  <div className="overflow-hidden rounded-2xl shadow-md">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="object-cover w-full h-96 hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
               </motion.div>
             ))}
