@@ -39,9 +39,9 @@ const BrandCarousel = () => {
   }, [isHovered, x]);
 
   return (
-    <section className="p-20">
+    <section className="pt-20 pb-20 md:p-20">
       <div
-        className="relative w-[270px] md:w-[700px] mx-auto overflow-hidden"
+        className="relative w-full md:w-[700px] mx-auto overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

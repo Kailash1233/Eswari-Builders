@@ -50,7 +50,7 @@ const PriceBudgetPackage = {
       ]
     },
     {
-      title: "Materials - Basic Construction",
+      title: "Basic Construction",
       type: "list",
       items: [
         "Cement: ANY ISI BRAND",
@@ -63,7 +63,7 @@ const PriceBudgetPackage = {
       ]
     },
     {
-      title: "Materials - Plumbing & Sanitary",
+      title: "Plumbing & Sanitary",
       type: "list",
       items: [
         "Plumbing (Concealed CPVC): ANY ISI BRAND",
@@ -76,7 +76,7 @@ const PriceBudgetPackage = {
       ]
     },
     {
-      title: "Materials - Doors & Windows",
+      title: "Doors & Windows",
       type: "list",
       items: [
         "Main Door Frame: READYMADE DOOR FRAMES",
@@ -89,7 +89,7 @@ const PriceBudgetPackage = {
       ]
     },
     {
-      title: "Materials - Flooring & Finishing",
+      title: "Flooring & Finishing",
       type: "list",
       items: [
         "Interior Paint: ANY ISI BRAND",
@@ -165,7 +165,7 @@ const standardPackage = {
       ]
     },
     {
-      title: "Materials - Basic Construction",
+      title: "Basic Construction",
       type: "list",
       items: [
         "Cement: ZUARI/NAGAJUNA/PRIYA",
@@ -178,7 +178,7 @@ const standardPackage = {
       ]
     },
     {
-      title: "Materials - Plumbing & Sanitary",
+      title: "Plumbing & Sanitary",
       type: "list",
       items: [
         "Plumbing (Concealed CPVC): SUPREME/JAIN PIPES OR EQUIVALENT",
@@ -191,7 +191,7 @@ const standardPackage = {
       ]
     },
     {
-      title: "Materials - Doors & Windows",
+      title: "Doors & Windows",
       type: "list",
       items: [
         "Main Door Frame: READY MADE TEAK FRAME",
@@ -204,7 +204,7 @@ const standardPackage = {
       ]
     },
     {
-      title: "Materials - Flooring & Finishing",
+      title: "Flooring & Finishing",
       type: "list",
       items: [
         "Interior Paint: ASIAN PAINTS TRACTOR EMULSION",
@@ -285,7 +285,7 @@ const premiumPackage = {
       ]
     },
     {
-      title: "Materials - Basic Construction",
+      title: "Basic Construction",
       type: "list",
       items: [
         "Cement: DALMIA/CHETTINADU/RAMCO",
@@ -298,7 +298,7 @@ const premiumPackage = {
       ]
     },
     {
-      title: "Materials - Plumbing & Sanitary",
+      title: "Plumbing & Sanitary",
       type: "list",
       items: [
         "Plumbing (Concealed CPVC): ARUNACHALA /ASTRAL",
@@ -311,7 +311,7 @@ const premiumPackage = {
       ]
     },
     {
-      title: "Materials - Doors & Windows",
+      title: "Doors & Windows",
       type: "list",
       items: [
         "Main Door Frame: ANY TEAK BELOW 2500/-CFT",
@@ -324,7 +324,7 @@ const premiumPackage = {
       ]
     },
     {
-      title: "Materials - Flooring & Finishing",
+      title: "Flooring & Finishing",
       type: "list",
       items: [
         "Interior Paint: ASIAN PRIMIUM EMULSION OR EQUIVALENT",
@@ -407,7 +407,7 @@ const ElitePackage = {
       ]
     },
     {
-      title: "Materials - Basic Construction",
+      title: "Basic Construction",
       type: "list",
       items: [
         "Cement: DALMIA/ULTRATECH/CHETTINADU",
@@ -420,7 +420,7 @@ const ElitePackage = {
       ]
     },
     {
-      title: "Materials - Plumbing & Sanitary",
+      title: "Plumbing & Sanitary",
       type: "list",
       items: [
         "Plumbing (Concealed CPVC): ASHIRWAD",
@@ -433,7 +433,7 @@ const ElitePackage = {
       ]
     },
     {
-      title: "Materials - Doors & Windows",
+      title: "Doors & Windows",
       type: "list",
       items: [
         "Main Door Frame: ANY TEAK BELOW 3000/-CFT",
@@ -446,7 +446,7 @@ const ElitePackage = {
       ]
     },
     {
-      title: "Materials - Flooring & Finishing",
+      title: "Flooring & Finishing",
       type: "list",
       items: [
         "Interior Paint: ASIAN ACE SHYNE OR BERGER EASY CLEAN",
@@ -529,7 +529,7 @@ const LuxuryPackage = {
       ]
     },
     {
-      title: "Materials - Basic Construction",
+      title: "Basic Construction",
       type: "list",
       items: [
         "Cement: DALMIA/CHETTINADU/ULTRATECH/COROMANDEL",
@@ -542,7 +542,7 @@ const LuxuryPackage = {
       ]
     },
     {
-      title: "Materials - Plumbing & Sanitary",
+      title: "Plumbing & Sanitary",
       type: "list",
       items: [
         "Plumbing (Concealed CPVC): ASHIRWAD/FINOLEX",
@@ -555,7 +555,7 @@ const LuxuryPackage = {
       ]
     },
     {
-      title: "Materials - Doors & Windows",
+      title: "Doors & Windows",
       type: "list",
       items: [
         "Main Door Frame: FIRST QUALITY TEAK ABOVE 4500/-CFT",
@@ -568,7 +568,7 @@ const LuxuryPackage = {
       ]
     },
     {
-      title: "Materials - Flooring & Finishing",
+      title: "Flooring & Finishing",
       type: "list",
       items: [
         "Interior Paint: ROYAL EMULSION OR EQUIVALENT",
@@ -595,7 +595,6 @@ const LuxuryPackage = {
   ]
 };
   
-  // Now combine them in one object
   const ServicePackage = {
     PriceBudgetPackage,
     standardPackage,
