@@ -75,7 +75,7 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="w-full px-4">
+      <div className="w-full">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-2">
@@ -192,7 +192,7 @@ export default function Header() {
                   </Button>
                 </div>
 
-                <nav className="flex flex-col space-y-6">
+                <nav className="flex flex-col space-y-2">
                   {navigation.map((item) => (
                     <div
                       key={item.name}
@@ -206,7 +206,7 @@ export default function Header() {
                               e.stopPropagation();
                               toggleDropDown(item.name);
                             }}
-                            className={`text-xl font-medium flex items-center w-full px-4 py-3 justify-between hover:text-yellow-600 ${
+                            className={`text-md font-medium flex items-center w-full px-4 py-3 justify-between ${
                               activeSection === item.href
                                 ? "bg-[#0E0E0E] text-white w-full"
                                 : ""
@@ -231,14 +231,14 @@ export default function Header() {
                                 : "max-h-0 opacity-0"
                             }`}
                           >
-                            <div className=" w-full px-6 py-4 flex flex-col space-y-3 text-white">
+                            <div className=" w-full px-6 py-4 flex flex-col space-y-2 text-black">
                               {item.subItems?.map((sub) => (
                                 <Link
                                   key={sub.name}
                                   href={sub.href}
-                                  className={`text-base w-full px-4 py-2 hover:text-yellow-600 ${
+                                  className={`text-black w-full px-4 py-2 text-md hover:text-yellow-600 ${
                                     activeSection === sub.href
-                                      ? "font-semibold bg-[#0E0E0E] text-white block w-full"
+                                      ? "font-semibold bg-[#0E0E0E] text-white w-full"
                                       : ""
                                   }`}
                                   onClick={(e) => {
@@ -257,7 +257,7 @@ export default function Header() {
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-                          className={`text-xl hover:text-yellow-600 w-full px-4 py-3 font-medium ${
+                          className={`text-md hover:text-yellow-600 w-full px-4 py-3 font-medium ${
                             activeSection === item.href
                               ? "bg-[#0E0E0E] text-white"
                               : ""
