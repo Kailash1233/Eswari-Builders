@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
 export default function StatisticsBar() {
   const stats = [
     {
-      value: "6m+",
-      description: "Views of our designs across the web"
+      value: "22+",
+      description: "Years of Experience",
     },
     {
-      value: "$11c+",
-      description: "Raised by our clients"
+      value: "300+",
+      description: "Projects Completed",
     },
     {
-      value: "200k+",
-      description: "Users we have shipped designs to"
-    }
+      value: "10+",
+      description: "On-going Projects",
+    },
   ];
 
   return (
@@ -25,11 +25,9 @@ export default function StatisticsBar() {
               <h2 className="text-4xl md:text-5xl font-bold text-[#0E0E0E] mb-2">
                 {stat.value}
               </h2>
-              <p className="text-gray-700 text-lg">
-                {stat.description}
-              </p>
+              <p className="text-gray-700 text-lg">{stat.description}</p>
             </div>
-            
+
             {index < stats.length - 1 && (
               <div className="hidden md:block h-16 w-px bg-gray-300 mx-4"></div>
             )}

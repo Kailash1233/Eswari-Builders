@@ -56,7 +56,7 @@ const slides = [
     });
   
     return (
-      <div className="flex flex-col">
+      <div className="relative overflow-hidden z-10 shadow-[0_0_80px_30px_rgba(120,119,198,0.6)] before:absolute before:inset-0 before:-z-10 before:rounded-[inherit] before:bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,rgba(120,119,198,0.6),transparent)] before:blur-3xl before:opacity-80">
         {/* Hero Section */}
         <section
           className="relative h-screen w-full overflow-hidden bg-black"

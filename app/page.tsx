@@ -1,6 +1,5 @@
 "use client";
 
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Hero from "@/components/hero";
@@ -8,8 +7,7 @@ import BrandCarousel from "@/components/BrandCarousel";
 import ProfileCard from "@/components/Profilecard";
 import WhyChooseUs from "@/components/why-choose-us";
 import FeaturedProjects from "@/components/featured-projects";
-import StatisticsBar from "@/components/stateDisplay"
-
+import ContactForm from "@/components/contactForm"
 
 export default function Home() {
   return (
@@ -17,9 +15,9 @@ export default function Home() {
       <Hero />
       <BrandCarousel />
       <FeaturedProjects />
-      <StatisticsBar />
       <WhyChooseUs />
       <ProfileCard />
+      <ContactForm />
       <section className="py-20 bg-[#0E0E0E] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

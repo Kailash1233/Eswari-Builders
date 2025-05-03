@@ -123,10 +123,6 @@ export default function Header() {
                     href={item.href}
                     className={`font-medium transition-colors duration-300 hover:text-yellow-600 ${
                       isScrolled ? "text-black" : "text-white"
-                    } ${
-                      activeSection === item.href
-                        ? "bg-[#0E0E0E] text-white"
-                        : ""
                     }`}
                   >
                     {item.name}

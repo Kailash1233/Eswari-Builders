@@ -61,7 +61,7 @@ export default function ServicesCategoryFilter() {
       id: 5,
       title: "Wardrobe",
       category: "residential",
-      image: "/interiorImage/residential 1.jpg",
+      image: "/interiorImage/interior 7.jpeg",
       description:
         "<strong>Your Dream Home:</strong> We design wardrobes that blend seamlessly with your space, offering modern, space-saving storage solutions with personalized finishes.",
       link: "/services/residential/wardrobe",
@@ -180,7 +180,7 @@ export default function ServicesCategoryFilter() {
       id: 18,
       title: "Under Stair Closures",
       category: "residential",
-      image: "/interiorImage/residential 6.jpg",
+      image: "/interiorImage/stair 1.jpeg",
       description:
         "<strong>Your Dream Home:</strong> Transform unused stair space into functional storage with custom-built drawers, cabinets, or display units.",
       link: "/services/residential/under-stair-closures",
@@ -189,7 +189,7 @@ export default function ServicesCategoryFilter() {
       id: 19,
       title: "Wall Partition",
       category: "residential",
-      image: "/interiorImage/residential 7.jpg",
+      image: "/interiorImage/interior 2.jpeg",
       description:
         "<strong>Your Dream Home:</strong> Elegant partitions add privacy and style to open spaces—choose from wood, glass, or CNC-cut panels.",
       link: "/services/residential/wall-partition",

@@ -7,7 +7,7 @@ interface PopupProps {
 }
 
 const Popup: React.FC<PopupProps> = ({ isOpen, onClose, title }) => {
-  console.log("Popup isOpen:", isOpen);
+  // console.log("Popup isOpen:", isOpen);
 
   if (!isOpen) return null;
 
@@ -19,13 +19,14 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, title }) => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
 
     const form = new FormData();
     form.append("name", formData.name);
@@ -38,14 +39,14 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, title }) => {
       const response = await fetch("https://formspree.io/f/mayknzaq", {
         method: "POST",
         headers: {
-          "Accept": "application/json",
+          Accept: "application/json",
         },
         body: form,
       });
 
       if (response.ok) {
         console.log("Message sent successfully!");
-        onClose(); 
+        onClose();
       } else {
         console.log("Error submitting message:", response.statusText);
       }
@@ -59,10 +60,13 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, title }) => {
       {/* <div className="bg-white w-[500px] h-[] rounded-lg shadow-xl max-w-md w-full"> */}
       <div className="bg-white rounded-lg bg-opacity-90 backdrop-blur-[10px] shadow-xl p-6 w-[90%] sm:max-w-md">
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-bold">
-            EswariBuilder
-          </h1>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700 text-2xl">×</button>
+          <h1 className="text-2xl font-bold">Eswari Builders</h1>
+          <button
+            onClick={onClose}
+            className="text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            ×
+          </button>
         </div>
         <div className="py-2 md:pb-6">
           <h2 className="text-xl font-bold">
@@ -78,7 +82,9 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, title }) => {
               name={field}
               value={(formData as any)[field]}
               onChange={handleChange}
-              placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
+              placeholder={`Your ${
+                field.charAt(0).toUpperCase() + field.slice(1)
+              }`}
               className="w-full bg-transparent border-b border-gray-300 focus:outline-none focus:border-black py-2"
               required
             />
@@ -104,13 +110,12 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, title }) => {
           </div>
         </form>
       </div>
-      </div>
+    </div>
     // </div>
   );
 };
 
 export default Popup;
-
 
 // import React, { useState, useEffect } from "react";
 

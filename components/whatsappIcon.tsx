@@ -12,10 +12,10 @@ const WhatsAppButton = () => {
       setShowButton(scrolled);
 
       if (scrolled) {
-        setShowText(false); 
-        setTimeout(() => setShowText(true), 800); 
+        setShowText(false);
+        setTimeout(() => setShowText(true), 800);
       } else {
-        setShowText(false); 
+        setShowText(false);
       }
     };
 
@@ -23,9 +23,9 @@ const WhatsAppButton = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const whatsappNumber = "YOUR_NUMBER";
+  const whatsappNumber = "919092097190";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
-  const instagramLink = "https://www.instagram.com/YOUR_USERNAME";
+  const instagramLink = "https://www.instagram.com/eswaribuilderspy";
 
   return (
     <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10 z-50 flex flex-col md:flex-row items-center gap-2 md:gap-3">
@@ -50,9 +50,9 @@ const WhatsAppButton = () => {
         }`}
       >
         <img
-          src="/Whatsapp.png"
+          src="/WhatsApp_icon.png"
           alt="WhatsApp"
-          className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 drop-shadow-lg hover:scale-110 transition-transform"
+          className="w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 drop-shadow-lg hover:scale-110 transition-transform"
         />
       </a>
 
@@ -68,7 +68,7 @@ const WhatsAppButton = () => {
         <img
           src="/Instagram.png"
           alt="Instagram"
-          className="w-12 h-12 lg:w-14 lg:h-14 drop-shadow-lg hover:scale-110 transition-transform"
+          className="w-10 h-10 lg:w-12 lg:h-12 drop-shadow-lg hover:scale-110 transition-transform"
         />
       </a>
     </div>
