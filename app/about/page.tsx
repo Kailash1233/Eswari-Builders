@@ -239,9 +239,15 @@ export default function AboutPage() {
                 image: "/team/Rajendran.jpg",
               },
               {
+                name: "Hema",
+                role: "Architect",
+                desc: "Plans, designs, and oversees the construction of buildings.",
+                image: "/team/Hema.jpg",
+              },
+              {
                 name: "Siddique",
-                role: "Site Engineer",
-                desc: "Ensures on-site operations are smooth and precise.",
+                role: "Designing Partner (BODMAS DESIGNS)",
+                desc: "Designs and implements the building's exterior and interior.",
                 image: "/team/Siddique.jpg",
               },
             ].map((member, index) => (

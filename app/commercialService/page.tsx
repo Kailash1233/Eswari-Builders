@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Building, Calculator, ClipboardList } from "lucide-react";
-import ConstructionPackages from "@/components/ResidentialProjects";
+// import ConstructionPackages from "@/components/ResidentialProjects";
 import { motion } from "framer-motion";
 
 const constructionServices = [
@@ -23,7 +23,7 @@ const constructionServices = [
   },
   {
     icon: <Building className="h-10 w-10" />,
-    title: "construction",
+    title: "Construction",
     description:
       "Reliable and efficient construction services to bring your architectural visions to life.",
   },
@@ -179,12 +179,10 @@ export default function ServicesPage() {
               variants={fadeInUp}
               className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
             >
-              <h3 className="text-3xl text-white font-bold mb-4">
-                Medical Centers
-              </h3>
+              <h3 className="text-3xl text-white font-bold mb-4">Clinics</h3>
               <p className="text-white ">
-                <strong>Healthcare Spaces:</strong> From hospitals and clinics
-                to testing laboratories, we support the establishment of medical
+                <strong>Clinics:</strong> From hospitals and clinics to testing
+                laboratories, we support the establishment of medical
                 enterprises by adhering to government regulations and
                 accreditation standards, ensuring a safe and functional
                 healthcare environment.
@@ -196,13 +194,13 @@ export default function ServicesPage() {
             >
               <img
                 src="/interiorImage/img 3.jpg"
-                alt="Medical Center"
+                alt="Clinics"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
             </motion.div>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -235,41 +233,7 @@ export default function ServicesPage() {
                 recreation.
               </p>
             </motion.div>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
-          >
-            <motion.div
-              variants={fadeInUp}
-              className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
-            >
-              <h3 className="text-3xl text-white font-bold mb-4">
-                Hotels / Resorts
-              </h3>
-              <p className="text-white">
-                <strong>Premium Retreats : </strong> We specialize in designing
-                hotels and resorts that turn every stay into a memorable
-                experience. Whether it’s a lavish getaway or a cozy retreat, our
-                spaces are crafted to offer comfort, style, and a warm,
-                welcoming atmosphere for all types of travelers.
-              </p>
-            </motion.div>
-            <motion.div
-              variants={fadeInUp}
-              className="overflow-hidden rounded-2xl shadow-md"
-            >
-              <img
-                src="/interiorImage/img 9.jpg"
-                alt="Medical Center"
-                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
-              />
-            </motion.div>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             variants={containerVariants}
@@ -317,6 +281,50 @@ export default function ServicesPage() {
               className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
             >
               <h3 className="text-3xl text-white font-bold mb-4">
+                Hotels / Resorts
+              </h3>
+              <p className="text-white">
+                <strong>Premium Retreats : </strong> We specialize in designing
+                hotels and resorts that turn every stay into a memorable
+                experience. Whether it’s a lavish getaway or a cozy retreat, our
+                spaces are crafted to offer comfort, style, and a warm,
+                welcoming atmosphere for all types of travelers.
+              </p>
+            </motion.div>
+            <motion.div
+              variants={fadeInUp}
+              className="overflow-hidden rounded-2xl shadow-md"
+            >
+              <img
+                src="/interiorImage/img 9.jpg"
+                alt="Medical Center"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-8 mb-16 items-center place-item-center"
+          >
+            <motion.div
+              variants={fadeInUp}
+              className="overflow-hidden rounded-2xl shadow-md"
+            >
+              <img
+                src="/interiorImage/img 5.jpg"
+                alt="Medical Center"
+                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
+              />
+            </motion.div>
+            <motion.div
+              variants={fadeInUp}
+              className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
+            >
+              <h3 className="text-3xl text-white font-bold mb-4">
                 Business Innovation Centers
               </h3>
               <p className="text-white">
@@ -327,16 +335,6 @@ export default function ServicesPage() {
                 functional and inspiring environments that foster learning,
                 service, and community engagement.
               </p>
-            </motion.div>
-            <motion.div
-              variants={fadeInUp}
-              className="overflow-hidden rounded-2xl shadow-md"
-            >
-              <img
-                src="/interiorImage/img 5.jpg"
-                alt="Medical Center"
-                className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
-              />
             </motion.div>
           </motion.div>
         </div>

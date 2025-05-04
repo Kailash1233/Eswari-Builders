@@ -13,25 +13,25 @@ export default function ArchitecturalPricingTable() {
   const packages = [
     {
       name: "Basic",
-      price: "₹45 per sqft",
+      price: "₹40 per sqft",
       description: "Concept Design",
       workingDays: "5 Working Days",
     },
     {
       name: "Standard",
-      price: "₹95 per sqft",
+      price: "₹90 per sqft",
       description: "Concept Design + Working Drawings",
       workingDays: "20 Working Days",
     },
     {
       name: "Premium",
-      price: "₹165 per sqft",
+      price: "₹150 per sqft",
       description: "Concept Design + Working Drawings + Interior",
       workingDays: "30 Working Days",
     },
     {
       name: "Ultra Premium",
-      price: "₹240 per sqft",
+      price: "₹225 per sqft",
       description:
         "Concept Design + Working Drawings + Interior + Material Selection",
       workingDays: "45 Working Days",
@@ -290,7 +290,7 @@ export default function ArchitecturalPricingTable() {
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            Our Portfolio
+            Our Architectural Services
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -298,11 +298,11 @@ export default function ArchitecturalPricingTable() {
             transition={{ duration: 2, delay: 0.3 }}
             className="text-xl text-white/90 max-w-2xl"
           >
-            Explore our completed projects and see the quality of our work.
+            We offer a wide range of architectural services to suit your needs.
           </motion.p>
         </div>
       </section>
-      
+
       <div className="container mx-auto px-4 md:px-20 py-12">
         {/* Render different views based on screen size */}
         <div className="hidden md:block">

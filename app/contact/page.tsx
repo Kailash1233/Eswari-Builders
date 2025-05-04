@@ -278,7 +278,7 @@ export default function ContactPage() {
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="bg-header rounded-xl shadow-lg hover:shadow-lg transition-shadow p-4 text-center"
+                    className="bg-[#0E0E0E] rounded-xl shadow-lg hover:shadow-lg transition-shadow p-4 text-center"
                   >
                     <img
                       src={item.icon}

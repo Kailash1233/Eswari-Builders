@@ -11,7 +11,7 @@ export default function ServicesCategoryFilter() {
   const categories = [
     { id: "all", name: "All Services" },
     { id: "commercial", name: "Commercial Interior" },
-    { id: "residential", name: "Residencial Interior" },
+    { id: "residential", name: "Residential Interior" },
     { id: "Home Decors", name: "Home Decors Solutions" },
     { id: "Turnkey Projects", name: "Turnkey Projects" },
     { id: "Balcony ideas", name: "Balcony ideas" },
@@ -242,13 +242,17 @@ export default function ServicesCategoryFilter() {
   };
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.9, ease: "easeOut" },
-    },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
+
+  const filteredServices =
+    activeCategory === "all"
+      ? services
+      : services.filter(
+          (service) =>
+            service.category.toLowerCase() === activeCategory.toLowerCase()
+        );
 
   const fadeInDown = {
     hidden: { opacity: 0, y: -40 },
@@ -281,8 +285,6 @@ export default function ServicesCategoryFilter() {
     }
   };
 
-  const filteredServices = getFilteredServices();
-
   return (
     <div>
       <section className="relative h-[80vh] w-full">
@@ -302,7 +304,7 @@ export default function ServicesCategoryFilter() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            Interior Service
+            Our Interior Service
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -310,8 +312,7 @@ export default function ServicesCategoryFilter() {
             transition={{ duration: 2, delay: 0.3 }}
             className="text-xl text-white/90 max-w-2xl"
           >
-            Comprehensive construction and interior design services tailored to
-            your needs.
+            Comprehensive Interior design services tailored to your needs.
           </motion.p>
         </div>
       </section>
@@ -323,7 +324,7 @@ export default function ServicesCategoryFilter() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Our Interior service
+            Our Interior services
           </motion.h2>
 
           {/* Category Filter Buttons */}
@@ -371,9 +372,8 @@ export default function ServicesCategoryFilter() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
               >
-
-                 {/* Text Content */}
-                 <div className="md:w-1/2 w-full">
+                {/* Text Content */}
+                <div className="md:w-1/2 w-full">
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p
                     className="text-gray-600 leading-relaxed"
@@ -385,7 +385,7 @@ export default function ServicesCategoryFilter() {
                     </span>
                   </Link> */}
                 </div>
-                
+
                 {/* Image */}
                 <div className="md:w-1/2 w-full">
                   <div className="overflow-hidden rounded-2xl shadow-md">
