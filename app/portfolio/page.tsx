@@ -69,7 +69,7 @@ export default function PortfolioPage() {
             }}
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            {["All", "ongoing", "completed"].map((type) => (
+            {["All", "ongoing", "completed", "proposed"].map((type) => (
               <motion.div
                 key={type}
                 variants={{
@@ -96,7 +96,12 @@ export default function PortfolioPage() {
                     ? "OnGoing Project"
                     : type === "completed"
                     ? "Completed Project"
-                    : "All Projects"}
+                    : type === "All"
+                    ? "All Project"
+                    : type === "proposed"
+                    ? "Proposed Project"
+                    : ""
+                    }
                 </Button>
               </motion.div>
             ))}

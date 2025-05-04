@@ -94,4 +94,84 @@ export const projects = [
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
+  {
+    id: 10,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 8.jpg",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
+  {
+    id: 11,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 7.jpg",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
+  {
+    id: 12,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 6.jpg",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
+  {
+    id: 13,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 1.jpg",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
+  {
+    id: 14,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 2.png",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
+  {
+    id: 15,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 3.jpg",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
+  {
+    id: 16,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 4.jpg",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
+  {
+    id: 17,
+    mapTitle: "proposed",
+    title: "Duplex Home",
+    location: "Chennai",
+    category: "Residential",
+    image: "/projectStatus/Proposed 5.jpg",
+    description:
+      "A spacious duplex home with modern amenities and custom interiors.",
+  },
 ];

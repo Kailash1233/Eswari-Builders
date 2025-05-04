@@ -211,7 +211,8 @@ export default function AboutPage() {
           >
             Our Expert Team
           </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="flex flex-wrap justify-center gap-8">
             {[
               {
                 name: "Sathya",
@@ -237,6 +238,12 @@ export default function AboutPage() {
                 desc: "Ensures on-site operations are smooth and precise.",
                 image: "/team/Rajendran.jpg",
               },
+              {
+                name: "Siddique",
+                role: "Site Engineer",
+                desc: "Ensures on-site operations are smooth and precise.",
+                image: "/team/Siddique.jpg",
+              },
             ].map((member, index) => (
               <motion.div
                 key={index}
@@ -245,14 +252,14 @@ export default function AboutPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#FFFFFF] rounded-2xl p-6 shadow-sm"
+                className="w-full sm:w-1/2 lg:w-1/4 bg-white rounded-2xl p-6 shadow-sm"
               >
                 <div className="relative h-[300px] w-full mb-4">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover rounded-sm"
+                    className="object-cover rounded-md object-top md:object-center"
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>

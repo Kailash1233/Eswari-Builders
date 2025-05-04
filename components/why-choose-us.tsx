@@ -5,6 +5,7 @@ import "keen-slider/keen-slider.min.css";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import StatisticsBar from "./stateDisplay";
+import GoogleReviewsWidget from "google-reviews-widget";
 
 const testimonials = [
   {
@@ -107,7 +108,11 @@ export default function WhyChooseUs() {
           {/* Lighting Design */}
           <div className="space-y-4">
             <div className="h-16 w-16">
-            <img src="/interiorImage/lighting.png" alt="Lighting design" className="w-18 h-18" />
+              <img
+                src="/interiorImage/lighting.png"
+                alt="Lighting design"
+                className="w-18 h-18"
+              />
             </div>
             <h3 className="text-xl font-semibold">Lighting Design</h3>
             <p className="text-gray-700 leading-relaxed">
@@ -119,7 +124,11 @@ export default function WhyChooseUs() {
           {/* Interior Design */}
           <div className="space-y-4">
             <div className="h-16 w-16">
-            <img src="/interior-design.png" alt="Lighting design" className="w-18 h-18" />
+              <img
+                src="/interior-design.png"
+                alt="Lighting design"
+                className="w-18 h-18"
+              />
             </div>
             <h3 className="text-xl font-semibold">Interior Design</h3>
             <p className="text-gray-700 leading-relaxed">
@@ -131,7 +140,11 @@ export default function WhyChooseUs() {
           {/* Outdoor Design */}
           <div className="space-y-4">
             <div className="h-16 w-16">
-            <img src="/outdoor.png" alt="Lighting design" className="w-18 h-18" />
+              <img
+                src="/outdoor.png"
+                alt="Lighting design"
+                className="w-18 h-18"
+              />
             </div>
             <h3 className="text-xl font-semibold">Outdoor Design</h3>
             <p className="text-gray-700 leading-relaxed">
@@ -150,88 +163,14 @@ export default function WhyChooseUs() {
             <br /> Say About Us
           </h2>
 
-          <div className="relative">
-            <div ref={sliderRef} className="keen-slider">
-              {testimonials.map((t, index) => (
-                <div
-                  key={index}
-                  className="keen-slider__slide bg-[#F7F7F7] text-black border border-gray-200 p-6 rounded-xl shadow-xl"
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className="h-5 w-5 fill-current text-yellow-400"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-black/80 mb-6">"{t.review}"</p>
-                  <div className="flex items-center">
-                    <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
-                      <Image
-                        src="/Pro.png"
-                        alt={`Client ${t.name}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-bold">{t.name}</h4>
-                      <p className="text-black/60 text-sm">{t.project}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Arrows */}
-            {loaded && instanceRef.current && (
-              <>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    instanceRef.current?.prev();
-                  }}
-                  className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-md hover:bg-gray-800 z-10"
-                >
-                  <ChevronLeft />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    instanceRef.current?.next();
-                  }}
-                  className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-md hover:bg-gray-800 z-10"
-                >
-                  <ChevronRight />
-                </button>
-              </>
-            )}
-          </div>
-
-          {/* Dots */}
-          {loaded && instanceRef.current && (
-            <div className="flex justify-center mt-8 gap-2">
-              {[
-                ...Array(
-                  instanceRef.current.track.details.slides.length
-                ).keys(),
-              ].map((idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    instanceRef.current?.moveToIdx(idx);
-                  }}
-                  className={`h-3 w-3 rounded-full ${
-                    currentSlide === idx ? "bg-black" : "bg-gray-300"
-                  }`}
-                />
-              ))}
-            </div>
-          )}
+          <script
+            src="https://static.elfsight.com/platform/platform.js"
+            async
+          ></script>
+          <div
+            className="elfsight-app-941731ae-9c03-4dd7-b90d-ca8397334f06"
+            data-elfsight-app-lazy
+          ></div>
         </div>
       </section>
     </>
