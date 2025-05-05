@@ -176,7 +176,7 @@ export const projects = [
   },
   {
     id: 18,
-    title: "House",
+    title: "Modern Home",
     mapTitle: "ongoing",
     location: "Pondicherry",
     category: "Residential",
