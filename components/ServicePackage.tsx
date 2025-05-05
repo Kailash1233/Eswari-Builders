@@ -16,7 +16,6 @@ const PriceBudgetPackage = {
       title: "Design",
       type: "list",
       items: [
-        "SCHEME DRAWING : ALL FLOORS (2D)",
         "ELEVATION DESIGN : (3D)",
         "HALF LAYOUT : ALL FLOORS (3D)",
         "ELECTRICAL DRAWINGS : ALL FLOORS (2D)",

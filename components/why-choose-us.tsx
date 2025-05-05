@@ -5,7 +5,7 @@ import "keen-slider/keen-slider.min.css";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import StatisticsBar from "./stateDisplay";
-import GoogleReviewsWidget from "google-reviews-widget";
+
 
 const testimonials = [
   {
@@ -156,9 +156,9 @@ export default function WhyChooseUs() {
       </section>
       <StatisticsBar />
 
-      <section className="md:pb-20 md:p-16 pb-20 bg-white text-black relative">
+      <section className="md:pb-20 md:p-16 pb-20 bg-[#0E0E0E] text-black relative">
         <div className="container mx-auto px-4">
-          <h2 className="md:text-5xl text-4xl font-bold mb-12 font-merriweather-sans">
+          <h2 className="md:text-5xl text-4xl font-bold mb-12 text-white font-merriweather-sans">
             What Our Customers
             <br /> Say About Us
           </h2>

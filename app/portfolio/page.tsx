@@ -80,9 +80,9 @@ export default function PortfolioPage() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.6,  
-                  delay: 0.2,    
-                  ease: "easeOut"
+                  duration: 0.6,
+                  delay: 0.2,
+                  ease: "easeOut",
                 }}
               >
                 <Button
@@ -100,8 +100,7 @@ export default function PortfolioPage() {
                     ? "All Project"
                     : type === "proposed"
                     ? "Proposed Project"
-                    : ""
-                    }
+                    : ""}
                 </Button>
               </motion.div>
             ))}
@@ -119,7 +118,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-[#121212] text-white">
+      <section className="py-20 bg-[#0E0E0E] text-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -130,7 +129,7 @@ export default function PortfolioPage() {
             What Our Clients Say
           </motion.h2>
 
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -189,7 +188,16 @@ export default function PortfolioPage() {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
+        
+          <script
+            src="https://static.elfsight.com/platform/platform.js"
+            async
+          ></script>
+          <div
+            className="elfsight-app-941731ae-9c03-4dd7-b90d-ca8397334f06"
+            data-elfsight-app-lazy
+          ></div>
         </div>
       </section>
 
