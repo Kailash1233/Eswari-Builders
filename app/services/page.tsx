@@ -70,7 +70,7 @@ export default function ServicesPage() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            Our Services
+            Our Residential Services
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -78,8 +78,8 @@ export default function ServicesPage() {
             transition={{ duration: 2, delay: 0.3 }}
             className="text-xl text-white/90 max-w-2xl"
           >
-            Comprehensive construction and interior design services tailored to
-            your needs.
+            Complete residential construction and interior design solutions crafted to match your lifestyle, 
+            comfort, and aesthetic preferences.
           </motion.p>
         </div>
       </section>

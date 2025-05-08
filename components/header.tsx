@@ -15,10 +15,10 @@ const navigation = [
     href: "/services",
     dropdown: true,
     subItems: [
-      { name: "Residential Construction", href: "/services" },
-      { name: "Commercial Projects", href: "/commercialService" },
-      { name: "Renovation", href: "/renovationService" },
-      { name: "Interior Design", href: "/interiorService" },
+      { name: "Residential Services", href: "/services" },
+      { name: "Commercial Services", href: "/commercialService" },
+      { name: "Renovation Services", href: "/renovationService" },
+      { name: "Interior Design Services", href: "/interiorService" },
       { name: "Architectural Service", href: "/architecturalService" },
     ],
   },
@@ -141,7 +141,7 @@ export default function Header() {
                       <Link
                         key={sub.name}
                         href={sub.href}
-                        className="block py-2 px-2 rounded  hover:bg-gray-100 text-sm"
+                        className="block py-2 px-2 rounded  hover:bg-gray-100 text-sm accordion block border-b border-gray-300 pb-2 mb-2"
                         onClick={() => setActiveDropDown(null)}
                       >
                         {sub.name}

@@ -1,14 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import { X } from "lucide-react";
 
 export const projects = [
   {
     id: 1,
-    title: "Modern Residence",
-    mapTitle: "completed",
-    location: "Pondicherry",
+    title: "Vinoth Krishnan Residence",
+    mapTitle: "Completed",
+    location: "Uruvaiyar",
     category: "Residential",
     image: "/projectStatus/completed 1.jpg",
     description:
@@ -16,19 +14,19 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Commercial Complex",
-    mapTitle: "completed",
-    location: "Chennai",
-    category: "Commercial",
+    title: "Thirukumaran Residence",
+    mapTitle: "Completed",
+    location: "Thavalakuppam",
+    category: "Residential",
     image: "/projectStatus/completed 2.jpg",
     description:
       "A multi-story commercial complex with modern amenities and sustainable features.",
   },
   {
     id: 3,
-    title: "Luxury Villa",
-    mapTitle: "completed",
-    location: "Pondicherry",
+    title: "Shankar Residence",
+    mapTitle: "Completed",
+    location: "Chennai",
     category: "Residential",
     image: "/projectStatus/completed 3.jpg",
     description:
@@ -36,19 +34,19 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Office Renovation",
-    mapTitle: "completed",
-    location: "Bangalore",
-    category: "Commercial",
+    title: "Sasirekha Residence",
+    mapTitle: "Completed",
+    location: "Puducherry",
+    category: "Residential",
     image: "/projectStatus/completed 4.jpg",
     description:
       "Complete renovation of a corporate office space with modern interiors.",
   },
   {
     id: 5,
-    title: "Apartment Building",
-    mapTitle: "ongoing",
-    location: "Pondicherry",
+    title: "Sridharan Residence",
+    mapTitle: "Ongoing",
+    location: "Pinnachikuppam",
     category: "Residential",
     image: "/projectStatus/Ongoing 1.jpg",
     description:
@@ -56,38 +54,38 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Retail Store",
-    mapTitle: "completed",
-    location: "Chennai",
-    category: "Commercial",
+    title: "Ramesh Residence",
+    mapTitle: "Completed",
+    location: "Pondicherry",
+    category: "Residential",
     image: "/projectStatus/completed 5.jpg",
     description:
       "A high-end retail store with custom interiors and display solutions.",
   },
   {
     id: 7,
-    title: "Beach House",
-    mapTitle: "onging",
+    title: "Vijayaghavan  Residence",
+    mapTitle: "Ongoing",
     location: "Pondicherry",
     category: "Residential",
-    image: "/projectStatus/Ongoing 1.jpg",
+    image: "/projectStatus/Vijayaghavan - Bussy Street Commercial (Ongoing).jpg",
     description:
       "A modern beach house with panoramic ocean views and sustainable design.",
   },
   {
     id: 8,
-    title: "Restaurant Design",
-    mapTitle: "completed",
+    title: "Mohammad Rafek residence",
+    mapTitle: "Completed",
     location: "cuddalore",
-    category: "Commercial",
+    category: "Residential",
     image: "/projectStatus/completed 6.jpg",
     description:
       "Complete interior design for a fine dining restaurant with custom furniture.",
   },
   {
     id: 9,
-    mapTitle: "ongoing",
-    title: "Duplex Home",
+    mapTitle: "Ongoing",
+    title: "Ganesh Residence",
     location: "Chennai",
     category: "Residential",
     image: "/projectStatus/Ongoing 2.jpg",
@@ -96,9 +94,9 @@ export const projects = [
   },
   {
     id: 10,
-    mapTitle: "proposed",
-    title: "Duplex Home",
-    location: "Chennai",
+    mapTitle: "Proposed",
+    title: "Diwakar Residence",
+    location: "Cuddalore",
     category: "Residential",
     image: "/projectStatus/Proposed 8.jpg",
     description:
@@ -106,8 +104,8 @@ export const projects = [
   },
   {
     id: 11,
-    mapTitle: "proposed",
-    title: "Duplex Home",
+    mapTitle: "Proposed",
+    title: "Ganesh Residence",
     location: "Chennai",
     category: "Residential",
     image: "/projectStatus/Proposed 7.jpg",
@@ -116,9 +114,9 @@ export const projects = [
   },
   {
     id: 12,
-    mapTitle: "proposed",
-    title: "Duplex Home",
-    location: "Chennai",
+    mapTitle: "Proposed",
+    title: "Karthik residence",
+    location: "Karuvaikuppam",
     category: "Residential",
     image: "/projectStatus/Proposed 6.jpg",
     description:
@@ -126,9 +124,9 @@ export const projects = [
   },
   {
     id: 13,
-    mapTitle: "proposed",
-    title: "Duplex Home",
-    location: "Chennai",
+    mapTitle: "Proposed",
+    title: "Vignesh Residence",
+    location: "Coimbatore",
     category: "Residential",
     image: "/projectStatus/Proposed 1.jpg",
     description:
@@ -136,9 +134,9 @@ export const projects = [
   },
   {
     id: 14,
-    mapTitle: "proposed",
-    title: "Duplex Home",
-    location: "Chennai",
+    mapTitle: "Proposed",
+    title: "Uma Maheswari Residence",
+    location: "Villupuram",
     category: "Residential",
     image: "/projectStatus/Proposed 2.png",
     description:
@@ -146,9 +144,9 @@ export const projects = [
   },
   {
     id: 15,
-    mapTitle: "proposed",
-    title: "Duplex Home",
-    location: "Chennai",
+    mapTitle: "Proposed",
+    title: "Uma Maheswari Residence",
+    location: "Villupuram",
     category: "Residential",
     image: "/projectStatus/Proposed 3.jpg",
     description:
@@ -156,9 +154,9 @@ export const projects = [
   },
   {
     id: 16,
-    mapTitle: "proposed",
-    title: "Duplex Home",
-    location: "Chennai",
+    mapTitle: "Proposed",
+    title: "Sathya Residence",
+    location: "Villupuram",
     category: "Residential",
     image: "/projectStatus/Proposed 4.jpg",
     description:
@@ -166,9 +164,9 @@ export const projects = [
   },
   {
     id: 17,
-    mapTitle: "proposed",
-    title: "Duplex Home",
-    location: "Chennai",
+    mapTitle: "Proposed",
+    title: "Murali Residence",
+    location: "Benglore",
     category: "Residential",
     image: "/projectStatus/Proposed 5.jpg",
     description:
@@ -176,9 +174,9 @@ export const projects = [
   },
   {
     id: 18,
-    title: "Modern Home",
-    mapTitle: "ongoing",
-    location: "Pondicherry",
+    title: "Dr sivani Jonathan Residence",
+    mapTitle: "Ongoing",
+    location: "Villianur",
     category: "Residential",
     image: "/projectStatus/Ongoing 3.jpg",
     description:
@@ -186,8 +184,8 @@ export const projects = [
   },
   {
     id: 19,
-    title: "Beach",
-    mapTitle: "ongoing",
+    title: "Bavani Residence",
+    mapTitle: "Ongoing",
     location: "Pondicherry",
     category: "Residential",
     image: "/projectStatus/Ongoing 4.jpg",

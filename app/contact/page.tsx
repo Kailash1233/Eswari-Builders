@@ -1,13 +1,26 @@
 "use client";
 
 import type React from "react";
-
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+
+// Animation variant
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -31,13 +44,11 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
 
-      // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
@@ -69,10 +80,14 @@ export default function ContactPage() {
       {/* Contact Form & Info */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          {/* Two-Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
               <p className="text-gray-700 mb-8">
                 Fill out the form below and we'll get back to you as soon as
@@ -90,7 +105,6 @@ export default function ContactPage() {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name */}
                 <div>
                   <label
                     htmlFor="name"
@@ -108,7 +122,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Email */}
                 <div>
                   <label
                     htmlFor="email"
@@ -127,7 +140,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Phone */}
                 <div>
                   <label
                     htmlFor="phone"
@@ -146,7 +158,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Message */}
                 <div>
                   <label
                     htmlFor="message"
@@ -164,7 +175,6 @@ export default function ContactPage() {
                   />
                 </div>
 
-                {/* Submit Button */}
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -173,10 +183,15 @@ export default function ContactPage() {
                   {isSubmitting ? "Sending..." : "Get a Quote"}
                 </Button>
               </form>
-            </div>
+            </motion.div>
 
             {/* Contact Info */}
-            <div>
+            <motion.div
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
               <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
               <p className="text-gray-700 mb-8">
                 Feel free to reach out to us using any of the contact methods
@@ -184,7 +199,6 @@ export default function ContactPage() {
               </p>
 
               <div className="space-y-6">
-                {/* Address */}
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -198,7 +212,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Phone */}
                 <div className="flex items-start">
                   <Phone className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -208,7 +221,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div className="flex items-start">
                   <Mail className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -216,11 +228,9 @@ export default function ContactPage() {
                     <p className="text-gray-700">
                       eswaribuilders2018@gmail.com
                     </p>
-                    {/* <p className="text-gray-700">contact@eswaribuilders.com</p> */}
                   </div>
                 </div>
 
-                {/* Working Hours */}
                 <div className="flex items-start">
                   <Clock className="h-6 w-6 mr-4 mt-1" />
                   <div>
@@ -233,7 +243,7 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="mt-16 relative w-full h-[300px]">
@@ -247,7 +257,14 @@ export default function ContactPage() {
             />
           </div>
 
-          <section className="py-16 bg-white">
+          {/* Office Locations */}
+          <motion.section
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="py-16 bg-white"
+          >
             <div className="container mx-auto px-4 text-center">
               <h2 className="text-2xl font-semibold mb-10">
                 Our Office Locations
@@ -291,7 +308,7 @@ export default function ContactPage() {
                 ))}
               </div>
             </div>
-          </section>
+          </motion.section>
         </div>
       </section>
     </div>
