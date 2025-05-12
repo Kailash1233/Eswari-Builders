@@ -277,7 +277,7 @@ export default function ArchitecturalPricingTable() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/4_slide.jpg"
+          src="/slider/4_slide.webp"
           alt="Our Portfolio"
           fill
           className="object-cover"

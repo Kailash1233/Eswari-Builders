@@ -12,7 +12,7 @@ export default function ProfileCard() {
           {/* Image on the left */}
           <div className="relative w-full h-[450px] rounded-[30px] overflow-hidden">
             <Image
-              src="/team/Prabhu.jpg"
+              src="/team/Prabhu.webp"
               alt="Prabhu Ram N"
               fill
               className="object-cover rounded-[30px]"

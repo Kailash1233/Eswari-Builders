@@ -61,7 +61,7 @@ export default function ContactPage() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/3.jpg"
+          src="/slider/3.webp"
           alt="Contact Us"
           fill
           className="object-cover"

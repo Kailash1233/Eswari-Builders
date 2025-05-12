@@ -55,7 +55,7 @@ export default function ServicesPage() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/10_slide.jpg"
+          src="/slider/10_slide.webp"
           alt="Our Services"
           fill
           className="object-cover"
@@ -129,7 +129,7 @@ export default function ServicesPage() {
             <motion.div variants={fadeInUp} className=" w-full">
               <div className="overflow-hidden rounded-2xl shadow-md">
                 <img
-                  src="/interiorImage/img 1.jpg"
+                  src="/interiorImage/img 1.webp"
                   alt="IT Office Space"
                   className="object-cover rounded-lg shadow-lg w-full h-80 md:h-96 hover:scale-105 transition-transform duration-500"
                 />
@@ -149,7 +149,7 @@ export default function ServicesPage() {
               variants={fadeInUp}
             >
               <img
-                src="/interiorImage/img 2.jpg"
+                src="/interiorImage/img 2.webp"
                 alt="IT Office Space"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
@@ -193,7 +193,7 @@ export default function ServicesPage() {
               className="overflow-hidden rounded-2xl shadow-md"
             >
               <img
-                src="/interiorImage/img 3.jpg"
+                src="/interiorImage/img 3.webp"
                 alt="Clinics"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
@@ -212,7 +212,7 @@ export default function ServicesPage() {
               className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md"
             >
               <img
-                src="/interiorImage/img 7.jpg"
+                src="/interiorImage/img 7.webp"
                 alt="Sports Center"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
@@ -247,7 +247,7 @@ export default function ServicesPage() {
               className="order-2 md:order-1 overflow-hidden rounded-2xl shadow-md"
             >
               <img
-                src="/interiorImage/img 6.jpg"
+                src="/interiorImage/img 6.webp"
                 alt="Sports Center"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
@@ -296,7 +296,7 @@ export default function ServicesPage() {
               className="overflow-hidden rounded-2xl shadow-md"
             >
               <img
-                src="/interiorImage/img 9.jpg"
+                src="/interiorImage/img 9.webp"
                 alt="Medical Center"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />
@@ -315,7 +315,7 @@ export default function ServicesPage() {
               className="overflow-hidden rounded-2xl shadow-md"
             >
               <img
-                src="/interiorImage/img 5.jpg"
+                src="/interiorImage/img 5.webp"
                 alt="Medical Center"
                 className="object-cover rounded-lg shadow-lg w-full h-96 hover:scale-105 transition-transform duration-500"
               />

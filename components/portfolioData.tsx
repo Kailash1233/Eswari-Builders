@@ -1,6 +1,5 @@
 "use client";
 
-
 export const projects = [
   {
     id: 1,
@@ -8,7 +7,7 @@ export const projects = [
     mapTitle: "Completed",
     location: "Uruvaiyar",
     category: "Residential",
-    image: "/projectStatus/completed 1.jpg",
+    image: "/projectStatus/completed 1.webp",
     description:
       "A contemporary 3-bedroom residence with open floor plan and minimalist design.",
   },
@@ -18,7 +17,7 @@ export const projects = [
     mapTitle: "Completed",
     location: "Thavalakuppam",
     category: "Residential",
-    image: "/projectStatus/completed 2.jpg",
+    image: "/projectStatus/completed 2.webp",
     description:
       "A multi-story commercial complex with modern amenities and sustainable features.",
   },
@@ -28,7 +27,7 @@ export const projects = [
     mapTitle: "Completed",
     location: "Chennai",
     category: "Residential",
-    image: "/projectStatus/completed 3.jpg",
+    image: "/projectStatus/completed 3.webp",
     description:
       "A luxurious 5-bedroom villa with swimming pool and landscaped gardens.",
   },
@@ -38,7 +37,7 @@ export const projects = [
     mapTitle: "Completed",
     location: "Puducherry",
     category: "Residential",
-    image: "/projectStatus/completed 4.jpg",
+    image: "/projectStatus/completed 4.webp",
     description:
       "Complete renovation of a corporate office space with modern interiors.",
   },
@@ -48,7 +47,7 @@ export const projects = [
     mapTitle: "Ongoing",
     location: "Pinnachikuppam",
     category: "Residential",
-    image: "/projectStatus/Ongoing 1.jpg",
+    image: "/projectStatus/Ongoing 1.webp",
     description:
       "A 12-unit apartment building with contemporary design and community spaces.",
   },
@@ -58,7 +57,7 @@ export const projects = [
     mapTitle: "Completed",
     location: "Pondicherry",
     category: "Residential",
-    image: "/projectStatus/completed 5.jpg",
+    image: "/projectStatus/completed 5.webp",
     description:
       "A high-end retail store with custom interiors and display solutions.",
   },
@@ -68,7 +67,8 @@ export const projects = [
     mapTitle: "Ongoing",
     location: "Pondicherry",
     category: "Commercial",
-    image: "/projectStatus/Vijayaghavan - Bussy Street Commercial (Ongoing).jpg",
+    image:
+      "/projectStatus/Vijayaghavan - Bussy Street Commercial (Ongoing).webp",
     description:
       "A modern beach house with panoramic ocean views and sustainable design.",
   },
@@ -78,7 +78,7 @@ export const projects = [
     mapTitle: "Completed",
     location: "cuddalore",
     category: "Residential",
-    image: "/projectStatus/completed 6.jpg",
+    image: "/projectStatus/completed 6.webp",
     description:
       "Complete interior design for a fine dining restaurant with custom furniture.",
   },
@@ -88,7 +88,7 @@ export const projects = [
     title: "Diwakar",
     location: "Cuddalore",
     category: "Residential",
-    image: "/projectStatus/Proposed 8.jpg",
+    image: "/projectStatus/Proposed 8.webp",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
@@ -98,7 +98,7 @@ export const projects = [
     title: "Ganesh",
     location: "Chennai",
     category: "Residential",
-    image: "/projectStatus/Proposed 7.jpg",
+    image: "/projectStatus/Proposed 7.webp",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
@@ -108,7 +108,7 @@ export const projects = [
     title: "Karthik",
     location: "Karuvaikuppam",
     category: "Residential",
-    image: "/projectStatus/Proposed 6.jpg",
+    image: "/projectStatus/Proposed 6.webp",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
@@ -118,7 +118,7 @@ export const projects = [
     title: "Vignesh",
     location: "Coimbatore",
     category: "Residential",
-    image: "/projectStatus/Proposed 1.jpg",
+    image: "/projectStatus/Proposed 1.webp",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
@@ -128,7 +128,7 @@ export const projects = [
     title: "Uma Maheswari",
     location: "Villupuram",
     category: "Residential",
-    image: "/projectStatus/Proposed 2.png",
+    image: "/projectStatus/Proposed 2.webp",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
@@ -138,7 +138,7 @@ export const projects = [
     title: "Sathya",
     location: "Villupuram",
     category: "Residential",
-    image: "/projectStatus/Proposed 4.jpg",
+    image: "/projectStatus/Proposed 4.webp",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
@@ -148,7 +148,7 @@ export const projects = [
     title: "Murali",
     location: "Benglore",
     category: "Residential",
-    image: "/projectStatus/Proposed 5.jpg",
+    image: "/projectStatus/Proposed 5.webp",
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
@@ -158,7 +158,7 @@ export const projects = [
     mapTitle: "Ongoing",
     location: "Villianur",
     category: "Residential",
-    image: "/projectStatus/Ongoing 3.jpg",
+    image: "/projectStatus/Ongoing 3.webp",
     description:
       "A modern beach house with panoramic ocean views and sustainable design.",
   },
@@ -168,7 +168,7 @@ export const projects = [
     mapTitle: "Ongoing",
     location: "Pondicherry",
     category: "Residential",
-    image: "/projectStatus/Ongoing 4.jpg",
+    image: "/projectStatus/Ongoing 4.webp",
     description:
       "A modern beach house with panoramic ocean views and sustainable design.",
   },

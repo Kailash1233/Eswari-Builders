@@ -23,7 +23,7 @@ export default function RenovationCategoryFilter() {
       id: 1,
       title: " Plumbing Solutions",
       // category: "Tiles",
-      image: "/interiorImage/plumbing 1.jpg",
+      image: "/interiorImage/plumbing 1.webp",
       description:
         "<strong>Expert Plumbing Services:</strong> From fixing leaks to installing new pipelines, we ensure your water systems work flawlessly. Our skilled plumbers use the latest techniques to deliver durable and efficient solutions. Trust us for seamless water flow and lasting reliability.",
       link: "/services/commercial/office-buildings",
@@ -32,7 +32,7 @@ export default function RenovationCategoryFilter() {
       id: 2,
       title: "Professional Painting",
       // category: "Tiles",
-      image: "/interiorImage/painting.jpg",
+      image: "/interiorImage/painting.webp",
       description:
         "<strong>Transform Your Space:</strong> Add new life to your walls with our expert painting services. We use premium materials and professional techniques to ensure a smooth, vibrant finish. Revitalize your environment with colors that inspire and energize.",
       link: "/services/commercial/it-offices",
@@ -42,7 +42,7 @@ export default function RenovationCategoryFilter() {
       id: 3,
       title: "Electrical Services",
       // category: "painting",
-      image: "/interiorImage/electrical 1.jpg",
+      image: "/interiorImage/electrical 1.webp",
       description:
         "<strong>Powering Your Needs:</strong> Our certified electricians deliver safe and reliable electrical installations and repairs. We handle everything from switchboard setups to complete rewiring projects. Your safety and convenience are our top priorities. ",
       link: "/services/commercial/medical-centers",
@@ -51,7 +51,7 @@ export default function RenovationCategoryFilter() {
       id: 4,
       title: "Vastu Compliance Solutions",
       // category: "painting",
-      image: "/interiorImage/vastu complaints.jpg",
+      image: "/interiorImage/vastu complaints.webp",
       description:
         "<strong>Balancing Energy Flows:</strong> Correct your space’s energy with our expert Vastu solutions. We analyze, recommend, and implement adjustments that align with ancient wisdom and modern living. Create a harmonious environment for prosperity and well-being.",
       link: "/services/commercial/sports-centers",
@@ -60,7 +60,7 @@ export default function RenovationCategoryFilter() {
       id: 5,
       title: "Demolition Services",
       // category: "painting",
-      image: "/interiorImage/demolition 1.jpg",
+      image: "/interiorImage/demolition 1.webp",
       description:
         "<strong>Clearing the Way for New Beginnings:</strong> Our demolition services are precise, safe, and efficient, paving the way for your next project. Whether it's a small wall removal or a complete site clearance, we handle it all with care. Start fresh with confidence and a clear space.",
       link: "/services/residential/luxury-villas",
@@ -123,7 +123,7 @@ export default function RenovationCategoryFilter() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/9_slide.jpg"
+          src="/slider/9_slide.webp"
           alt="Our Services"
           fill
           className="object-cover"

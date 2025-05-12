@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import StatisticsBar from "./stateDisplay";
 
-
 const testimonials = [
   {
     name: "Thiyagu Raju",
@@ -109,12 +108,14 @@ export default function WhyChooseUs() {
           <div className="space-y-4">
             <div className="h-16 w-16">
               <img
-                src="/interiorImage/lighting.png"
+                src="/interiorImage/lighting.webp"
                 alt="Lighting design"
                 className="w-18 h-18"
               />
             </div>
-            <h3 className="text-xl text-[#FFFFFF] font-semibold">Lighting Design</h3>
+            <h3 className="text-xl text-[#FFFFFF] font-semibold">
+              Lighting Design
+            </h3>
             <p className="text-[#999999] leading-relaxed">
               Achieve the perfect balance of ambient, task, and accent lighting
               for a functional atmosphere
@@ -130,7 +131,9 @@ export default function WhyChooseUs() {
                 className="w-18 h-18"
               />
             </div>
-            <h3 className="text-xl font-semibold text-[#FFFFFF]">Interior Design</h3>
+            <h3 className="text-xl font-semibold text-[#FFFFFF]">
+              Interior Design
+            </h3>
             <p className="text-[#999999] leading-relaxed">
               From concept to completion, we oversee every detail to bring your
               vision to life efficiently
@@ -146,7 +149,9 @@ export default function WhyChooseUs() {
                 className="w-18 h-18"
               />
             </div>
-            <h3 className="text-xl font-semibold text-[#FFFFFF]">Outdoor Design</h3>
+            <h3 className="text-xl font-semibold text-[#FFFFFF]">
+              Outdoor Design
+            </h3>
             <p className="text-[#999999] leading-relaxed">
               Celebrate the changing seasons with our seasonal outdoor decor
               services

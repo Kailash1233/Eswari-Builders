@@ -56,7 +56,7 @@ export default function ServicesPage() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/5_slide.jpg"
+          src="/slider/5_slide.webp"
           alt="Our Services"
           fill
           className="object-cover"
@@ -78,8 +78,8 @@ export default function ServicesPage() {
             transition={{ duration: 2, delay: 0.3 }}
             className="text-xl text-white/90 max-w-2xl"
           >
-            Complete residential construction and interior design solutions crafted to match your lifestyle, 
-            comfort, and aesthetic preferences.
+            Complete residential construction and interior design solutions
+            crafted to match your lifestyle, comfort, and aesthetic preferences.
           </motion.p>
         </div>
       </section>

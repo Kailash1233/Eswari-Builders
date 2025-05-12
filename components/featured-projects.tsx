@@ -9,28 +9,28 @@ const projects = [
     title: "Modern Residence",
     // location: "Pondicherry",
     category: "Residential",
-    image: "/projects/1.jpg",
+    image: "/projects/1.webp",
   },
   {
     id: 2,
     title: "Commercial Complex",
     // location: "Chennai",
     category: "Commercial",
-    image: "/projects/2.jpg",
+    image: "/projects/2.webp",
   },
   {
     id: 3,
     title: "Luxury Villa",
     // location: "Pondicherry",
     category: "Residential",
-    image: "/projects/3.jpg",
+    image: "/projects/3.webp",
   },
   {
     id: 4,
     title: "Office Renovation",
     // location: "Bangalore",
     category: "Commercial",
-    image: "/projects/4.jpg",
+    image: "/projects/4.webp",
   },
 ];
 

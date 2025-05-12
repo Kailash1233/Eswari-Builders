@@ -33,7 +33,7 @@ export default function AboutPage() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/6_slide.jpg"
+          src="/slider/6_slide.webp"
           alt="About Eswari Builders"
           fill
           className="object-cover"
@@ -100,7 +100,7 @@ export default function AboutPage() {
               className="relative h-[400px] w-full order-1 md:order-2"
             >
               <Image
-                src="/slider/7_slide.jpg"
+                src="/slider/7_slide.webp"
                 alt="Eswari Builders History"
                 fill
                 className="object-cover"
@@ -169,7 +169,7 @@ export default function AboutPage() {
               className="relative h-[600px] w-full"
             >
               <Image
-                src="/team/Founder.jpg"
+                src="/team/Founder.webp"
                 alt="Founder of Eswari Builders"
                 fill
                 className="object-cover rounded-lg"
@@ -218,37 +218,37 @@ export default function AboutPage() {
                 name: "Sathya",
                 role: "Managing Director",
                 desc: "Leads operations and ensures quality and client satisfaction.",
-                image: "/team/MD2.png",
+                image: "/team/MD2.webp",
               },
               {
                 name: "Prabhu Ram N",
                 role: "CEO, Operations Head",
                 desc: "Oversees project management, timelines, and quality control.",
-                image: "/team/Prabhu.jpg",
+                image: "/team/Prabhu.webp",
               },
               {
                 name: "Raam",
                 role: "Strategic Partner in Interior",
                 desc: "Brings innovative interior solutions to each project.",
-                image: "/team/Raam.jpg",
+                image: "/team/Raam.webp",
               },
               {
                 name: "Rajendran",
                 role: "Site Engineer",
                 desc: "Ensures on-site operations are smooth and precise.",
-                image: "/team/Rajendran.jpg",
+                image: "/team/Rajendran.webp",
               },
               {
                 name: "Hema",
                 role: "Architect",
                 desc: "Plans, designs, and oversees the construction of buildings.",
-                image: "/team/Hema.jpg",
+                image: "/team/Hema.webp",
               },
               {
                 name: "Siddique",
                 role: "Designing Partner (BODMAS DESIGNS)",
                 desc: "Designs and implements the building's exterior and interior.",
-                image: "/team/Siddique.jpg",
+                image: "/team/Siddique.webp",
               },
             ].map((member, index) => (
               <motion.div

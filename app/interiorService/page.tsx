@@ -24,7 +24,7 @@ export default function ServicesCategoryFilter() {
       id: 1,
       title: "Office Buildings",
       category: "commercial",
-      image: "/interiorImage/img 12.jpg",
+      image: "/interiorImage/img 12.webp",
       description:
         "<strong>Elevating Workspaces:</strong> Our office buildings are more than just spaces to work; they are the epicenter of corporate innovation. We design and construct modern offices that foster productivity, collaboration, and strategic thinking.",
       link: "/services/commercial/office-buildings",
@@ -33,7 +33,7 @@ export default function ServicesCategoryFilter() {
       id: 2,
       title: "IT Offices",
       category: "commercial",
-      image: "/interiorImage/img 11.jpg",
+      image: "/interiorImage/img 11.webp",
       description:
         "<strong>Tech-Ready Spaces:</strong> IT businesses demand cutting-edge infrastructure. We specialize in creating IT office spaces with the technological capabilities and telecommunication infrastructure required for the digital age.",
       link: "/services/commercial/it-offices",
@@ -43,7 +43,7 @@ export default function ServicesCategoryFilter() {
       id: 3,
       title: "Medical Centers",
       category: "commercial",
-      image: "/interiorImage/img 13.jpg",
+      image: "/interiorImage/img 13.webp",
       description:
         "<strong>Healthcare Spaces:</strong> From hospitals and clinics to testing laboratories, we support the establishment of medical enterprises by adhering to government regulations and accreditation standards, ensuring a safe and functional healthcare environment.",
       link: "/services/commercial/medical-centers",
@@ -52,7 +52,7 @@ export default function ServicesCategoryFilter() {
       id: 4,
       title: "Sports Centers",
       category: "commercial",
-      image: "/interiorImage/img 14.jpg",
+      image: "/interiorImage/img 14.webp",
       description:
         "<strong>Active Lifestyles:</strong> We contribute to the growing demand for sports and recreation centers by creating facilities such as indoor cricket venues, badminton courts, and multipurpose recreational activity centers—all under one roof.",
       link: "/services/commercial/sports-centers",
@@ -61,7 +61,7 @@ export default function ServicesCategoryFilter() {
       id: 5,
       title: "Wardrobe",
       category: "residential",
-      image: "/interiorImage/interior 7.jpeg",
+      image: "/interiorImage/interior 7.webp",
       description:
         "<strong>Your Dream Home:</strong> We design wardrobes that blend seamlessly with your space, offering modern, space-saving storage solutions with personalized finishes.",
       link: "/services/residential/wardrobe",
@@ -70,7 +70,7 @@ export default function ServicesCategoryFilter() {
       id: 6,
       title: "TV Units & Paneling Works",
       category: "residential",
-      image: "/interiorImage/residential 2.jpg",
+      image: "/interiorImage/residential 2.webp",
       description:
         "<strong>Your Dream Home:</strong> Custom TV units and wall paneling enhance your living space with elegance and function, hiding cables and showcasing your entertainment area.",
       link: "/services/residential/tv-units-paneling",
@@ -79,7 +79,7 @@ export default function ServicesCategoryFilter() {
       id: 7,
       title: "Built for Your Life",
       category: "Turnkey Projects",
-      image: "/interiorImage/turnkey 1.jpg",
+      image: "/interiorImage/turnkey 1.webp",
       description:
         "<strong>Built for Your Life:</strong> Our turnkey services are designed to turn your vision into reality. We carefully craft every detail — from concept to completion — creating spaces that reflect your unique style and lifestyle. With us, your dream space is ready when you are.",
       link: "/services/industrial/warehouses",
@@ -88,7 +88,7 @@ export default function ServicesCategoryFilter() {
       id: 8,
       title: "Your Space, Your Story",
       category: "Turnkey Projects",
-      image: "/interiorImage/turnkey 2.jpg",
+      image: "/interiorImage/turnkey 2.webp",
       description:
         "<strong>Your Space, Your Story:</strong> Every space tells a unique story, and our turnkey services bring that vision to life. From design to final touches, we ensure your space reflects your personality and lifestyle, offering a seamless experience from start to finish.",
       link: "/services/industrial/manufacturing-plants",
@@ -97,7 +97,7 @@ export default function ServicesCategoryFilter() {
       id: 9,
       title: "Effortless Turnkey Solutions",
       category: "Turnkey Projects",
-      image: "/interiorImage/turnkey 3.jpg",
+      image: "/interiorImage/turnkey 3.webp",
       description:
         "<strong>Effortless Turnkey Solutions:</strong> We manage every step of creating your ideal space, from design to final finishes. Enjoy a stress-free, move-in-ready space that reflects your vision, with no surprises or delays. Our attention to detail ensures your dream space is brought to life with quality and efficiency.",
       link: "/services/renovation/home-remodeling",
@@ -106,7 +106,7 @@ export default function ServicesCategoryFilter() {
       id: 10,
       title: "Balcony Retreat",
       category: "Balcony ideas",
-      image: "/interiorImage/Balcony 1.jpg",
+      image: "/interiorImage/Balcony 1.webp",
       description:
         "<strong>Beauty of Home : </strong>  Create a peaceful outdoor sanctuary with cozy seating, lush plants, and soft lighting. A perfect space to unwind and enjoy fresh air.",
       link: "/services/renovation/commercial-retrofitting",
@@ -116,7 +116,7 @@ export default function ServicesCategoryFilter() {
       id: 11,
       title: "Reimagine Your Home",
       category: "Home Decors",
-      image: "/interiorImage/Home Decors 1.jpg",
+      image: "/interiorImage/Home Decors 1.webp",
       description:
         "<strong>Reimagine Your Home:</strong> Our decor solutions transform your interiors with fresh ideas, tasteful designs, and a focus on what makes a house truly feel like home.",
       link: "/services/renovation/commercial-retrofitting",
@@ -126,7 +126,7 @@ export default function ServicesCategoryFilter() {
       id: 12,
       title: "Dream Home Realized",
       category: "Home Decors",
-      image: "/interiorImage/Home Decors 2.jpg",
+      image: "/interiorImage/Home Decors 2.webp",
       description:
         "<strong>Transform Your Living Space:</strong> Our home decor solutions bring style, comfort, and personality to your interiors. From elegant furnishings to creative wall designs, we craft spaces that truly feel like home.",
       link: "/services/renovation/commercial-retrofitting",
@@ -135,7 +135,7 @@ export default function ServicesCategoryFilter() {
       id: 13,
       title: "Urban Escape",
       category: "Balcony ideas",
-      image: "/interiorImage/Balcony 2.jpg",
+      image: "/interiorImage/Balcony 2.webp",
       description:
         "<strong>Stylish Spaces with Stunning City Views Transformation:</strong> Maximize your city views by adding modern furniture, lush greenery, and stylish decorative touches, transforming your balcony into a chic, cozy escape that feels like an extension of your home.",
       link: "/services/renovation/commercial-retrofitting",
@@ -144,7 +144,7 @@ export default function ServicesCategoryFilter() {
       id: 14,
       title: "Garden Balcony",
       category: "Balcony ideas",
-      image: "/interiorImage/Balcony 3.jpg",
+      image: "/interiorImage/Balcony 3.webp",
       description:
         "<strong>Bring Nature to Your Home:</strong> Transform your balcony into a lush mini garden filled with vibrant plants and colorful flowers, creating a serene green space that brings the beauty of nature right to your doorstep.",
       link: "/services/renovation/commercial-retrofitting",
@@ -153,7 +153,7 @@ export default function ServicesCategoryFilter() {
       id: 15,
       title: "Modern False Ceiling Works",
       category: "residential",
-      image: "/interiorImage/residential 3.jpg",
+      image: "/interiorImage/residential 3.webp",
       description:
         "<strong>Your Dream Home:</strong> False ceilings with cove lighting and geometric designs add depth, style, and insulation to your home interiors.",
       link: "/services/residential/false-ceiling",
@@ -162,7 +162,7 @@ export default function ServicesCategoryFilter() {
       id: 16,
       title: "Modular Kitchen",
       category: "residential",
-      image: "/interiorImage/residential 4.jpg",
+      image: "/interiorImage/residential 4.webp",
       description:
         "<strong>Your Dream Home:</strong> Smart modular kitchens that maximize space with ergonomic layouts, premium finishes, and intelligent storage systems.",
       link: "/services/residential/modular-kitchen",
@@ -180,7 +180,7 @@ export default function ServicesCategoryFilter() {
       id: 18,
       title: "Under Stair Closures",
       category: "residential",
-      image: "/interiorImage/stair 1.jpeg",
+      image: "/interiorImage/stair 1.webp",
       description:
         "<strong>Your Dream Home:</strong> Transform unused stair space into functional storage with custom-built drawers, cabinets, or display units.",
       link: "/services/residential/under-stair-closures",
@@ -189,7 +189,7 @@ export default function ServicesCategoryFilter() {
       id: 19,
       title: "Wall Partition",
       category: "residential",
-      image: "/interiorImage/interior 2.jpeg",
+      image: "/interiorImage/interior 2.webp",
       description:
         "<strong>Your Dream Home:</strong> Elegant partitions add privacy and style to open spaces—choose from wood, glass, or CNC-cut panels.",
       link: "/services/residential/wall-partition",
@@ -198,7 +198,7 @@ export default function ServicesCategoryFilter() {
       id: 20,
       title: "Vinely Flooring",
       category: "residential",
-      image: "/interiorImage/residential 8.jpg",
+      image: "/interiorImage/residential 8.webp",
       description:
         "<strong>Your Dream Home:</strong> Vinely flooring offers a modern look with wood-like finishes that are water-resistant, pet-friendly, and long-lasting.",
       link: "/services/residential/vinely-flooring",
@@ -207,7 +207,7 @@ export default function ServicesCategoryFilter() {
       id: 21,
       title: "Curtains & Blinds",
       category: "residential",
-      image: "/interiorImage/residential 9.jpg",
+      image: "/interiorImage/residential 9.webp",
       description:
         "<strong>Your Dream Home:</strong> Custom curtains and blinds elevate your interiors with a balance of privacy, light control, and style.",
       link: "/services/residential/curtains-blinds",
@@ -216,7 +216,7 @@ export default function ServicesCategoryFilter() {
       id: 22,
       title: "Furniture & Dining Table",
       category: "residential",
-      image: "/interiorImage/residential 10.jpg",
+      image: "/interiorImage/residential 10.webp",
       description:
         "<strong>Your Dream Home:</strong> From designer sofas to handcrafted dining tables, we create furniture that complements your interior themes.",
       link: "/services/residential/furniture-dining-table",
@@ -225,7 +225,7 @@ export default function ServicesCategoryFilter() {
       id: 23,
       title: "Lighting Solutions",
       category: "residential",
-      image: "/interiorImage/residential 11.jpg",
+      image: "/interiorImage/residential 11.webp",
       description:
         "<strong>Your Dream Home:</strong> Ambient, task, and accent lighting designed to enhance every space with modern technology and elegant fixtures.",
       link: "/services/residential/lighting-solutions",
@@ -290,7 +290,7 @@ export default function ServicesCategoryFilter() {
       <section className="relative h-[80vh] w-full">
         <div className="absolute inset-0 bg-black/70 z-10"></div>
         <Image
-          src="/slider/8_slide.jpg"
+          src="/slider/8_slide.webp"
           alt="Our Services"
           fill
           className="object-cover"

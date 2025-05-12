@@ -10,17 +10,17 @@ const slides = [
   {
     title: "Building Dreams with Strength and Style",
     subtitle: "Premium Residential and Commercial Construction in Pondicherry",
-    image: "/slider/1_slide.jpg",
+    image: "/slider/1_slide.webp",
   },
   {
     title: "Crafting Luxury Homes with Precision",
     subtitle: "Where Design Meets Durability",
-    image: "/slider/2_slide.jpg",
+    image: "/slider/2_slide.webp",
   },
   {
     title: "From Vision to Reality",
     subtitle: "Your Trusted Construction Partner for 15+ Years",
-    image: "/slider/3_slide.jpg",
+    image: "/slider/3_slide.webp",
   },
 ];
 
