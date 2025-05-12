@@ -4,7 +4,7 @@
 export const projects = [
   {
     id: 1,
-    title: "Vinoth Krishnan Residence",
+    title: "Vinoth Krishnan",
     mapTitle: "Completed",
     location: "Uruvaiyar",
     category: "Residential",
@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Thirukumaran Residence",
+    title: "Thirukumaran",
     mapTitle: "Completed",
     location: "Thavalakuppam",
     category: "Residential",
@@ -24,7 +24,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Shankar Residence",
+    title: "Shankar",
     mapTitle: "Completed",
     location: "Chennai",
     category: "Residential",
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Sasirekha Residence",
+    title: "Sasirekha",
     mapTitle: "Completed",
     location: "Puducherry",
     category: "Residential",
@@ -44,7 +44,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Sridharan Residence",
+    title: "Sridharan",
     mapTitle: "Ongoing",
     location: "Pinnachikuppam",
     category: "Residential",
@@ -54,7 +54,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Ramesh Residence",
+    title: "Ramesh",
     mapTitle: "Completed",
     location: "Pondicherry",
     category: "Residential",
@@ -64,17 +64,17 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Vijayaghavan  Residence",
+    title: "Vijayaghavan",
     mapTitle: "Ongoing",
     location: "Pondicherry",
-    category: "Residential",
+    category: "Commercial",
     image: "/projectStatus/Vijayaghavan - Bussy Street Commercial (Ongoing).jpg",
     description:
       "A modern beach house with panoramic ocean views and sustainable design.",
   },
   {
     id: 8,
-    title: "Mohammad Rafek residence",
+    title: "Mohammad Rafek",
     mapTitle: "Completed",
     location: "cuddalore",
     category: "Residential",
@@ -84,18 +84,8 @@ export const projects = [
   },
   {
     id: 9,
-    mapTitle: "Ongoing",
-    title: "Ganesh Residence",
-    location: "Chennai",
-    category: "Residential",
-    image: "/projectStatus/Ongoing 2.jpg",
-    description:
-      "A spacious duplex home with modern amenities and custom interiors.",
-  },
-  {
-    id: 10,
     mapTitle: "Proposed",
-    title: "Diwakar Residence",
+    title: "Diwakar",
     location: "Cuddalore",
     category: "Residential",
     image: "/projectStatus/Proposed 8.jpg",
@@ -103,9 +93,9 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 11,
+    id: 10,
     mapTitle: "Proposed",
-    title: "Ganesh Residence",
+    title: "Ganesh",
     location: "Chennai",
     category: "Residential",
     image: "/projectStatus/Proposed 7.jpg",
@@ -113,9 +103,9 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 12,
+    id: 11,
     mapTitle: "Proposed",
-    title: "Karthik residence",
+    title: "Karthik",
     location: "Karuvaikuppam",
     category: "Residential",
     image: "/projectStatus/Proposed 6.jpg",
@@ -123,9 +113,9 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 13,
+    id: 12,
     mapTitle: "Proposed",
-    title: "Vignesh Residence",
+    title: "Vignesh",
     location: "Coimbatore",
     category: "Residential",
     image: "/projectStatus/Proposed 1.jpg",
@@ -133,9 +123,9 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 14,
+    id: 13,
     mapTitle: "Proposed",
-    title: "Uma Maheswari Residence",
+    title: "Uma Maheswari",
     location: "Villupuram",
     category: "Residential",
     image: "/projectStatus/Proposed 2.png",
@@ -143,19 +133,9 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 15,
+    id: 14,
     mapTitle: "Proposed",
-    title: "Uma Maheswari Residence",
-    location: "Villupuram",
-    category: "Residential",
-    image: "/projectStatus/Proposed 3.jpg",
-    description:
-      "A spacious duplex home with modern amenities and custom interiors.",
-  },
-  {
-    id: 16,
-    mapTitle: "Proposed",
-    title: "Sathya Residence",
+    title: "Sathya",
     location: "Villupuram",
     category: "Residential",
     image: "/projectStatus/Proposed 4.jpg",
@@ -163,9 +143,9 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 17,
+    id: 15,
     mapTitle: "Proposed",
-    title: "Murali Residence",
+    title: "Murali",
     location: "Benglore",
     category: "Residential",
     image: "/projectStatus/Proposed 5.jpg",
@@ -173,8 +153,8 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 18,
-    title: "Dr sivani Jonathan Residence",
+    id: 16,
+    title: "Dr sivani Jonathan",
     mapTitle: "Ongoing",
     location: "Villianur",
     category: "Residential",
@@ -183,8 +163,8 @@ export const projects = [
       "A modern beach house with panoramic ocean views and sustainable design.",
   },
   {
-    id: 19,
-    title: "Bavani Residence",
+    id: 17,
+    title: "Bavani",
     mapTitle: "Ongoing",
     location: "Pondicherry",
     category: "Residential",
