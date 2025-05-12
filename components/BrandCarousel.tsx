@@ -21,9 +21,11 @@ const BrandCarousel = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const speed = 0.5;
+  let animationId: number;
+
 
   useEffect(() => {
-    let animationId: number;
+    let animationId:  number;
 
     const animate = () => {
       if (!isHovered && containerRef.current) {
@@ -41,25 +43,27 @@ const BrandCarousel = () => {
   return (
     <section className="pt-20 pb-20 md:p-20">
       <div
-        className="relative w-full md:w-[700px] mx-auto overflow-hidden"
+        className="relative w-full md:w-[700px] mx-auto gap-4 overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        
+        <div className="absolute left-0 top-0 h-full w-24  to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l to-transparent z-10 pointer-events-none" />
 
         <motion.div
           ref={containerRef}
-          className="flex gap-6 w-max"
+          className="flex gap-8 w-max"
           style={{ x }}
         >
           {[...brandLogos, ...brandLogos].map((logo, index) => (
-            <img
-              key={index}
-              src={logo}
-              alt={`Brand ${index + 1}`}
-              className="w-[90px] h-[90px] object-contain"
-            />
+            <div key={index} className="flex items-center justify-center">
+              <img
+                src={logo}
+                alt={`Brand ${index + 1}`}
+                className="w-[90px] h-[90px] object-contain"
+              />
+            </div>
           ))}
         </motion.div>
       </div>

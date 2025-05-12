@@ -8,6 +8,7 @@ import PortfolioGallery from "@/components/portfolio-gallery";
 import { projects } from "@/components/portfolioData";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { User } from "lucide-react";
 
 export default function PortfolioPage() {
   const [filteredProject, setFilterProject] = useState(projects);
@@ -22,6 +23,27 @@ export default function PortfolioPage() {
     }
     setActiveFilter(type);
   };
+
+  const testimonials = [
+    {
+      rating: 5,
+      text: "I was referred by a family friend who is known to Mr. Prabhu ram of Eswari builders. He was a very responsive, humble and very down to earth person. I constructed a house in Krishna Nagar in Pondicherry with their design and floor plan.",
+      name: "Saranraj J",
+      project: "Villa Project, Chennai",
+    },
+    {
+      rating: 5,
+      text: "Best builders i know. affordability and quality is their mantra. i am staying in the house they build more than 5 years .I didn't have any issues with the quality in my house till date. they even give the best service whenever I ask for rework or alterations.",
+      name: "Raj Kumar",
+      project: "Apartment Renovation, Bangalore",
+    },
+    {
+      rating: 5,
+      text: "My experience with Eswari Builders is awesome, i constructed a house in Cuddalore , their quality of work till now which I experienced is very nice.",
+      name: "Akalya Khalifa",
+      project: "Commercial Complex, Hyderabad",
+    },
+  ];
 
   return (
     <div className="flex flex-col">
@@ -129,7 +151,7 @@ export default function PortfolioPage() {
             What Our Clients Say
           </motion.h2>
 
-          {/* <motion.div
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -143,61 +165,44 @@ export default function PortfolioPage() {
             }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {[1, 2, 3].map((item) => (
+            {testimonials.map((testimonial, index) => (
               <motion.div
-                key={item}
+                key={index}
                 variants={{
                   hidden: { opacity: 0, y: 30 },
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="border border-white/20 p-8"
+                className="border border-white/20 p-8 flex flex-col justify-between h-full"
               >
                 <div className="flex items-center mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
+                  {[...Array(testimonial.rating)].map((_, starIdx) => (
                     <svg
-                      key={star}
-                      className="h-5 w-5 fill-current text-white"
+                      key={starIdx}
+                      className="h-5 w-5 fill-current text-gold"
                       viewBox="0 0 24 24"
                     >
                       <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                     </svg>
                   ))}
                 </div>
-                <p className="text-white/80 mb-6">
-                  "Eswari Builders exceeded our expectations in every way. Their
-                  attention to detail, quality of work, and professionalism made
-                  our dream home a reality. We couldn't be happier with the
-                  results."
+                <p className="text-white/80 mb-6 flex-grow">
+                  {testimonial.text}
                 </p>
-                <div className="flex items-center">
+                <div className="flex items-center mt-auto">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src="/placeholder.svg?height=100&width=100"
-                      alt={`Client ${item}`}
-                      fill
-                      className="object-cover"
-                    />
+                    <User className="h-6 w-6 mr-4 mt-1 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold">Client Name</h4>
+                    <h4 className="font-bold">{testimonial.name}</h4>
                     <p className="text-white/60 text-sm">
-                      Project Type, Location
+                      {testimonial.project}
                     </p>
                   </div>
                 </div>
               </motion.div>
             ))}
-          </motion.div> */}
-        
-          <script
-            src="https://static.elfsight.com/platform/platform.js"
-            async
-          ></script>
-          <div
-            className="elfsight-app-941731ae-9c03-4dd7-b90d-ca8397334f06"
-            data-elfsight-app-lazy
-          ></div>
+          </motion.div>
         </div>
       </section>
 

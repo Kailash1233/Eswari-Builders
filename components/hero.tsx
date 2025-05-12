@@ -54,7 +54,7 @@ export default function Hero() {
   });
 
   return (
-    <div className="relative overflow-hidden z-10 shadow-[0_0_80px_30px_rgba(255,215,0,0.1)] before:absolute before:inset-0 before:-z-10 before:rounded-[inherit] before:bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,rgba(255,215,0,0.3),transparent)] before:blur-3xl before:opacity-80">
+    <div className="relative">
       {/* Hero Section */}
       <section
         className="relative h-screen w-full overflow-hidden bg-black"

@@ -194,7 +194,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#0E0E0E] text-white">
+      <section className="py-16 bg-[ #1b1b1b] text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2
             variants={fadeInUp}

@@ -85,7 +85,7 @@ const ConstructionPackages = () => {
   };
 
   return (
-    <div className="construction-packages p-6 py-8 md:py-20">
+    <div className="construction-packages p-6 py-8 md:py-20 bg-white">
       <div className="container mx-auto px-4 pt-16">
         <motion.div
           initial="hidden"

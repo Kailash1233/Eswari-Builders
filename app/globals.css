@@ -30,6 +30,7 @@
     --chart-2: 0 0% 40%;
     --header-bg: 220 25% 20%; 
     --header-text: 40 60% 85%;   
+    --text-color: #999999;
   }
 
   .dark {
@@ -69,5 +70,6 @@
 html,
 body {
   overflow-x: hidden;
+  background: #1b1b1b;
 }
 

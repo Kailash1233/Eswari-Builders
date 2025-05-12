@@ -97,8 +97,8 @@ export default function WhyChooseUs() {
       <section className="pb-16 pt-16  md:py-18 px-4 items-center md:px-8 mx-auto container">
         <div className="mb-16">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-0.5 bg-black"></div>
-            <h2 className="text-3xl md:text-4xl font-bold font-merriweather-sans">
+            <div className="w-12 h-0.5"></div>
+            <h2 className="text-3xl md:text-4xl font-bold font-merriweather-sans text-[#FFFFFF]">
               Why Us?
             </h2>
           </div>
@@ -114,8 +114,8 @@ export default function WhyChooseUs() {
                 className="w-18 h-18"
               />
             </div>
-            <h3 className="text-xl font-semibold">Lighting Design</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <h3 className="text-xl text-[#FFFFFF] font-semibold">Lighting Design</h3>
+            <p className="text-[#999999] leading-relaxed">
               Achieve the perfect balance of ambient, task, and accent lighting
               for a functional atmosphere
             </p>
@@ -130,8 +130,8 @@ export default function WhyChooseUs() {
                 className="w-18 h-18"
               />
             </div>
-            <h3 className="text-xl font-semibold">Interior Design</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <h3 className="text-xl font-semibold text-[#FFFFFF]">Interior Design</h3>
+            <p className="text-[#999999] leading-relaxed">
               From concept to completion, we oversee every detail to bring your
               vision to life efficiently
             </p>
@@ -146,8 +146,8 @@ export default function WhyChooseUs() {
                 className="w-18 h-18"
               />
             </div>
-            <h3 className="text-xl font-semibold">Outdoor Design</h3>
-            <p className="text-gray-700 leading-relaxed">
+            <h3 className="text-xl font-semibold text-[#FFFFFF]">Outdoor Design</h3>
+            <p className="text-[#999999] leading-relaxed">
               Celebrate the changing seasons with our seasonal outdoor decor
               services
             </p>
@@ -156,7 +156,7 @@ export default function WhyChooseUs() {
       </section>
       <StatisticsBar />
 
-      <section className="md:pb-20 md:p-16 pb-20 bg-[#0E0E0E] text-black relative">
+      <section className="md:pb-20 md:p-16 pb-20 text-black relative">
         <div className="container mx-auto px-4">
           <h2 className="md:text-5xl text-4xl font-bold mb-12 text-white font-merriweather-sans">
             What Our Customers

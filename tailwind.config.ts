@@ -39,6 +39,8 @@ const config = {
           50: '#e6eeff',
           100: '#c9d9f2',
         },
+        text: 'var(--text-color)',
+        gold: "#FFD700",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
