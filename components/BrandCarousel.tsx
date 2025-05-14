@@ -20,7 +20,7 @@ const BrandCarousel = () => {
   const x = useMotionValue(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-  const speed = 0.5;
+  const speed = 0.8;
   let animationId: number;
 
 
@@ -41,13 +41,17 @@ const BrandCarousel = () => {
   }, [isHovered, x]);
 
   return (
-    <section className="pt-20 pb-20 md:p-20">
+    <section className="pt-20 pb-20 md:p-20 bg-[#efefef]">
+      <div className="text-center mb-12">
+          <h3 className=" text-gray text-2xl font-bold mb-4">
+            Our Branding partners
+          </h3>
+        </div>
       <div
         className="relative w-full md:w-[700px] mx-auto gap-4 overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-      >
-        
+      >        
         <div className="absolute left-0 top-0 h-full w-24  to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l to-transparent z-10 pointer-events-none" />
 

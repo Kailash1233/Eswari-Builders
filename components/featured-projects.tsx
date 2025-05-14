@@ -36,10 +36,10 @@ const projects = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="relative py-4 pt-16 pb-16 mx-2 md:mx-6">
+    <section className="relative py-4 pt-16 pb-16 bg-[#b8b8b8]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl text-white md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl text-black md:text-4xl font-bold mb-4">
             Featured Projects
           </h2>
           <p className="text-white max-w-2xl mx-auto">
