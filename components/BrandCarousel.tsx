@@ -48,7 +48,7 @@ const BrandCarousel = () => {
           </h3>
         </div>
       <div
-        className="relative w-full md:w-[700px] mx-auto gap-4 overflow-hidden"
+        className="relative container w-full md:w-full mx-auto gap-4 overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >        

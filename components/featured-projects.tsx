@@ -42,7 +42,7 @@ export default function FeaturedProjects() {
           <h2 className="text-3xl text-black md:text-4xl font-bold mb-4">
             Featured Projects
           </h2>
-          <p className="text-white max-w-2xl mx-auto">
+          <p className="text-gray-700 white max-w-2xl mx-auto">
             Explore some of our recent construction and interior design projects
             that showcase our expertise and quality.
           </p>

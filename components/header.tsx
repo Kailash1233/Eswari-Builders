@@ -69,10 +69,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 w-full transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#FAFAFAB2] shadow-xl backdrop-blur-xl"
-          : "bg-transparent"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="w-full">
@@ -80,10 +78,10 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center space-x-2">
               {/* <img
-              src="/logo.png"
-              alt="Eswari Builders Logo"
-              className="h-10 w-10 md:h-20 md:w-20 bg-white rounded-full object-contain"
-            /> */}
+                src="/logo.png"
+                alt="Eswari Builders Logo"
+                className="h-14 w-14 md:h-20 md:w-20"
+              /> */}
               <span
                 className={`font-bold text-2xl transition-colors duration-300 ${
                   isScrolled ? "text-black" : "text-white"
@@ -143,7 +141,7 @@ export default function Header() {
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          className="block py-2 px-2 rounded  hover:bg-gray-100 text-sm accordion block border-b border-gray-300 pb-2 mb-2"
+                          className="py-2 px-2 rounded  hover:bg-gray-100 text-sm accordion block border-b border-gray-300 pb-2 mb-2"
                           onClick={() => setActiveDropDown(null)}
                         >
                           {sub.name}
@@ -160,7 +158,7 @@ export default function Header() {
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="md:hidden">
                   <img
-                    src="/menu.png" 
+                    src="/menu.png"
                     alt="Menu"
                     className={`h-6 w-6 filter transition duration-300 ${
                       isScrolled ? "invert-0" : "invert"
@@ -188,6 +186,7 @@ export default function Header() {
                       size="icon"
                       onClick={() => setIsOpen(false)}
                     >
+                      <X className="h-6 w-6" />
                       <span className="sr-only">Close menu</span>
                     </Button>
                   </div>

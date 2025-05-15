@@ -35,7 +35,7 @@ export const projects = [
     id: 4,
     title: "Sasirekha",
     mapTitle: "Completed",
-    location: "Puducherry",
+    location: "Pondicherry",
     category: "Residential",
     image: "/projectStatus/completed 4.webp",
     description:
@@ -76,7 +76,7 @@ export const projects = [
     id: 8,
     title: "Mohammad Rafek",
     mapTitle: "Completed",
-    location: "cuddalore",
+    location: "Cuddalore",
     category: "Residential",
     image: "/projectStatus/completed 6.webp",
     description:
@@ -95,7 +95,7 @@ export const projects = [
   {
     id: 10,
     mapTitle: "Proposed",
-    title: "Ganesh",
+    title: "Ganeshan",
     location: "Chennai",
     category: "Residential",
     image: "/projectStatus/Proposed 7.webp",
@@ -122,16 +122,16 @@ export const projects = [
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
-  {
-    id: 13,
-    mapTitle: "Proposed",
-    title: "Uma Maheswari",
-    location: "Villupuram",
-    category: "Residential",
-    image: "/projectStatus/Proposed 2.webp",
-    description:
-      "A spacious duplex home with modern amenities and custom interiors.",
-  },
+  // {
+  //   id: 13,
+  //   mapTitle: "Proposed",
+  //   title: "Uma Maheswari",
+  //   location: "Villupuram",
+  //   category: "Residential",
+  //   image: "/projectStatus/Proposed 2.webp",
+  //   description:
+  //     "A spacious duplex home with modern amenities and custom interiors.",
+  // },
   {
     id: 14,
     mapTitle: "Proposed",
@@ -146,7 +146,7 @@ export const projects = [
     id: 15,
     mapTitle: "Proposed",
     title: "Murali",
-    location: "Benglore",
+    location: "Banglore",
     category: "Residential",
     image: "/projectStatus/Proposed 5.webp",
     description:
@@ -154,7 +154,7 @@ export const projects = [
   },
   {
     id: 16,
-    title: "Dr sivani Jonathan",
+    title: "Dr.Sivani Jonathan",
     mapTitle: "Ongoing",
     location: "Villianur",
     category: "Residential",
@@ -169,7 +169,32 @@ export const projects = [
     location: "Pondicherry",
     category: "Residential",
     image: "/projectStatus/Ongoing 4.webp",
-    description:
-      "A modern beach house with panoramic ocean views and sustainable design.",
+    description: "Residential project currently under development.",
+  },
+  {
+    id: 18,
+    title: "Vijayalakshmi",
+    mapTitle: "Ongoing",
+    location: "Villayanur",
+    category: "Residential",
+    image: "/projectStatus/Vijayalakshmi.webp",
+    description: "Residential project currently under development.",
+  },
+  {
+    id: 19,
+    title: "Proposed Project",
+    mapTitle: "Proposed",
+    category: "Residential",
+    image: "/projectStatus/Propsed.webp",
+    description: "Residential project currently under planning.",
+  },
+  {
+    id: 20,
+    title: "Ganesh",
+    mapTitle: "Ongoing",
+    location: "Laswpet Pondicherry",
+    category: "Residential",
+    image: "/projectStatus/Ganesh.webp",
+    description: "Residential project currently under development.",
   },
 ];

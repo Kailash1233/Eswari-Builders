@@ -29,19 +29,19 @@ export default function PortfolioPage() {
       rating: 5,
       text: "I was referred by a family friend who is known to Mr. Prabhu ram of Eswari builders. He was a very responsive, humble and very down to earth person. I constructed a house in Krishna Nagar in Pondicherry with their design and floor plan.",
       name: "Saranraj J",
-      project: "Villa Project, Chennai",
+      project: "Villa Project, Pondichery",
     },
     {
       rating: 5,
       text: "Best builders i know. affordability and quality is their mantra. i am staying in the house they build more than 5 years .I didn't have any issues with the quality in my house till date. they even give the best service whenever I ask for rework or alterations.",
       name: "Raj Kumar",
-      project: "Apartment Renovation, Bangalore",
+      project: "Apartment Project, Chennai",
     },
     {
       rating: 5,
       text: "My experience with Eswari Builders is awesome, i constructed a house in Cuddalore , their quality of work till now which I experienced is very nice.",
       name: "Akalya Khalifa",
-      project: "Commercial Complex, Hyderabad",
+      project: "Commercial Complex, Cuddalore",
     },
   ];
 

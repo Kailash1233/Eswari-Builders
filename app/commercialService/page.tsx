@@ -91,7 +91,7 @@ export default function ServicesPage() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="text-3xl font-bold mb-4"
+              className="text-3xl font-bold mb-4 text-white"
             >
               Our Commercial Constructions Service
             </motion.h2>
@@ -322,12 +322,12 @@ export default function ServicesPage() {
             </motion.div>
             <motion.div
               variants={fadeInUp}
-              className="bg-[#0E0E0E]/80 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
+              className="bg-gray-100 p-8 rounded-lg h-full flex flex-col justify-center shadow-md"
             >
-              <h3 className="text-3xl text-white font-bold mb-4">
+              <h3 className="text-3xl text-black font-bold mb-4">
                 Business Innovation Centers
               </h3>
-              <p className="text-white">
+              <p className="text-gray-700">
                 <strong>Innovation Hubs and Incubators:</strong> We specialize
                 in designing spaces for educational institutions, government
                 offices, NGOs, trusts, and religious organizations. Our designs

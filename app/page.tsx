@@ -7,7 +7,7 @@ import BrandCarousel from "@/components/BrandCarousel";
 import ProfileCard from "@/components/Profilecard";
 import WhyChooseUs from "@/components/why-choose-us";
 import FeaturedProjects from "@/components/featured-projects";
-import ContactForm from "@/components/contactForm"
+import ContactForm from "@/components/contactForm";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <WhyChooseUs />
       <ProfileCard />
       <ContactForm />
-      <section className="py-20 bg-[ #1b1b1b] text-white">
+      <section className="py-20 bg-[#1b1b1b] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Your Dream Project?

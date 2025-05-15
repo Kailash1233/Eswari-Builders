@@ -108,7 +108,7 @@ export default function WhyChooseUs() {
           <div className="space-y-4">
             <div className="h-16 w-16">
               <img
-                src="/interiorImage/lighting.webp"
+                src="/interiorImage/lighting.png"
                 alt="Lighting design"
                 className="w-18 h-18"
               />
