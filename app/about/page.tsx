@@ -75,14 +75,14 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold mb-6">Our History & Values</h2>
               <p className="text-black mb-4">
-                Founded in 2004, Eswari Builders began as a small construction
+                Founded in 2002, Eswari Builders began as a small construction
                 company with a big vision: to transform the architectural
                 landscape of Pondicherry with innovative, high-quality
                 construction solutions.
               </p>
               <p className="text-black mb-4">
                 Over the years, we've grown into a premier construction company,
-                completing over 1000+ sq. ft. of residential and commercial
+                completing over 100000 sq. ft. of residential and commercial
                 projects. Our success is built on our unwavering commitment to
                 quality, transparency, and customer satisfaction.
               </p>

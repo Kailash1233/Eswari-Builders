@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ClientLayout from "@/components/Clientpopup";
-import WhatsAppButton from "@/components/whatsappIcon"
+import WhatsAppButton from "@/components/whatsappIcon";
 
 const merriweatherSans = Merriweather_Sans({
   subsets: ["latin"],
@@ -23,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${merriweatherSans.className} flex min-h-screen flex-col`}>
+      <body
+        className={`${merriweatherSans.className} flex min-h-screen flex-col`}
+      >
         <Header />
         <ClientLayout>{children}</ClientLayout>
         <WhatsAppButton />

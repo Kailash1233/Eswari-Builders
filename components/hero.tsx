@@ -19,7 +19,7 @@ const slides = [
   },
   {
     title: "From Vision to Reality",
-    subtitle: "Your Trusted Construction Partner for 15+ Years",
+    subtitle: "Your Trusted Construction Partner for 22 Years",
     image: "/slider/3_slide.webp",
   },
 ];
