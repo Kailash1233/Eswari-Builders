@@ -14,6 +14,30 @@ const merriweatherSans = Merriweather_Sans({
 export const metadata: Metadata = {
   title: "Eswari Builders | Premium Construction Company",
   description: "Premium Residential and Commercial Construction in Pondicherry",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Eswari Builders | Premium Construction Company in Pondicherry",
+    description: "Building your dream spaces in Pondicherry and beyond.",
+
+    url: "https://eswaribuilders.in",
+    images: [
+      {
+        url: "/slider/2_slide.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eswari Builders Home Banner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eswari Builders | Premium Construction Company",
+    description:
+      "Premium Residential and Commercial Construction in Pondicherry",
+    images: ["/slider/2_slide.jpg"],
+  },
 };
 
 export default function RootLayout({

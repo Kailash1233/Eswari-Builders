@@ -34,7 +34,7 @@ export const projects = [
   {
     id: 4,
     title: "Sasirekha",
-    mapTitle: "Completed",
+    mapTitle: "Proposed",
     location: "Pondicherry",
     category: "Residential",
     image: "/projectStatus/completed 4.webp",

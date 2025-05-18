@@ -23,6 +23,13 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ResidentialProjects.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/ResidentialProjects.tsx",
+    "app/renovationService/RenovationServicePageClient.tsx"
+  ],
   "exclude": ["node_modules"]
 }
