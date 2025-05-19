@@ -26,6 +26,28 @@ const fadeInTop = {
   visible: { opacity: 1, y: 0 },
 };
 
+const ImageCard = ({ item, index }: any) => (
+  <motion.div
+    variants={fadeInBottom}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    transition={{ duration: 0.4, delay: index * 0.05 }}
+    className="relative group h-[250px] w-full overflow-hidden rounded-xl"
+  >
+    <Image
+      src={item.image}
+      alt={item.title}
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white text-center p-4">
+      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+      <p className="text-sm">{item.description}</p>
+    </div>
+  </motion.div>
+);
+
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
@@ -279,121 +301,158 @@ export default function AboutPage() {
 
       {/* Gallery Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            variants={fadeInBottom}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl font-bold mb-12 text-center"
-          >
-            Cherished Moments with{" "}
-            <span className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text">
-              Eswari Builders!
-            </span>
-          </motion.h2>
+        <div className="container mx-auto px-4 space-y-20">
+          {/* Section 1: Cherished Moments */}
+          <div>
+            <motion.h2
+              variants={fadeInBottom}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl font-bold mb-12 text-center"
+            >
+              Cherished Moments with{" "}
+              <span className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-transparent bg-clip-text">
+                Eswari Builders!
+              </span>
+            </motion.h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                image: "/gallery/1.webp",
-                title: "Modern House",
-                description: "Elegant and spacious living.",
-              },
-              {
-                image: "/gallery/2.webp",
-                title: "Ongoing Project",
-                description: "A long-term commitment to quality.",
-              },
-              {
-                image: "/gallery/3.webp",
-                title: "Land Pooja 1",
-                description: "A celebration of nature and community.",
-              },
-              {
-                image: "/gallery/4.webp",
-                title: "Land Pooja 2",
-                description: "A celebration of nature and community.",
-              },
-              {
-                image: "/gallery/5.webp",
-                title: "Giving Back",
-                description: "A meaningful contribution to society.",
-              },
-              {
-                image: "/gallery/15.webp",
-                title: "Partners",
-                description: "Collaborative and supportive relationships.",
-              },
-              {
-                image: "/gallery/7.webp",
-                title: "Land Pooja 3",
-                description: "A celebration of nature and community.",
-              },
-              {
-                image: "/gallery/8.webp",
-                title: "Land Pooja 4",
-                description: "A celebration of nature and community.",
-              },
-              {
-                image: "/gallery/9.webp",
-                title: "Birthday Celebration",
-                description: "CEO's birthday celebration.",
-              },
-              {
-                image: "/gallery/13.webp",
-                title: "Ayudha Pooja Celebration",
-                description: "Fresh and new beginnings.",
-              },
-              {
-                image: "/gallery/11.webp",
-                title: "Strong Team",
-                description: "A team of dedicated and hardworking individuals.",
-              },
-              {
-                image: "/gallery/12.webp",
-                title: "Group Picture",
-                description: "Prabhu and Raam with their Team/Family",
-              },
-              {
-                image: "/gallery/10.webp",
-                title: "Diwali Celebration",
-                description:
-                  "Celebrating the festival of lights with employees.",
-              },
-              {
-                image: "/gallery/14.webp",
-                title: "Partner Raam",
-                description: "Celebration during Ayudha Pooja.",
-              },
-              {
-                image: "/gallery/6.webp",
-                title: "Land Pooja 5",
-                description: "Site Pooja Celebration.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInBottom}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="relative group h-[250px] w-full overflow-hidden rounded-xl"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white text-center p-4">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  image: "/gallery/1.webp",
+                  title: "Modern House",
+                  description: "Elegant and spacious living.",
+                },
+                {
+                  image: "/gallery/2.webp",
+                  title: "Ongoing Project",
+                  description: "A long-term commitment to quality.",
+                },
+                {
+                  image: "/gallery/5.webp",
+                  title: "Giving Back",
+                  description: "A meaningful contribution to society.",
+                },
+                {
+                  image: "/gallery/11.webp",
+                  title: "Strong Team",
+                  description:
+                    "A team of dedicated and hardworking individuals.",
+                },
+                {
+                  image: "/gallery/12.webp",
+                  title: "Group Picture",
+                  description: "Prabhu and Raam with their Team/Family",
+                },
+                {
+                  image: "/gallery/15.webp",
+                  title: "Partners",
+                  description: "Collaborative and supportive relationships.",
+                },
+                {
+                  image: "/gallery/10.webp",
+                  title: "Diwali Celebration",
+                  description:
+                    "Celebrating the festival of lights with employees.",
+                },
+                {
+                  image: "/gallery/13.webp",
+                  title: "Ayudha Pooja Celebration",
+                  description: "Fresh and new beginnings.",
+                },
+                {
+                  image: "/gallery/14.webp",
+                  title: "Ayudha Pooja",
+                  description: "Celebration during Ayudha Pooja.",
+                },
+              ].map((item, index) => (
+                <ImageCard key={index} item={item} index={index} />
+              ))}
+            </div>
+          </div>
+
+          {/* Section 2: Birthday Celebrations */}
+          <div>
+            <motion.h2
+              variants={fadeInBottom}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl font-bold mb-12 text-center text-yellow-600"
+            >
+              Birthday Celebrations
+            </motion.h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  image: "/gallery/9.webp",
+                  title: "Birthday Celebration",
+                  description: "CEO's birthday celebration.",
+                },
+                {
+                  image: "/gallery/16.webp",
+                  title: "Birthday Celebration",
+                  description: "Staff's birthday celebration.",
+                },
+                {
+                  image: "/gallery/17.webp",
+                  title: "Birthday Celebration",
+                  description: "Staff's birthday celebration.",
+                },
+              ].map((item, index) => (
+                <ImageCard key={index} item={item} index={index} />
+              ))}
+            </div>
+          </div>
+
+          {/* Section 3: Mana Poojas & Land Poojas */}
+          <div>
+            <motion.h2
+              variants={fadeInBottom}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl font-bold mb-12 text-center text-orange-600"
+            >
+              Mana Poojas
+            </motion.h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  image: "/gallery/3.webp",
+                  title: "Land Pooja 1",
+                  description: "A celebration of nature and community.",
+                },
+                {
+                  image: "/gallery/4.webp",
+                  title: "Land Pooja 2",
+                  description: "A celebration of nature and community.",
+                },
+                {
+                  image: "/gallery/7.webp",
+                  title: "Land Pooja 3",
+                  description: "A celebration of nature and community.",
+                },
+                {
+                  image: "/gallery/8.webp",
+                  title: "Land Pooja 4",
+                  description: "A celebration of nature and community.",
+                },
+                {
+                  image: "/gallery/6.webp",
+                  title: "Land Pooja 5",
+                  description: "Site Pooja Celebration.",
+                },
+              ].map((item, index) => (
+                <ImageCard key={index} item={item} index={index} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

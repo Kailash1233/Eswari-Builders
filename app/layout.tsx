@@ -12,6 +12,7 @@ const merriweatherSans = Merriweather_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eswaribuilders.in"),
   title: "Eswari Builders | Premium Construction Company",
   description: "Premium Residential and Commercial Construction in Pondicherry",
   icons: {
