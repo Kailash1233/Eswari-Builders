@@ -16,22 +16,28 @@ export default function Footer() {
               residential and commercial construction in Pondicherry.
             </p>
             <div className="flex space-x-4 mt-6">
-              <Link href="#" className="text-white hover:text-white/80">
+              <Link
+                href="https://www.instagram.com/eswaribuilderspy"
+                className="text-white hover:text-white/80"
+              >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-white hover:text-white/80">
+              <Link
+                href="https://www.instagram.com/eswaribuilderspy"
+                className="text-white hover:text-white/80"
+              >
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-white hover:text-white/80">
+              {/* <Link href="#" className="text-white hover:text-white/80">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link href="#" className="text-white hover:text-white/80">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -42,16 +48,10 @@ export default function Footer() {
                 Quick Links
               </h3>
               <nav className="flex flex-col space-y-3">
-                <Link
-                  href="/"
-                  className="text-[#f7f7f7] hover:text-white"
-                >
+                <Link href="/" className="text-[#f7f7f7] hover:text-white">
                   Home
                 </Link>
-                <Link
-                  href="/about"
-                  className="text-[#f7f7f7] hover:text-white"
-                >
+                <Link href="/about" className="text-[#f7f7f7] hover:text-white">
                   About Us
                 </Link>
                 <Link

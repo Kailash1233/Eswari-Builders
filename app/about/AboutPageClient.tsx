@@ -322,13 +322,13 @@ export default function AboutPage() {
               {[
                 {
                   image: "/gallery/1.webp",
-                  title: "Modern House",
-                  description: "Elegant and spacious living.",
+                  title: "Giving Back",
+                  description: "Good Memories with Employees",
                 },
                 {
                   image: "/gallery/2.webp",
-                  title: "Ongoing Project",
-                  description: "A long-term commitment to quality.",
+                  title: "Ayudha Pooja",
+                  description: "Ayudha Pooja Celebration with Employees",
                 },
                 {
                   image: "/gallery/5.webp",
