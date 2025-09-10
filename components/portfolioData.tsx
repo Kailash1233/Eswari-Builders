@@ -43,16 +43,6 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Sridharan",
-    mapTitle: "Ongoing",
-    location: "Pinnachikuppam",
-    category: "Residential",
-    image: "/projectStatus/Ongoing 1.webp",
-    description:
-      "A 12-unit apartment building with contemporary design and community spaces.",
-  },
-  {
-    id: 6,
     title: "Ramesh",
     mapTitle: "Completed",
     location: "Pondicherry",
@@ -62,9 +52,9 @@ export const projects = [
       "A high-end retail store with custom interiors and display solutions.",
   },
   {
-    id: 7,
+    id: 6,
     title: "Vijayaghavan",
-    mapTitle: "Ongoing",
+    mapTitle: "Proposed",
     location: "Pondicherry",
     category: "Commercial",
     image:
@@ -73,7 +63,7 @@ export const projects = [
       "A modern beach house with panoramic ocean views and sustainable design.",
   },
   {
-    id: 8,
+    id: 7,
     title: "Mohammad Rafek",
     mapTitle: "Completed",
     location: "Cuddalore",
@@ -83,7 +73,7 @@ export const projects = [
       "Complete interior design for a fine dining restaurant with custom furniture.",
   },
   {
-    id: 9,
+    id: 8,
     mapTitle: "Proposed",
     title: "Diwakar",
     location: "Cuddalore",
@@ -93,7 +83,7 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 10,
+    id: 9,
     mapTitle: "Proposed",
     title: "Ganeshan",
     location: "Chennai",
@@ -103,7 +93,7 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 11,
+    id: 10,
     mapTitle: "Proposed",
     title: "Karthik",
     location: "Karuvaikuppam",
@@ -113,7 +103,7 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 12,
+    id: 11,
     mapTitle: "Proposed",
     title: "Vignesh",
     location: "Coimbatore",
@@ -122,18 +112,8 @@ export const projects = [
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
-  // {
-  //   id: 13,
-  //   mapTitle: "Proposed",
-  //   title: "Uma Maheswari",
-  //   location: "Villupuram",
-  //   category: "Residential",
-  //   image: "/projectStatus/Proposed 2.webp",
-  //   description:
-  //     "A spacious duplex home with modern amenities and custom interiors.",
-  // },
   {
-    id: 14,
+    id: 12,
     mapTitle: "Proposed",
     title: "Sathya",
     location: "Villupuram",
@@ -143,7 +123,7 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 15,
+    id: 13,
     mapTitle: "Proposed",
     title: "Murali",
     location: "Banglore",
@@ -153,26 +133,16 @@ export const projects = [
       "A spacious duplex home with modern amenities and custom interiors.",
   },
   {
-    id: 16,
-    title: "Dr.Sivani Jonathan",
-    mapTitle: "Ongoing",
-    location: "Villianur",
-    category: "Residential",
-    image: "/projectStatus/Ongoing 3.webp",
-    description:
-      "A modern beach house with panoramic ocean views and sustainable design.",
-  },
-  {
-    id: 17,
+    id: 14,
     title: "Bavani",
-    mapTitle: "Ongoing",
+    mapTitle: "Completed",
     location: "Pondicherry",
     category: "Residential",
     image: "/projectStatus/Ongoing 4.webp",
     description: "Residential project currently under development.",
   },
   {
-    id: 18,
+    id: 15,
     title: "Vijayalakshmi",
     mapTitle: "Ongoing",
     location: "Villayanur",
@@ -181,7 +151,7 @@ export const projects = [
     description: "Residential project currently under development.",
   },
   {
-    id: 19,
+    id: 16,
     title: "Proposed Project",
     mapTitle: "Proposed",
     category: "Residential",
@@ -189,12 +159,21 @@ export const projects = [
     description: "Residential project currently under planning.",
   },
   {
-    id: 20,
+    id: 17,
     title: "Ganesh",
     mapTitle: "Ongoing",
     location: "Laswpet Pondicherry",
     category: "Residential",
     image: "/projectStatus/Ganesh.webp",
+    description: "Residential project currently under development.",
+  },
+  {
+    id: 18,
+    title: "Naveen Kumar",
+    mapTitle: "Ongoing",
+    location: "Irumbai",
+    category: "Residential",
+    image: "/projectStatus/NaveenKumar.webp",
     description: "Residential project currently under development.",
   },
 ];

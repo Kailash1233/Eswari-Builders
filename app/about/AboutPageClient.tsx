@@ -238,13 +238,13 @@ export default function AboutPage() {
             {[
               {
                 name: "Sathya",
-                role: "Managing Director",
-                desc: "Leads operations and ensures quality and client satisfaction.",
+                role: "CRM Head",
+                desc: "Leads the CRM team and ensures quality and client satisfaction.",
                 image: "/team/MD2.webp",
               },
               {
                 name: "Prabhu Ram N",
-                role: "CEO, Operations Head",
+                role: "Managing Director, Operations Head",
                 desc: "Oversees project management, timelines, and quality control.",
                 image: "/team/Prabhu.webp",
               },

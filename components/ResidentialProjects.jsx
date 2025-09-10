@@ -112,6 +112,7 @@ const ConstructionPackages = () => {
             ServicePackage.standardPackage,
             ServicePackage.premiumPackage,
             ServicePackage.ElitePackage,
+            ServicePackage.GoldenPackage,
             ServicePackage.LuxuryPackage,
           ].map((pkg, index) => (
             <motion.div

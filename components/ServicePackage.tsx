@@ -419,6 +419,115 @@ const ElitePackage = {
   ],
 };
 
+const GoldenPackage = {
+  title: {
+    name: "Golden Package (Builder's Choice)",
+    price: "2799",
+  },
+  sections: [
+    {
+      title: "Overview",
+      type: "text",
+      content:
+        "Our Golden Package (Builder's Choice) offers exceptional quality construction with premium features and comprehensive architectural support — curated choices from our best practices to balance luxury and value.",
+    },
+    {
+      title: "Design",
+      type: "list",
+      items: [
+        "SCHEME DRAWING : ALL FLOORS (2D)",
+        "ELEVATION DESIGN : (3D)",
+        "HALF LAYOUT : ALL FLOORS (3D)",
+        "ELECTRICAL DRAWINGS : ALL FLOORS (2D)",
+        "PLUMBING DRAWING : ALL FLOORS (2D)",
+        "WORKING DRAWING : ALL FLOORS (2D)",
+        "STRUCTURAL DRAWINGS",
+        "FURNITURE LAYOUT : ALL FLOORS (2D)",
+        "ELEVATION DETAIL DRAWING : (2D)",
+      ],
+    },
+    {
+      title: "Project Management",
+      type: "list",
+      items: [
+        "Site Engineer : Weekly 3 Days Site Visit",
+        "Architect : Dedicated Architect through-out the Project. Material Selection Support.",
+        "ENGINEER SHARED SITES/& DAILY 1 PHOTO",
+      ],
+    },
+    {
+      title: "Structure",
+      type: "list",
+      items: [
+        "Basement Height : 4 feet",
+        "Steel : PULKIT/JSW/VIZAG/",
+        "Bricks : CHAMBER/AAC /INTERLOCKING",
+        "Cement : DALMIA/ULTRATECH/CHETTINADU",
+        "Fine Aggregate : M-SAND/P-SAND",
+        "Concrete Grade : M20 | RMC for Roof",
+        "Ceiling Height : 11 Feet (FFL to FFL)",
+        "Basement Plastering : YES",
+        "Parapet Wall : 3.5' Feet Height | 6\" Thick",
+        "Wire: FINOLEX/FEBROS OR EQUIVALENT",
+        "Switches: GM /ANCHOR OR EQUIVALENT",
+        "Water Tank: ASHIRWAD 3 LAYERS 2000LTR",
+      ],
+    },
+    {
+      title: "Plumbing & Sanitary",
+      type: "list",
+      items: [
+        "Plumbing (Concealed CPVC): ASHIRWAD",
+        "Plumbing Open PVC: ASHIRWAD",
+        "Sanitary Fittings: PARRYWARE/SOMANY/KAG",
+        "Taps & Valves: PARRYWARE/SOMANY/CERA/KAG",
+        "Bathroom Floor Tile: ANTISKID 1X15 TILES BELOW 50/-",
+        "Bathroom Wall Tile & Height: CERAMIC TILES 4X2 PREMIUM BRAND 8 FEET",
+        "Kitchen Wall Tile: DADO TILE 2X2 (2 FEET WALL HEIGHT) 50/-",
+      ],
+    },
+    {
+      title: "Doors & Windows",
+      type: "list",
+      items: [
+        "Main Door Frame: ANY TEAK BELOW 3000/-CFT",
+        "Main Door: SINGLE DOOR WITH CNC CARVING",
+        "Bedroom Door Frames: ANY TEAK BELOW 3000/-CFT",
+        "Bedroom Door: FLUSH DOORS BELOW 5000/-",
+        "Bathroom Door: PAINTED WPC FRAME & DOORS WITH GROOVING",
+        "Windows: UPVC WITH GLASS 4MM",
+        "Ventilators: UPVC LOUVERS WITH PINNED GLASS",
+      ],
+    },
+    {
+      title: "Flooring & Finishing",
+      type: "list",
+      items: [
+        "Interior Paint: ASIAN ACE SHYNE OR BERGER EASY CLEAN",
+        "Exterior Paint: ASIAN APEX OR EQUIVALENT BRANDS",
+        "Handrails for Staircase: STAINLESS STEEL WITH TOUGHEND GLASS",
+        "Staircase Flooring: GRANITE BELOW 90/-- PER SQFT",
+        "Kitchen Counter Top: GRANITE BELOW 180/- PER SQFT",
+        "Terrace: COOL ROOF",
+        "Floor Tile: VERTIFIED TILES 2X4 BELOW 60/-",
+      ],
+    },
+    {
+      title: "Additional Features",
+      type: "list",
+      items: [
+        "Carparking/Portico/Balcony: ANTISKID TILES 50/-",
+        "AC Point Provisions: IN ALL ROOMS",
+        "General Extra: ANTI-TERMITE TREATMENT",
+        "Team Supports: ENGINEER SHARED SITES/& DAILY 1 PHOTO",
+        "Locks: GODREJ",
+        "Design & Drawings: 2D,3D,FURNITURE LAYOUT,STRUTURAL LAYOUT,ELEVATION,ELECTRICAL & PLUMBING",
+      ],
+    },
+  ],
+};
+
+
 const LuxuryPackage = {
   title: {
     name: "Luxury Package",
@@ -536,6 +645,7 @@ const ServicePackage = {
   standardPackage,
   premiumPackage,
   ElitePackage,
+  GoldenPackage,
   LuxuryPackage,
 };
 
