@@ -25,7 +25,7 @@ export default function ProfileCard() {
               Prabhu Ram N
             </h2>
             <p className="text-lg font-semibold text-[#999999] mb-4">
-              CEO, Eswari Builders
+              Managing Director & Operations Head
             </p>
             <p className="text-[#999999] mb-4">
               Eswari Builders is a trusted name in premium residential and

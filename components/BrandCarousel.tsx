@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, useMotionValue } from "framer-motion";
 
 const brandLogos = [
@@ -16,63 +17,108 @@ const brandLogos = [
   "/branding/godrej.png",
 ];
 
-const BrandCarousel = () => {
+export default function BrandCarousel({ speed = 0.8 }: { speed?: number }) {
   const x = useMotionValue(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState(false);
-  const speed = 0.8;
-  let animationId: number;
+  const [width, setWidth] = useState(0);
 
-
+  // measure width of one set (we duplicate items for seamless loop)
   useEffect(() => {
-    let animationId:  number;
-
-    const animate = () => {
-      if (!isHovered && containerRef.current) {
-        const scrollWidth = containerRef.current.scrollWidth;
-        const newX = (x.get() - speed) % (scrollWidth / 2);
-        x.set(newX);
+    const resize = () => {
+      if (trackRef.current) {
+        // total width of the duplicated track / 2 => width of one set
+        setWidth(trackRef.current.scrollWidth / 2 || 0);
       }
-      animationId = requestAnimationFrame(animate);
     };
 
-    animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
-  }, [isHovered, x]);
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
+  // infinite animation loop
+  useEffect(() => {
+    let frame: number;
+
+    const animate = () => {
+      if (!isHovered && width > 0) {
+        // move left continuously and wrap using modulo
+        const next = (x.get() - speed) % width;
+        x.set(next);
+      }
+      frame = requestAnimationFrame(animate);
+    };
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, [isHovered, x, speed, width]);
+
+  // keyboard pause/play for accessibility
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === " ") {
+        // space toggles
+        setIsHovered((s) => !s);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   return (
-    <section className="pt-20 pb-20 md:p-20 bg-[#efefef]">
-      <div className="text-center mb-12">
-          <h3 className=" text-gray text-2xl font-bold mb-4">
-            Our Branding partners
-          </h3>
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h4 className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">
+              Trusted by
+            </h4>
+            <p className="mt-1 text-xl font-bold text-slate-900">
+              Our Branding Partners
+            </p>
+          </div>
         </div>
-      <div
-        className="relative container w-full md:w-full mx-auto gap-4 overflow-hidden"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >        
-        <div className="absolute left-0 top-0 h-full w-24  to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l to-transparent z-10 pointer-events-none" />
 
-        <motion.div
+        <div
           ref={containerRef}
-          className="flex gap-8 w-max"
-          style={{ x }}
+          className="relative overflow-hidden rounded-2xl bg-slate-50/60 p-4"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          aria-label="Brand carousel"
         >
-          {[...brandLogos, ...brandLogos].map((logo, index) => (
-            <div key={index} className="flex items-center justify-center">
-              <img
-                src={logo}
-                alt={`Brand ${index + 1}`}
-                className="w-[90px] h-[90px] object-contain"
-              />
-            </div>
-          ))}
-        </motion.div>
+          {/* fading edges */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white/90 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white/90 to-transparent" />
+
+          <motion.div
+            ref={trackRef}
+            className="flex items-center gap-6 whitespace-nowrap"
+            style={{ x }}
+          >
+            {/* duplicate logos for seamless loop */}
+            {[...brandLogos, ...brandLogos].map((logo, idx) => (
+              <div
+                key={idx}
+                className="inline-flex items-center justify-center min-w-[110px] min-h-[110px] px-3 py-2 rounded-lg bg-white/60 shadow-sm border border-slate-100"
+                role="img"
+                aria-label={`Brand logo ${idx + 1}`}
+                tabIndex={0}
+              >
+                <Image
+                  src={logo}
+                  alt={`Brand ${idx + 1}`}
+                  width={90}
+                  height={90}
+                  style={{ objectFit: "contain" }}
+                  priority={idx < brandLogos.length}
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default BrandCarousel;
+}

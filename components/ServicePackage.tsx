@@ -422,7 +422,7 @@ const ElitePackage = {
 const GoldenPackage = {
   title: {
     name: "Golden Package (Builder's Choice)",
-    price: "2799",
+    price: "2750",
   },
   sections: [
     {
@@ -526,7 +526,6 @@ const GoldenPackage = {
     },
   ],
 };
-
 
 const LuxuryPackage = {
   title: {
