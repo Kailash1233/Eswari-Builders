@@ -11,8 +11,8 @@ export default function StatisticsBar() {
       description: "Projects Completed",
     },
     {
-      value: "10+",
-      description: "On-going Projects",
+      value: "100000+",
+      description: "Built-up Area",
     },
   ];
 

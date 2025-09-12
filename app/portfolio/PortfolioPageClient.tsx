@@ -35,11 +35,11 @@ export default function PortfolioPage() {
       rating: 5,
       text: "Best builders i know. affordability and quality is their mantra. i am staying in the house they build more than 5 years .I didn't have any issues with the quality in my house till date. they even give the best service whenever I ask for rework or alterations.",
       name: "Raj Kumar",
-      project: "Apartment Project, Chennai",
+      project: "Duplex Residential Project, Chennai",
     },
     {
       rating: 5,
-      text: "My experience with Eswari Builders is awesome, i constructed a house in Cuddalore , their quality of work till now which I experienced is very nice.",
+      text: "My experience with Eswari Builders is awesome, I constructed commercial complex in Cuddalore , their quality of work till now which I experienced is very nice.",
       name: "Akalya Khalifa",
       project: "Commercial Complex, Cuddalore",
     },

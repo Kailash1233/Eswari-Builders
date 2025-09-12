@@ -26,6 +26,7 @@ const WhatsAppButton = () => {
   const whatsappNumber = "919092097190";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   const instagramLink = "https://www.instagram.com/eswaribuilderspy";
+  const facebookLink = "https://www.facebook.com/EswariBuilders2018";
 
   return (
     <div className="fixed bottom-5 right-5 md:bottom-10 md:right-10 z-50 flex flex-col md:flex-row items-center gap-2 md:gap-3">
@@ -68,6 +69,22 @@ const WhatsAppButton = () => {
         <img
           src="/Instagram.png"
           alt="Instagram"
+          className="w-10 h-10 lg:w-12 lg:h-12 drop-shadow-lg hover:scale-110 transition-transform"
+        />
+      </a>
+
+      {/* Facebook Icon */}
+      <a
+        href={facebookLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`transition-opacity duration-700 ${
+          showButton ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <img
+          src="/facebook.webp"
+          alt="Facebook"
           className="w-10 h-10 lg:w-12 lg:h-12 drop-shadow-lg hover:scale-110 transition-transform"
         />
       </a>
