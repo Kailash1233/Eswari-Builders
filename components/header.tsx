@@ -137,7 +137,7 @@ export default function Header() {
 
                   {item.dropdown && (
                     <div
-                      className={`absolute top-full left-0 mt-2 w-60 p-4 rounded-md bg-white shadow-lg origin-top transform transition-all duration-300 ease-in-out z-50 ${
+                      className={`absolute top-full left-0 mt-2 w-60 p-4 rounded-md ${menuBg} text-white shadow-lg origin-top transform transition-all duration-300 ease-in-out z-50 ${
                         activeDropDown === item.name
                           ? "opacity-100 translate-y-0 scale-y-100"
                           : "opacity-0 -translate-y-4 scale-y-95 pointer-events-none"
@@ -147,7 +147,7 @@ export default function Header() {
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          className="py-2 px-2 rounded hover:bg-gray-100 text-sm block border-b border-gray-200 pb-2 mb-2"
+                          className="py-2 px-2 rounded text-sm block border-b border-gray-200 pb-2 mb-2"
                           onClick={() => setActiveDropDown(null)}
                         >
                           {sub.name}

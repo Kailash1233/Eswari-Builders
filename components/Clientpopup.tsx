@@ -13,7 +13,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <Popup
         isOpen={isPopupOpen}
         onClose={closePopup}
-        title="Welcome to Our Eswari Builders!"
+        title="Welcome to Eswari Builders!"
       />
     </>
   );

@@ -461,15 +461,15 @@ const GoldenPackage = {
       items: [
         "Basement Height : 4 feet",
         "Steel : PULKIT/JSW/VIZAG/",
-        "Bricks : CHAMBER/AAC /INTERLOCKING",
+        "Bricks : Wire cut Bricks/Box Bricks or AAC",
         "Cement : DALMIA/ULTRATECH/CHETTINADU",
         "Fine Aggregate : M-SAND/P-SAND",
         "Concrete Grade : M20 | RMC for Roof",
         "Ceiling Height : 11 Feet (FFL to FFL)",
         "Basement Plastering : YES",
         "Parapet Wall : 3.5' Feet Height | 6\" Thick",
-        "Wire: FINOLEX/FEBROS OR EQUIVALENT",
-        "Switches: GM /ANCHOR OR EQUIVALENT",
+        "Wire: FINOLEX AND ANCHOR PANASONIC",
+        "Switches: LNT or Gold Medal of Panasonic Roma",
         "Water Tank: ASHIRWAD 3 LAYERS 2000LTR",
       ],
     },
@@ -478,22 +478,22 @@ const GoldenPackage = {
       type: "list",
       items: [
         "Plumbing (Concealed CPVC): ASHIRWAD",
-        "Plumbing Open PVC: ASHIRWAD",
-        "Sanitary Fittings: PARRYWARE/SOMANY/KAG",
+        "Plumbing Open PVC: SUPREME OR ASTRAL",
+        "Sanitary Fittings: JOHNSON/SOMANY/ESSCO",
         "Taps & Valves: PARRYWARE/SOMANY/CERA/KAG",
-        "Bathroom Floor Tile: ANTISKID 1X15 TILES BELOW 50/-",
+        "Bathroom Floor Tile: ANTISKID 1X15 TILES BELOW 55/-", // 50 -> 60
         "Bathroom Wall Tile & Height: CERAMIC TILES 4X2 PREMIUM BRAND 8 FEET",
-        "Kitchen Wall Tile: DADO TILE 2X2 (2 FEET WALL HEIGHT) 50/-",
+        "Kitchen Wall Tile: DADO TILE 2X2 (2 FEET WALL HEIGHT) 60/-", // 50 -> 60
       ],
     },
     {
       title: "Doors & Windows",
       type: "list",
       items: [
-        "Main Door Frame: ANY TEAK BELOW 3000/-CFT",
+        "Main Door Frame: ANY TEAK BELOW 3500/-CFT",
         "Main Door: SINGLE DOOR WITH CNC CARVING",
-        "Bedroom Door Frames: ANY TEAK BELOW 3000/-CFT",
-        "Bedroom Door: FLUSH DOORS BELOW 5000/-",
+        "Bedroom Door Frames: ANY TEAK BELOW 3500/-CFT",
+        "Bedroom Door: FLUSH DOORS BELOW 5500/-",
         "Bathroom Door: PAINTED WPC FRAME & DOORS WITH GROOVING",
         "Windows: UPVC WITH GLASS 4MM",
         "Ventilators: UPVC LOUVERS WITH PINNED GLASS",
@@ -503,20 +503,20 @@ const GoldenPackage = {
       title: "Flooring & Finishing",
       type: "list",
       items: [
-        "Interior Paint: ASIAN ACE SHYNE OR BERGER EASY CLEAN",
-        "Exterior Paint: ASIAN APEX OR EQUIVALENT BRANDS",
+        "Interior Paint: OPUS PREMIUM SHYNE",
+        "Exterior Paint: OPUS NEO STAR SHYNE",
         "Handrails for Staircase: STAINLESS STEEL WITH TOUGHEND GLASS",
-        "Staircase Flooring: GRANITE BELOW 90/-- PER SQFT",
-        "Kitchen Counter Top: GRANITE BELOW 180/- PER SQFT",
+        "Staircase Flooring: 110/- matt", // 90 -> 100
+        "Kitchen Counter Top: GRANITE BELOW 200/- PER SQFT", // 180 -> 190
         "Terrace: COOL ROOF",
-        "Floor Tile: VERTIFIED TILES 2X4 BELOW 60/-",
+        "Floor Tile: 70/-", // 60 -> 70
       ],
     },
     {
       title: "Additional Features",
       type: "list",
       items: [
-        "Carparking/Portico/Balcony: ANTISKID TILES 50/-",
+        "Carparking/Portico/Balcony: ANTISKID TILES 60/-", // 50 -> 60
         "AC Point Provisions: IN ALL ROOMS",
         "General Extra: ANTI-TERMITE TREATMENT",
         "Team Supports: ENGINEER SHARED SITES/& DAILY 1 PHOTO",
