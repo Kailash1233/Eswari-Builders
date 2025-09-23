@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from "react";
 import usePopup from "@/hooks/usePopup";
@@ -13,7 +13,7 @@ const ClientLayout = ({ children }: { children: React.ReactNode }) => {
       <Popup
         isOpen={isPopupOpen}
         onClose={closePopup}
-        title="Welcome to Our Site!"
+        title="Welcome to Our Eswari Builders!"
       />
     </>
   );
