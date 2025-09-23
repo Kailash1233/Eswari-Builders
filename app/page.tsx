@@ -12,6 +12,9 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
+  const whatsappNumber = "919092097190";
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
   return (
     <div className="">
       <Hero />
@@ -62,7 +65,7 @@ export default function Home() {
               </Button>
 
               <Link
-                href="/estimate"
+                href={whatsappLink}
                 className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-slate-200 hover:bg-slate-50 transition text-sm text-slate-700"
                 aria-label="Get an estimate"
               >

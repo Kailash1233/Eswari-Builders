@@ -37,7 +37,7 @@ export default function ProfileCard() {
               insight, strong project management, and a commitment to quality in
               every build.
             </p>
-            <button className="inline-block px-5 py-2 rounded-md bg-white hover:bg-white text-black rounded-xl font-semibold shadow-md transition duration-300 hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.4)]">
+            <button className="inline-block px-5 py-2 rounded-md bg-white hover:bg-white text-black font-semibold shadow-md transition duration-300 hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.4)]">
               <a href="/about">Read more</a>
             </button>
           </div>

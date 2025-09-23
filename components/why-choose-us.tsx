@@ -1,55 +1,54 @@
 "use client";
-import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 import StatisticsBar from "./stateDisplay";
 
-const testimonials = [
-  {
-    name: "Thiyagu Raju",
-    project: "Home Construction, Local Market",
-    review:
-      "When we first met builder MD Prabhu Ram Sir, he explained about the company and services clearly. His thorough knowledge of home construction and the local market impressed us. He guided us through multiple inspections and negotiations. In the end, we found the perfect builder and are loving it so far.",
-  },
-  {
-    name: "Saranraj J",
-    project: "House Construction, Krishna Nagar, Pondicherry",
-    review:
-      "Referred by a family friend, I met Mr. Prabhu Ram who was very humble and responsive. I constructed my house in Krishna Nagar. The quality and timely delivery were top-notch. Mr. Rajendran, the site engineer, explained everything patiently. Highly recommended!",
-  },
-  {
-    name: "Raj Kumar",
-    project: "Residential Project",
-    review:
-      "Best builders I know. Affordability and quality is their mantra. I’ve been living in the house they built for over 5 years without any issues. They even offer post-handover service which is rare these days. Extremely happy with them.",
-  },
-  {
-    name: "Akalya Khalifa",
-    project: "House Construction, Cuddalore",
-    review:
-      "My experience with Eswari Builders has been awesome. Constructed a house in Cuddalore. Their quality of work, materials used, and payment flexibility are great. The work is progressing well, and they support customers in every aspect.",
-  },
-  {
-    name: "Kiran Balaji M",
-    project: "Custom Residential Project",
-    review:
-      "I'm glad my search ended with Eswari Builders. You made my dream come true! My parents were so happy with your approach and energy. You're customer-oriented, organized, and committed to quality. Highly recommend!",
-  },
-  {
-    name: "Mari Mari",
-    project: "Full-Service Home Construction",
-    review:
-      "Very friendly approach. They explain everything in detail, no hidden charges. The builder helped us a lot with paperwork, approvals, and the loan process. I highly recommend them to anyone building a new house.",
-  },
-  {
-    name: "Sammantham Sammantham",
-    project: "Planning & Design",
-    review:
-      "We found them on Google and they exceeded our expectations. Mr. Prabhu Ram and team translated our thoughts into a great plan. Excellent work!",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Thiyagu Raju",
+//     project: "Home Construction, Local Market",
+//     review:
+//       "When we first met builder MD Prabhu Ram Sir, he explained about the company and services clearly. His thorough knowledge of home construction and the local market impressed us. He guided us through multiple inspections and negotiations. In the end, we found the perfect builder and are loving it so far.",
+//   },
+//   {
+//     name: "Saranraj J",
+//     project: "House Construction, Krishna Nagar, Pondicherry",
+//     review:
+//       "Referred by a family friend, I met Mr. Prabhu Ram who was very humble and responsive. I constructed my house in Krishna Nagar. The quality and timely delivery were top-notch. Mr. Rajendran, the site engineer, explained everything patiently. Highly recommended!",
+//   },
+//   {
+//     name: "Raj Kumar",
+//     project: "Residential Project",
+//     review:
+//       "Best builders I know. Affordability and quality is their mantra. I’ve been living in the house they built for over 5 years without any issues. They even offer post-handover service which is rare these days. Extremely happy with them.",
+//   },
+//   {
+//     name: "Akalya Khalifa",
+//     project: "House Construction, Cuddalore",
+//     review:
+//       "My experience with Eswari Builders has been awesome. Constructed a house in Cuddalore. Their quality of work, materials used, and payment flexibility are great. The work is progressing well, and they support customers in every aspect.",
+//   },
+//   {
+//     name: "Kiran Balaji M",
+//     project: "Custom Residential Project",
+//     review:
+//       "I'm glad my search ended with Eswari Builders. You made my dream come true! My parents were so happy with your approach and energy. You're customer-oriented, organized, and committed to quality. Highly recommend!",
+//   },
+//   {
+//     name: "Mari Mari",
+//     project: "Full-Service Home Construction",
+//     review:
+//       "Very friendly approach. They explain everything in detail, no hidden charges. The builder helped us a lot with paperwork, approvals, and the loan process. I highly recommend them to anyone building a new house.",
+//   },
+//   {
+//     name: "Sammantham Sammantham",
+//     project: "Planning & Design",
+//     review:
+//       "We found them on Google and they exceeded our expectations. Mr. Prabhu Ram and team translated our thoughts into a great plan. Excellent work!",
+//   },
+// ];
 
 export default function WhyChooseUs() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -96,7 +95,6 @@ export default function WhyChooseUs() {
       <section className="pb-16 pt-16  md:py-18 px-4 items-center md:px-8 mx-auto container">
         <div className="mb-16">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-0.5"></div>
             <h2 className="text-3xl md:text-4xl font-bold font-merriweather-sans text-[#FFFFFF]">
               Why Us?
             </h2>

@@ -98,14 +98,18 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Eswari Builders. All rights
             reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-white/60 text-sm hover:text-white">
-              Privacy Policy
+
+          <p className="text-white/60 text-sm mt-4 md:mt-0">
+            Built with <span className="text-red-500">❤️</span> by{" "}
+            <Link
+              href="https://adszoo.in"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white font-medium"
+            >
+              Adszoo
             </Link>
-            <Link href="#" className="text-white/60 text-sm hover:text-white">
-              Terms of Service
-            </Link>
-          </div>
+          </p>
         </div>
       </div>
     </footer>

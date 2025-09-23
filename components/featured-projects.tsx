@@ -10,7 +10,6 @@ interface Project {
   title: string;
   category: string;
   image: string;
-  year: number;
   location: string;
 }
 
@@ -20,7 +19,6 @@ const projects: Project[] = [
     title: "Modern Residence",
     category: "Residential",
     image: "/projects/1.webp",
-    year: 2024,
     location: "Pondicherry",
   },
   {
@@ -28,7 +26,6 @@ const projects: Project[] = [
     title: "Commercial Complex",
     category: "Commercial",
     image: "/projects/2.webp",
-    year: 2023,
     location: "Chennai",
   },
   {
@@ -36,7 +33,6 @@ const projects: Project[] = [
     title: "Luxury Villa",
     category: "Residential",
     image: "/projects/3.webp",
-    year: 2025,
     location: "Pondicherry",
   },
   {
@@ -44,7 +40,6 @@ const projects: Project[] = [
     title: "Office Renovation",
     category: "Commercial",
     image: "/projects/4.webp",
-    year: 2022,
     location: "Bengaluru",
   },
 ];
@@ -95,9 +90,6 @@ export default function FeaturedProjects() {
                 <div className="absolute left-4 bottom-4 flex items-center gap-3">
                   <span className="bg-black/60 text-white text-xs font-medium px-3 py-1 rounded-full backdrop-blur">
                     {project.category}
-                  </span>
-                  <span className="bg-white/90 text-slate-800 text-xs px-2 py-1 rounded-md font-medium">
-                    {project.year}
                   </span>
                 </div>
               </div>
@@ -202,7 +194,7 @@ export default function FeaturedProjects() {
                 <div>
                   <h3 className="text-2xl font-bold">{active.title}</h3>
                   <p className="text-sm text-slate-500 mt-1">
-                    {active.location} • {active.year}
+                    {active.location}
                   </p>
                 </div>
 

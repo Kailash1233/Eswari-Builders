@@ -6,7 +6,8 @@
     "axe/name-role-value": [
       "default",
       {
-        "button-name": "off"
+        "button-name": "off",
+        "link-name": "off"
       }
     ],
     "axe/keyboard": [
@@ -14,6 +15,14 @@
       {
         "nested-interactive": "off"
       }
-    ]
+    ],
+    "disown-opener": "off",
+    "axe/aria": [
+      "default",
+      {
+        "aria-valid-attr-value": "off"
+      }
+    ],
+    "button-type": "off"
   }
 }

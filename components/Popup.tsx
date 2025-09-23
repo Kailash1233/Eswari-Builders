@@ -65,7 +65,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, onClose, title }) => {
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700 text-2xl"
           >
-            ×
+            x
           </button>
         </div>
         <div className="py-2 md:pb-6">
