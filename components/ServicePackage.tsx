@@ -460,7 +460,7 @@ const GoldenPackage = {
       type: "list",
       items: [
         "Basement Height : 4 feet",
-        "Steel : PULKIT/JSW/VIZAG/",
+        "Steel : JSW OR VIZAG",
         "Bricks : Wire cut Bricks/Box Bricks or AAC",
         "Cement : DALMIA/ULTRATECH/CHETTINADU",
         "Fine Aggregate : M-SAND/P-SAND",
@@ -468,9 +468,9 @@ const GoldenPackage = {
         "Ceiling Height : 11 Feet (FFL to FFL)",
         "Basement Plastering : YES",
         "Parapet Wall : 3.5' Feet Height | 6\" Thick",
-        "Wire: FINOLEX AND ANCHOR PANASONIC",
-        "Switches: LNT or Gold Medal of Panasonic Roma",
-        "Water Tank: ASHIRWAD 3 LAYERS 2000LTR",
+        "Wire: FINOLEX OR ANCHOR PANASONIC",
+        "Switches: LNT OR GOLD META OR PANASONIC ROMA",
+        "Water Tank: SUPREME 5 LAYERS 2000LTR",
       ],
     },
     {
@@ -480,7 +480,7 @@ const GoldenPackage = {
         "Plumbing (Concealed CPVC): ASHIRWAD",
         "Plumbing Open PVC: SUPREME OR ASTRAL",
         "Sanitary Fittings: JOHNSON/SOMANY/ESSCO",
-        "Taps & Valves: PARRYWARE/SOMANY/CERA/KAG",
+        "Taps and Valves: JOHNSON/SOMANY/ESSCO",
         "Bathroom Floor Tile: ANTISKID 1X15 TILES BELOW 55/-", // 50 -> 60
         "Bathroom Wall Tile & Height: CERAMIC TILES 4X2 PREMIUM BRAND 8 FEET",
         "Kitchen Wall Tile: DADO TILE 2X2 (2 FEET WALL HEIGHT) 60/-", // 50 -> 60
@@ -495,7 +495,7 @@ const GoldenPackage = {
         "Bedroom Door Frames: ANY TEAK BELOW 3500/-CFT",
         "Bedroom Door: FLUSH DOORS BELOW 5500/-",
         "Bathroom Door: PAINTED WPC FRAME & DOORS WITH GROOVING",
-        "Windows: UPVC WITH GLASS 4MM",
+        "Windows: PREMIUM UPVC WITH COLOUR TINTED GLASS",
         "Ventilators: UPVC LOUVERS WITH PINNED GLASS",
       ],
     },
