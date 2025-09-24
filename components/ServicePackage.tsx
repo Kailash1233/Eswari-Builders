@@ -429,7 +429,7 @@ const GoldenPackage = {
       title: "Overview",
       type: "text",
       content:
-        "Our Golden Package (Builder's Choice) offers exceptional quality construction with premium features and comprehensive architectural support — curated choices from our best practices to balance luxury and value.",
+        "Our Golden Package (Builder's Choice) delivers exceptional quality construction with premium features and complete architectural support — exclusively using materials handpicked by our expert builders to guarantee top-notch quality, luxury, and lasting value.",
     },
     {
       title: "Design",
@@ -466,7 +466,7 @@ const GoldenPackage = {
         "Fine Aggregate : M-SAND/P-SAND",
         "Concrete Grade : M20 | RMC for Roof",
         "Ceiling Height : 11 Feet (FFL to FFL)",
-        "Basement Plastering : YES",
+        "Basement Plastering : PLASTERING WITH BITUMEN CHEMICAL",
         "Parapet Wall : 3.5' Feet Height | 6\" Thick",
         "Wire: FINOLEX OR ANCHOR PANASONIC",
         "Switches: LNT OR GOLD META OR PANASONIC ROMA",
@@ -509,7 +509,7 @@ const GoldenPackage = {
         "Staircase Flooring: 110/- matt", // 90 -> 100
         "Kitchen Counter Top: GRANITE BELOW 200/- PER SQFT", // 180 -> 190
         "Terrace: COOL ROOF",
-        "Floor Tile: 70/-", // 60 -> 70
+        "Floor Tile: VERTIFIED TILES 5x3 - 70/-", // 60 -> 70
       ],
     },
     {
@@ -520,7 +520,7 @@ const GoldenPackage = {
         "AC Point Provisions: IN ALL ROOMS",
         "General Extra: ANTI-TERMITE TREATMENT",
         "Team Supports: ENGINEER SHARED SITES/& DAILY 1 PHOTO",
-        "Locks: GODREJ",
+        "Locks: GODREJ OR OZONE",
         "Design & Drawings: 2D,3D,FURNITURE LAYOUT,STRUTURAL LAYOUT,ELEVATION,ELECTRICAL & PLUMBING",
       ],
     },
