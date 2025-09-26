@@ -12,7 +12,7 @@ export default function Footer() {
               ESWARI BUILDERS
             </Link>
             <p className="mt-4 text-[#f7f7f7]">
-              Building dreams with strength and style since 2004. Premium
+              Building dreams with strength and style since 2002. Premium
               residential and commercial construction in Pondicherry.
             </p>
             <div className="flex space-x-4 mt-6">

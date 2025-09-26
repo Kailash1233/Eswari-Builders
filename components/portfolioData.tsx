@@ -95,8 +95,8 @@ export const projects = [
   {
     id: 10,
     mapTitle: "Proposed",
-    title: "Karthik",
-    location: "Karuvaikuppam",
+    title: "Dr. Karthick",
+    location: "Karuvadikuppam",
     category: "Residential",
     image: "/projectStatus/Proposed 6.webp",
     description:

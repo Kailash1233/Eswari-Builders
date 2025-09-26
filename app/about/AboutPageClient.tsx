@@ -78,7 +78,7 @@ export default function AboutPage() {
             className="text-xl text-white/90 max-w-2xl"
           >
             Building excellence through innovation, integrity, and exceptional
-            craftsmanship since 2004.
+            craftsmanship since 2002.
           </motion.p>
         </div>
       </section>
