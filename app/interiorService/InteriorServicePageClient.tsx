@@ -54,7 +54,7 @@ export default function ServicesCategoryFilter() {
       category: "commercial",
       image: "/interiorImage/img 14.webp",
       description:
-        "<strong>Active Lifestyles:</strong> We contribute to the growing demand for sports and recreation centers by creating facilities such as indoor cricket venues, badminton courts, and multipurpose recreational activity centers—all under one roof.",
+        "<strong>Active Lifestyles:</strong> We contribute to the growing demand for sports and recreation centers by creating facilities such as indoor cricket venues, badminton courts, and multipurpose recreational activity centers-all under one roof.",
       link: "/services/commercial/sports-centers",
     },
     {
@@ -81,7 +81,7 @@ export default function ServicesCategoryFilter() {
       category: "Turnkey Projects",
       image: "/interiorImage/turnkey 1.webp",
       description:
-        "<strong>Built for Your Life:</strong> Our turnkey services are designed to turn your vision into reality. We carefully craft every detail — from concept to completion — creating spaces that reflect your unique style and lifestyle. With us, your dream space is ready when you are.",
+        "<strong>Built for Your Life:</strong> Our turnkey services are designed to turn your vision into reality. We carefully craft every detail - from concept to completion - creating spaces that reflect your unique style and lifestyle. With us, your dream space is ready when you are.",
       link: "/services/industrial/warehouses",
     },
     {
@@ -191,7 +191,7 @@ export default function ServicesCategoryFilter() {
       category: "residential",
       image: "/interiorImage/interior 2.webp",
       description:
-        "<strong>Your Dream Home:</strong> Elegant partitions add privacy and style to open spaces—choose from wood, glass, or CNC-cut panels.",
+        "<strong>Your Dream Home:</strong> Elegant partitions add privacy and style to open spaces-choose from wood, glass, or CNC-cut panels.",
       link: "/services/residential/wall-partition",
     },
     {

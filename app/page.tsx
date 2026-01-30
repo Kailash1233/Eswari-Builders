@@ -43,7 +43,7 @@ export default function Home() {
 
             {/* Subheading */}
             <p className="text-slate-600 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              Tell us your idea — we&apos;ll handle the rest. Get a free
+              Tell us your idea - we&apos;ll handle the rest. Get a free
               consultation, transparent estimates, and a realistic timeline from
               our expert team.
             </p>
@@ -57,7 +57,7 @@ export default function Home() {
               >
                 <Link
                   href="/contact"
-                  aria-label="Contact Eswari Builders — Get a consultation"
+                  aria-label="Contact Eswari Builders - Get a consultation"
                 >
                   Start your consultation
                   <ArrowRight className="h-4 w-4 inline-block ml-1" />

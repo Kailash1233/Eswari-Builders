@@ -429,7 +429,7 @@ const GoldenPackage = {
       title: "Overview",
       type: "text",
       content:
-        "Our Golden Package (Builder's Choice) delivers exceptional quality construction with premium features and complete architectural support — exclusively using materials handpicked by our expert builders to guarantee top-notch quality, luxury, and lasting value.",
+        "Our Golden Package (Builder's Choice) delivers exceptional quality construction with premium features and complete architectural support - exclusively using materials handpicked by our expert builders to guarantee top-notch quality, luxury, and lasting value.",
     },
     {
       title: "Design",
