@@ -51,17 +51,15 @@ export const projects = [
     description:
       "A high-end retail store with custom interiors and display solutions.",
   },
-  // {
-  //   id: 6,
-  //   title: "Vijayaghavan",
-  //   mapTitle: "Proposed",
-  //   location: "Pondicherry",
-  //   category: "Commercial",
-  //   image:
-  //     "/projectStatus/Vijayaghavan - Bussy Street Commercial (Ongoing).webp",
-  //   description:
-  //     "A modern beach house with panoramic ocean views and sustainable design.",
-  // },
+  {
+    id: 6,
+    title: "Nilayadakshi",
+    mapTitle: "Proposed",
+    location: "Villupuram",
+    category: "Residential",
+    image: "/projectStatus/Nilayadakshi.jpg",
+    description: "Residential project currently under planning.",
+  },
   {
     id: 7,
     title: "Mohammad Rafek",
