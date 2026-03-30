@@ -146,302 +146,173 @@ const Popup: FC<PopupProps> = ({
       aria-modal="true"
       role="dialog"
       aria-label={title}
-      className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8"
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
     >
       {/* backdrop */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity" />
+      <div className="absolute inset-0 bg-black/60" />
 
-      {/* modal card */}
+      {/* modal */}
       <div
         ref={containerRef}
-        className="relative w-full max-w-lg mx-auto transform transition-all duration-300 ease-out"
+        className="relative w-full max-w-5xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden grid md:grid-cols-2"
       >
-        <div className="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-white/90 to-slate-50/80 border border-white/20 backdrop-blur-lg">
+        {/* LEFT - IMAGE */}
+        <div className="relative hidden md:block">
+          <Image
+            src="/projectStatus/Nilayadakshi.jpg"
+            alt="Eswari Builders Project"
+            fill
+            className="object-cover"
+          />
+
+          {/* subtle overlay */}
+          <div className="absolute inset-0 bg-black/20" />
+
+          {/* branding */}
+          <div className="absolute bottom-6 left-6 text-white">
+            <p className="text-sm opacity-80">Premium Construction</p>
+            <p className="text-xl font-semibold">Eswari Builders</p>
+          </div>
+        </div>
+
+        {/* RIGHT - FORM */}
+        <div className="p-6 md:p-8">
           {/* header */}
-          <div className="flex items-center justify-between px-6 py-4">
-            <div className="flex items-center space-x-4">
-              {/* small logo placeholder */}
-              <Image src={logo} alt="Logo" width={50} height={50} />
-              <div>
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {title}
-                </h3>
-                <p className="text-sm text-slate-500">
-                  Quick chat - we usually reply within 24 hrs
-                </p>
-              </div>
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
+              <p className="text-sm text-gray-500">
+                We&apos;ll get back within 24 hours
+              </p>
             </div>
 
-            <div className="flex items-center space-x-3">
-              {/* WhatsApp quick link */}
-              {whatsappLink && (
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-full bg-green-600 text-white text-sm font-medium hover:bg-green-700 transition"
-                >
-                  <Image
-                    src={whatsappLogo}
-                    alt="WhatsApp"
-                    width={20}
-                    height={20}
-                  />
-                  <span>WhatsApp</span>
-                </a>
-              )}
-
-              {/* close button */}
-              <button
-                onClick={onClose}
-                aria-label="Close contact form"
-                className="p-2 rounded-md hover:bg-slate-100 transition"
-              >
-                <svg
-                  className="w-5 h-5 text-slate-700"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M6 6l12 12M6 18L18 6"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
+            <button
+              onClick={onClose}
+              className="p-2 rounded-md hover:bg-gray-100"
+            >
+              ✕
+            </button>
           </div>
 
-          {/* body */}
-          <div className="px-6 pb-6 pt-2">
-            {/* success / error banners */}
-            {status === "success" && (
-              <div className="mb-4 rounded-md bg-green-50 border border-green-100 px-4 py-3 text-sm text-green-800">
-                ✅ Message sent - we will be in touch soon.
-              </div>
-            )}
-            {status === "error" && (
-              <div className="mb-4 rounded-md bg-rose-50 border border-rose-100 px-4 py-3 text-sm text-rose-800">
-                ❌ Oops - something went wrong. Try again or message us on
-                WhatsApp.
-              </div>
-            )}
+          {/* status */}
+          {status === "success" && (
+            <div className="mb-4 text-sm text-green-700">
+              Message sent successfully.
+            </div>
+          )}
+          {status === "error" && (
+            <div className="mb-4 text-sm text-red-600">
+              Something went wrong. Try again.
+            </div>
+          )}
 
-            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-medium text-slate-600 mb-1">
-                    Full name
-                  </label>
-                  <input
-                    ref={firstInputRef}
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your name"
-                    className={`w-full rounded-lg border px-3 py-2 bg-white/70 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-                      errors.name ? "border-rose-400" : "border-white/10"
-                    }`}
-                    aria-invalid={!!errors.name}
-                  />
-                  {errors.name && (
-                    <p className="mt-1 text-xs text-rose-600">{errors.name}</p>
-                  )}
-                </div>
+          {/* form */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              ref={firstInputRef}
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Full Name"
+              className="w-full border rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-black"
+            />
 
-                <div>
-                  <label className="block text-xs font-medium text-slate-600 mb-1">
-                    Email
-                  </label>
-                  <input
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="abc@gmail.com"
-                    className={`w-full rounded-lg border px-3 py-2 bg-white/70 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-                      errors.email ? "border-rose-400" : "border-white/10"
-                    }`}
-                    aria-invalid={!!errors.email}
-                  />
-                  {errors.email && (
-                    <p className="mt-1 text-xs text-rose-600">{errors.email}</p>
-                  )}
-                </div>
-              </div>
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              className="w-full border rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-black"
+            />
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-medium text-slate-600 mb-1">
-                    Phone
-                  </label>
-                  <input
-                    name="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    placeholder="+91 98765 43210"
-                    className={`w-full rounded-lg border px-3 py-2 bg-white/70 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-                      errors.phone ? "border-rose-400" : "border-white/10"
-                    }`}
-                    aria-invalid={!!errors.phone}
-                  />
-                  {errors.phone && (
-                    <p className="mt-1 text-xs text-rose-600">{errors.phone}</p>
-                  )}
-                </div>
+            <input
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Phone Number"
+              className="w-full border rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-black"
+            />
 
-                <div>
-                  <label className="block text-xs font-medium text-slate-600 mb-1">
-                    Location
-                  </label>
-                  <input
-                    name="location"
-                    type="text"
-                    value={formData.location}
-                    onChange={handleChange}
-                    required
-                    placeholder="City, State"
-                    className="w-full rounded-lg border px-3 py-2 bg-white/70 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 border-white/10"
-                  />
-                </div>
-              </div>
+            <input
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+              placeholder="Location"
+              className="w-full border rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-black"
+            />
 
-              <div>
-                <label className="block text-xs font-medium text-slate-600 mb-1">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your project or question..."
-                  required
-                  rows={4}
-                  className={`w-full rounded-lg border px-3 py-2 bg-white/70 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-                    errors.message ? "border-rose-400" : "border-white/10"
-                  }`}
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Tell us about your project"
+              rows={4}
+              className="w-full border rounded-md px-3 py-2 text-sm focus:ring-2 focus:ring-black"
+            />
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-black text-white py-2 rounded-md text-sm font-medium hover:opacity-90 transition"
+            >
+              {loading ? "Sending..." : "Submit Enquiry"}
+            </button>
+          </form>
+
+          {/* CONTACT + SOCIAL */}
+          <div className="mt-6 border-t pt-4 flex items-center justify-between">
+            <a
+              href="tel:+919092097190"
+              className="text-sm text-gray-600 hover:underline"
+            >
+              +91 90920 97190
+            </a>
+
+            <div className="flex items-center gap-3">
+              <a href="https://wa.me/919092097190" target="_blank">
+                <Image
+                  src="/Whatsapp.png"
+                  alt="WhatsApp"
+                  width={24}
+                  height={24}
                 />
-                {errors.message && (
-                  <p className="mt-1 text-xs text-rose-600">{errors.message}</p>
-                )}
-              </div>
+              </a>
 
-              <div className="flex items-center justify-between gap-4">
-                <div className="text-xs text-slate-500">
-                  <p>
-                    By sending you agree to our team contacting you.{" "}
-                    <span className="hidden sm:inline">
-                      We never share your data.
-                    </span>
-                  </p>
-                </div>
+              <a
+                href="https://www.instagram.com/eswaribuilderspy"
+                target="_blank"
+              >
+                <Image
+                  src="/Instagram.png"
+                  alt="Instagram"
+                  width={22}
+                  height={22}
+                />
+              </a>
 
-                <div className="flex items-center gap-3">
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-semibold px-4 py-2 rounded-lg shadow-md transition disabled:opacity-60"
-                  >
-                    {loading ? (
-                      <>
-                        <svg
-                          className="animate-spin h-4 w-4"
-                          viewBox="0 0 24 24"
-                        >
-                          <circle
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="3"
-                            strokeDasharray="60"
-                            strokeLinecap="round"
-                            fill="none"
-                          />
-                        </svg>
-                        <span>Sending...</span>
-                      </>
-                    ) : (
-                      <span>Send Message</span>
-                    )}
-                  </button>
+              <a
+                href="https://www.facebook.com/EswariBuilders2018"
+                target="_blank"
+              >
+                <Image
+                  src="/facebook.webp"
+                  alt="Facebook"
+                  width={22}
+                  height={22}
+                />
+              </a>
 
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setFormData(initialState);
-                      setErrors({});
-                      setStatus(null);
-                    }}
-                    className="px-3 py-2 rounded-md text-sm text-slate-700 hover:bg-slate-100 transition"
-                  >
-                    Reset
-                  </button>
-                </div>
-              </div>
-            </form>
-
-            {/* social row (mobile friendly) */}
-            <div className="mt-5 border-t pt-4 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <p className="text-sm text-slate-500">Prefer social?</p>
-                <div className="flex items-center gap-2">
-                  <a
-                    href={whatsappLinks ?? "#"}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="py-2"
-                  >
-                    <Image
-                      src={whatsappLogo}
-                      alt="WhatsApp"
-                      width={40}
-                      height={40}
-                    />
-                  </a>
-
-                  <a
-                    href={instagramLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-2"
-                  >
-                    <Image
-                      src={instagramLogo}
-                      alt="Instagram"
-                      width={34}
-                      height={34}
-                    />
-                  </a>
-
-                  <a
-                    href={facebookLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-2"
-                  >
-                    <Image
-                      src={facebookLogo}
-                      alt="Facebook"
-                      width={34}
-                      height={34}
-                    />
-                  </a>
-                </div>
-              </div>
-
-              <div className="text-xs text-slate-400">
-                <span>Or call: </span>
-                <a href="tel:+919092097190" className="hover:underline">
-                  +91 90920 97190
-                </a>
-              </div>
+              <a
+                href="https://youtube.com/@eswaribuilders-q4e?si=r_J-QJMNdl-IdNO8"
+                target="_blank"
+              >
+                <Image
+                  src="/Youtube_logo.png"
+                  alt="YouTube"
+                  width={24}
+                  height={24}
+                />
+              </a>
             </div>
           </div>
         </div>

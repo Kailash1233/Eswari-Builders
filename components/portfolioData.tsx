@@ -31,16 +31,16 @@ export const projects = [
     description:
       "A luxurious 5-bedroom villa with swimming pool and landscaped gardens.",
   },
-  {
-    id: 4,
-    title: "Sasirekha",
-    mapTitle: "Proposed",
-    location: "Pondicherry",
-    category: "Residential",
-    image: "/projectStatus/completed 4.webp",
-    description:
-      "Complete renovation of a corporate office space with modern interiors.",
-  },
+  // {
+  //   id: 4,
+  //   title: "Sasirekha",
+  //   mapTitle: "Proposed",
+  //   location: "Pondicherry",
+  //   category: "Residential",
+  //   image: "/projectStatus/completed 4.webp",
+  //   description:
+  //     "Complete renovation of a corporate office space with modern interiors.",
+  // },
   {
     id: 5,
     title: "Ramesh",
@@ -70,26 +70,26 @@ export const projects = [
     description:
       "Complete interior design for a fine dining restaurant with custom furniture.",
   },
-  {
-    id: 8,
-    mapTitle: "Proposed",
-    title: "Diwakar",
-    location: "Cuddalore",
-    category: "Residential",
-    image: "/projectStatus/Proposed 8.webp",
-    description:
-      "A spacious duplex home with modern amenities and custom interiors.",
-  },
-  {
-    id: 9,
-    mapTitle: "Proposed",
-    title: "Ganeshan",
-    location: "Chennai",
-    category: "Residential",
-    image: "/projectStatus/Proposed 7.webp",
-    description:
-      "A spacious duplex home with modern amenities and custom interiors.",
-  },
+  // {
+  //   id: 8,
+  //   mapTitle: "Proposed",
+  //   title: "Diwakar",
+  //   location: "Cuddalore",
+  //   category: "Residential",
+  //   image: "/projectStatus/Proposed 8.webp",
+  //   description:
+  //     "A spacious duplex home with modern amenities and custom interiors.",
+  // },
+  // {
+  //   id: 9,
+  //   mapTitle: "Proposed",
+  //   title: "Ganeshan",
+  //   location: "Chennai",
+  //   category: "Residential",
+  //   image: "/projectStatus/Proposed 7.webp",
+  //   description:
+  //     "A spacious duplex home with modern amenities and custom interiors.",
+  // },
   {
     id: 10,
     mapTitle: "Proposed",
@@ -100,16 +100,16 @@ export const projects = [
     description:
       "A spacious duplex home with modern amenities and custom interiors.",
   },
-  {
-    id: 11,
-    mapTitle: "Proposed",
-    title: "Vignesh",
-    location: "Coimbatore",
-    category: "Residential",
-    image: "/projectStatus/Proposed 1.webp",
-    description:
-      "A spacious duplex home with modern amenities and custom interiors.",
-  },
+  // {
+  //   id: 11,
+  //   mapTitle: "Proposed",
+  //   title: "Vignesh",
+  //   location: "Coimbatore",
+  //   category: "Residential",
+  //   image: "/projectStatus/Proposed 1.webp",
+  //   description:
+  //     "A spacious duplex home with modern amenities and custom interiors.",
+  // },
   {
     id: 12,
     mapTitle: "Proposed",
@@ -139,39 +139,39 @@ export const projects = [
     image: "/projectStatus/Ongoing 4.webp",
     description: "Residential project currently under development.",
   },
-  {
-    id: 15,
-    title: "Vijayalakshmi",
-    mapTitle: "Ongoing",
-    location: "Villayanur",
-    category: "Residential",
-    image: "/projectStatus/Vijayalakshmi.webp",
-    description: "Residential project currently under development.",
-  },
-  {
-    id: 16,
-    title: "Proposed Project",
-    mapTitle: "Proposed",
-    category: "Residential",
-    image: "/projectStatus/Propsed.webp",
-    description: "Residential project currently under planning.",
-  },
-  {
-    id: 17,
-    title: "Ganesh",
-    mapTitle: "Ongoing",
-    location: "Laswpet Pondicherry",
-    category: "Residential",
-    image: "/projectStatus/Ganesh.webp",
-    description: "Residential project currently under development.",
-  },
-  {
-    id: 18,
-    title: "Naveen Kumar",
-    mapTitle: "Ongoing",
-    location: "Irumbai",
-    category: "Residential",
-    image: "/projectStatus/NaveenKumar.webp",
-    description: "Residential project currently under development.",
-  },
+  // {
+  //   id: 15,
+  //   title: "Vijayalakshmi",
+  //   mapTitle: "Ongoing",
+  //   location: "Villayanur",
+  //   category: "Residential",
+  //   image: "/projectStatus/Vijayalakshmi.webp",
+  //   description: "Residential project currently under development.",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Proposed Project",
+  //   mapTitle: "Proposed",
+  //   category: "Residential",
+  //   image: "/projectStatus/Propsed.webp",
+  //   description: "Residential project currently under planning.",
+  // },
+  // {
+  //   id: 17,
+  //   title: "Ganesh",
+  //   mapTitle: "Ongoing",
+  //   location: "Laswpet Pondicherry",
+  //   category: "Residential",
+  //   image: "/projectStatus/Ganesh.webp",
+  //   description: "Residential project currently under development.",
+  // },
+  // {
+  //   id: 18,
+  //   title: "Naveen Kumar",
+  //   mapTitle: "Ongoing",
+  //   location: "Irumbai",
+  //   category: "Residential",
+  //   image: "/projectStatus/NaveenKumar.webp",
+  //   description: "Residential project currently under development.",
+  // },
 ];

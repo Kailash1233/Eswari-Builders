@@ -91,7 +91,8 @@ export default function PortfolioPage() {
             }}
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            {["All", "Ongoing", "Completed", "Proposed"].map((type) => (
+            {/* {["All", "Ongoing", "Completed", "Proposed"].map((type) => ( */}
+            {["All", "Completed", "Proposed"].map((type) => (
               <motion.div
                 key={type}
                 variants={{
@@ -114,7 +115,7 @@ export default function PortfolioPage() {
                     activeFilter === type ? "bg-black text-white" : ""
                   }`}
                 >
-                  {type === "Ongoing"
+                  {/* {type === "Ongoing"
                     ? "OnGoing Project"
                     : type === "Completed"
                     ? "Completed Project"
@@ -122,6 +123,13 @@ export default function PortfolioPage() {
                     ? "All Project"
                     : type === "Proposed"
                     ? "Proposed Project"
+                    : ""} */}
+                  {type === "Completed"
+                    ? "Completed Projects"
+                    : type === "All"
+                    ? "All Projects"
+                    : type === "Proposed"
+                    ? "Proposed Projects"
                     : ""}
                 </Button>
               </motion.div>

@@ -10,6 +10,7 @@ import FeaturedProjects from "@/components/featured-projects";
 import ContactForm from "@/components/contactForm";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import FAQSection from "@/components/FAQ";
 
 export default function Home() {
   const whatsappNumber = "919092097190";
@@ -121,6 +122,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <FAQSection />
       </section>
     </div>
   );
