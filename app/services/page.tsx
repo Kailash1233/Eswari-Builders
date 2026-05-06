@@ -1,25 +1,28 @@
 import ServicesPageClient from "./ServicesPageClient";
 
 export const metadata = {
-  title: "Our Services | Eswari Builders",
-  description: "Explore all construction and design services we offer.",
+  title: "House Construction Services in Pondicherry | Eswari Builders",
+  description:
+    "End-to-end house construction services in Pondicherry. Residential, commercial, interior design & renovation. 24+ years experience.",
   openGraph: {
-    title: "Our Services | Eswari Builders",
-    description: "Premium building, interior, renovation & more.",
+    title: "House Construction Services in Pondicherry | Eswari Builders",
+    description:
+      "End-to-end house construction services in Pondicherry. Residential, commercial, interior design & renovation. 24+ years experience.",
     url: "https://eswaribuilders.in/services",
     images: [
       {
         url: "/slider/2_slide.jpg",
         width: 1200,
         height: 630,
-        alt: "Eswari Services Overview",
+        alt: "Best Builders in Pondicherry",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Services | Eswari Builders",
-    description: "Explore premium construction services.",
+    title: "House Construction Services in Pondicherry | Eswari Builders",
+    description:
+      "End-to-end house construction services in Pondicherry. Residential, commercial, interior design & renovation. 24+ years experience.",
     images: ["/slider/2_slide.jpg"],
   },
 };

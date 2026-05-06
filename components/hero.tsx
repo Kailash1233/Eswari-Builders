@@ -1,24 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
 const slides = [
   {
-    title: "Building Dreams with Strength and Style",
-    subtitle: "Premium Residential and Commercial Construction in Pondicherry",
+    title: "Best Builders in",
+    titleAccent: "Pondicherry",
+    subtitle: "Premium Residential & Commercial Construction Since 2002",
     image: "/slider/1_slide.webp",
   },
   {
-    title: "Crafting Luxury Homes with Precision",
+    title: "Crafting Luxury Homes",
+    titleAccent: "with Precision",
     subtitle: "Where Design Meets Durability",
     image: "/slider/2_slide.webp",
   },
   {
-    title: "From Vision to Reality",
+    title: "From Vision",
+    titleAccent: "to Reality",
     subtitle: "Your Trusted Construction Partner for 22 Years",
     image: "/slider/3_slide.webp",
   },
@@ -38,196 +41,176 @@ export default function Hero() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // Auto Slide
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextSlide();
-    }, 5000);
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  // Swipe
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: () => nextSlide(),
-    onSwipedRight: () => prevSlide(),
-    trackMouse: true, // This option allows mouse events for testing
+    onSwipedLeft: nextSlide,
+    onSwipedRight: prevSlide,
+    trackMouse: true,
   });
 
   return (
-    <div className="relative">
-      {/* Hero Section */}
-      <section
-        className="relative h-screen w-full overflow-hidden bg-black"
-        {...swipeHandlers}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60 z-10" />
+    <section
+      className="relative h-screen w-full overflow-hidden bg-[#0a0a0a]"
+      {...swipeHandlers}
+    >
+      {/* Background slides */}
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.div
+          key={current}
+          custom={direction}
+          className="absolute inset-0 z-0"
+          initial={{ x: direction > 0 ? "100%" : "-100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: direction > 0 ? "-100%" : "100%", opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <Image
+            src={slides[current].image}
+            alt={slides[current].title}
+            fill
+            className="object-cover"
+            priority
+          />
+        </motion.div>
+      </AnimatePresence>
 
-        {/* Background Image Slider */}
-        <div className="absolute inset-0 w-full h-full top-0 left-0 z-0 overflow-hidden">
-          {slides.map((slide, index) => {
-            const isActive = index === current;
-            return (
-              <motion.div
-                key={slide.image}
-                className="absolute w-full h-full top-0 left-0 z-10"
-                initial={{
-                  x: index === current ? (direction > 0 ? "100%" : "-100%") : 0,
-                  opacity: 0,
-                }}
-                animate={{
-                  x: 0,
-                  opacity: isActive ? 1 : 0,
-                }}
-                exit={{
-                  x: direction > 0 ? "-100%" : "100%",
-                  opacity: 0,
-                }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ zIndex: isActive ? 2 : 1 }}
-              >
-                <Image
-                  src={slide.image}
-                  alt="Hero Slide"
-                  fill
-                  className="object-cover w-full h-full"
-                  // priority
-                  priority={true}
-                />
-              </motion.div>
-            );
-          })}
+      {/* Layered overlays */}
+      <div className="absolute inset-0 bg-black/55 z-10" />
+      {/* Bottom fade to match section below */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10" />
+      {/* Left vignette for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent z-10" />
+
+      {/* Content */}
+      <div className="relative z-20 container mx-auto px-6 max-w-6xl h-full flex flex-col justify-center">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <motion.div
+            key={`eyebrow-${current}`}
+            className="flex items-center gap-3 mb-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="h-px w-8 bg-[#c8a97e]" />
+            <span
+              className="text-[#c8a97e] tracking-[0.25em] text-xs uppercase"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Eswari Builders · Est. 2002
+            </span>
+          </motion.div>
+
+          {/* Heading */}
+          <motion.h1
+            key={`title-${current}`}
+            className="mb-6 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <span
+              className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              {slides[current].title}
+            </span>
+            <span
+              className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light italic text-[#c8a97e]"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              {slides[current].titleAccent}
+            </span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            key={`sub-${current}`}
+            className="text-white/60 text-base md:text-lg mb-10 max-w-xl leading-relaxed"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            {slides[current].subtitle}
+          </motion.p>
+
+          {/* CTAs */}
+          <motion.div
+            key={`cta-${current}`}
+            className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+          >
+            <Link
+              href="/portfolio"
+              className="group inline-flex items-center gap-3 bg-[#c8a97e] text-[#0a0a0a] px-8 py-3.5 text-xs tracking-widest uppercase font-medium hover:bg-[#b8996e] transition-all duration-300"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Explore Our Work
+              <span className="group-hover:translate-x-1 transition-transform duration-300">
+                →
+              </span>
+            </Link>
+
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-3 border border-white/30 text-white/80 px-8 py-3.5 text-xs tracking-widest uppercase hover:border-[#c8a97e]/60 hover:text-[#c8a97e] transition-all duration-300"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Get a Free Quote
+              <span className="group-hover:translate-x-1 transition-transform duration-300">
+                →
+              </span>
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Slide counter + dots — bottom right */}
+      <div className="absolute bottom-12 right-6 md:right-10 z-20 flex flex-col items-end gap-4">
+        {/* Slide number */}
+        <div
+          className="text-white/30 text-xs tracking-widest"
+          style={{ fontFamily: "'DM Sans', sans-serif" }}
+        >
+          <span className="text-[#c8a97e]">0{current + 1}</span> / 0
+          {slides.length}
         </div>
 
-        {/* Slide Navigation Arrows */}
-        {/* Mobile Nav Arrows */}
-        {/* <div className="sm:hidden absolute bottom-12 z-20 w-full flex justify-between px-8">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={prevSlide}
-              className="bg-white/20 text-white hover:bg-white/40"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={nextSlide}
-              className="bg-white/20 text-white hover:bg-white/40"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </Button>
-          </div> */}
-
-        {/* Desktop Nav Arrows */}
-        {/* <div className="hidden sm:block absolute top-1/2 left-4 z-20 -translate-y-1/2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={prevSlide}
-              className="bg-white/20 text-white hover:bg-white/40"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </Button>
-          </div>
-          <div className="hidden sm:block absolute top-1/2 right-4 z-20 -translate-y-1/2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={nextSlide}
-              className="bg-white/20 text-white hover:bg-white/40"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </Button>
-          </div> */}
-
-        {/* Indicators */}
-        <div className="absolute bottom-5 left-1/2 z-20 -translate-x-1/2 flex gap-2">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === current ? "bg-white" : "bg-white/50"
+        {/* Dots */}
+        <div className="flex items-center gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                setDirection(i > current ? 1 : -1);
+                setCurrent(i);
+              }}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`transition-all duration-300 h-px ${
+                i === current ? "w-8 bg-[#c8a97e]" : "w-4 bg-white/30"
               }`}
             />
           ))}
         </div>
+      </div>
 
-        {/* Slide Text Content */}
-        <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center pt-56 sm:pt-0">
-          <div className="max-w-3xl">
-            <motion.h1
-              key={slides[current].title}
-              className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-2 sm:mb-4 font-merriweather-sans md:tracking-tighter"
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              {slides[current].title}
-            </motion.h1>
-
-            <motion.p
-              key={slides[current].subtitle}
-              className="text-lg sm:text-xl md:text-2xl text-white mb-4 sm:mb-8"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              {slides[current].subtitle}
-            </motion.p>
-
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-black hover:bg-white/80 text-sm sm:text-base"
-            >
-              <Link href="/portfolio">
-                Explore Our Work <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
+      {/* Scroll hint */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2">
+        <div
+          className="text-white/30 text-[10px] tracking-[0.3em] uppercase"
+          style={{ fontFamily: "'DM Sans', sans-serif" }}
+        >
+          Scroll
         </div>
-      </section>
-
-      {/* <section className="relative py-20 bg-[#121212] overflow-hidden">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#1e1e1e_1px,transparent_1px)] [background-size:40px_40px]" />
-  
-          <div className="relative z-10 container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-white">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Eswari Builders – Leading Construction Company in Pondicherry
-                </h2>
-                <p className="text-gray-300 mb-4">
-                  With over 15 years of proven excellence,{" "}
-                  <strong>Eswari Builders</strong> is one of the fastest-growing
-                  construction companies in Pondicherry...
-                </p>
-                <p className="text-gray-300 mb-4">
-                  Our portfolio includes{" "}
-                  <strong>
-                    apartments, individual houses, group houses, and row houses
-                  </strong>
-                  ...
-                </p>
-              </div>
-  
-              <div className="relative h-[450px] w-full rounded-xl overflow-hidden">
-                <Image
-                  src="/about/1.jpg"
-                  alt="Eswari Builders"
-                  fill
-                  className="object-cover rounded-xl"
-                />
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-      {/* Featured Projects Section */}
-
-      {/* CTA Section */}
-    </div>
+        <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent animate-pulse" />
+      </div>
+    </section>
   );
 }

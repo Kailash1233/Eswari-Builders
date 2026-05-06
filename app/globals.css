@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500&display=swap");
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -28,8 +30,8 @@
     --radius: 0.5rem;
     --chart-1: 0 0% 0%;
     --chart-2: 0 0% 40%;
-    --header-bg: 220 25% 20%; 
-    --header-text: 40 60% 85%;   
+    --header-bg: 220 25% 20%;
+    --header-text: 40 60% 85%;
     --text-color: #999999;
   }
 
@@ -72,4 +74,3 @@ body {
   overflow-x: hidden;
   background: #1b1b1b;
 }
-

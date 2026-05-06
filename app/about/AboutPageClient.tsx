@@ -239,38 +239,51 @@ export default function AboutPage() {
               {
                 name: "Sathya",
                 role: "CRM Head",
-                desc: "Leads the CRM team and ensures quality and client satisfaction.",
+                desc: "Handles all client communication after onboarding. Tracks every lead, follows up regularly, solves issues quickly, and makes sure the client stays informed and satisfied throughout the project.",
                 image: "/team/MD2.webp",
+                alt: "Sathya - CRM Head, Eswari Builders Pondicherry",
               },
               {
                 name: "Prabhu Ram N",
                 role: "Managing Director, Operations Head",
-                desc: "Oversees project management, timelines, and quality control.",
+                desc: "Runs the entire operation. Plans projects, assigns teams, tracks timelines, controls costs, and makes sure every project is delivered on time without compromising quality.",
                 image: "/team/Prabhu.webp",
+                alt: "Prabhu Ram N - Managing Director, Eswari Builders Pondicherry",
               },
               {
                 name: "Raam",
                 role: "Strategic Partner in Interior",
-                desc: "Brings innovative interior solutions to each project.",
+                desc: "Works closely with clients on interior ideas. Suggests layouts, materials, and concepts that are practical, budget-friendly, and actually work in real living spaces.",
                 image: "/team/Raam.webp",
+                alt: "Raam - Interior Design Partner, Eswari Builders Pondicherry",
               },
               {
                 name: "Rajendran",
                 role: "Site Engineer",
-                desc: "Ensures on-site operations are smooth and precise.",
+                desc: "Manages day-to-day work at the site. Checks drawings, coordinates workers, tracks progress, and makes sure the work is done correctly and safely.",
                 image: "/team/Rajendran.webp",
+                alt: "Rajendran - Site Engineer, Eswari Builders Pondicherry",
               },
               {
-                name: "Hema",
-                role: "Architect",
-                desc: "Plans, designs, and oversees the construction of buildings.",
-                image: "/team/Hema.webp",
+                name: "Kunjithapadham",
+                role: "Internal Architect",
+                desc: "Creates building plans and designs. Works on layouts, space usage, and structure planning, ensuring everything is functional, compliant, and easy to execute.",
+                image: "/team/Kunjithapadham.webp",
+                alt: "Kunjithapadham - Interior Architect, Eswari Builders Pondicherry",
+              },
+              {
+                name: "Madhan Raj",
+                role: "Interior Site  Supervisor",
+                desc: "Supervises interior work at the site. Coordinates carpenters and workers, checks finishing quality, and ensures the design is executed exactly as planned.",
+                image: "/team/MadhanRaj.webp",
+                alt: "Madhan Raj - Interior Site Supervisor, Eswari Builders Pondicherry",
               },
               {
                 name: "Siddique",
                 role: "Designing Partner (BODMAS DESIGNS)",
-                desc: "Designs and implements the building's exterior and interior.",
+                desc: "Handles design concepts and detailing. Works on both interior and exterior design, selects materials, and ensures the final output looks clean, modern, and well-finished.",
                 image: "/team/Siddique.webp",
+                alt: "Siddique - Designing Partner (BODMAS DESIGNS), Eswari Builders Pondicherry",
               },
             ].map((member, index) => (
               <motion.div
@@ -285,7 +298,7 @@ export default function AboutPage() {
                 <div className="relative h-[300px] w-full mb-4">
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={member.alt}
                     fill
                     className="object-cover rounded-md object-top md:object-center"
                   />

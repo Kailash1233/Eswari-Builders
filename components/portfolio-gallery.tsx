@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
-import { projects as allProjects } from "@/components/portfolioData";
+// import { projects as allProjects } from "@/components/portfolioData";
 
 interface Project {
   id: number;
