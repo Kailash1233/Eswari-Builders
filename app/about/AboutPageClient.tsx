@@ -266,10 +266,10 @@ export default function AboutPage() {
               },
               {
                 name: "Kunjithapadham",
-                role: "Internal Architect",
+                role: "Engineer",
                 desc: "Creates building plans and designs. Works on layouts, space usage, and structure planning, ensuring everything is functional, compliant, and easy to execute.",
                 image: "/team/Kunjithapadham.webp",
-                alt: "Kunjithapadham - Interior Architect, Eswari Builders Pondicherry",
+                alt: "Kunjithapadham - Engineer, Eswari Builders Pondicherry",
               },
               {
                 name: "Madhan Raj",

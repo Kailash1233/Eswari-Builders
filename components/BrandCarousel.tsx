@@ -140,7 +140,7 @@ const brandLogos = [
   "/branding/godrej.png",
 ];
 
-export default function BrandCarousel({ speed = 0.5 }: { speed?: number }) {
+export default function BrandCarousel({ speed = 0.8 }: { speed?: number }) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const animationRef = useRef<number | null>(null);
   const offsetRef = useRef(0);
@@ -213,8 +213,8 @@ export default function BrandCarousel({ speed = 0.5 }: { speed?: number }) {
           aria-label="Brand partners carousel"
         >
           {/* Fade edges */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10" />
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10" />
 
           {/* Track — NO framer-motion, direct DOM transform for smoothness */}
           <div
@@ -225,17 +225,17 @@ export default function BrandCarousel({ speed = 0.5 }: { speed?: number }) {
             {[...brandLogos, ...brandLogos].map((logo, idx) => (
               <div
                 key={idx}
-                className="inline-flex items-center justify-center min-w-[100px] min-h-[80px] px-4 py-3 border border-white/10 hover:border-[#c8a97e]/40 transition-colors duration-300 bg-white/[0.03] flex-shrink-0"
+                className="inline-flex items-center justify-center w-[160px] h-[100px] px-6 py-4 border border-[#c8a97e]/20 hover:border-[#c8a97e]/50 transition-all duration-300 bg-[#f8f6f1] flex-shrink-0 rounded-sm"
               >
-                <Image
-                  src={logo}
-                  alt={`Brand ${(idx % brandLogos.length) + 1}`}
-                  width={80}
-                  height={50}
-                  style={{ objectFit: "contain" }}
-                  className=""
-                  priority={idx < brandLogos.length}
-                />
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={logo}
+                    alt={`Brand ${(idx % brandLogos.length) + 1}`}
+                    fill
+                    className="object-contain p-2"
+                    priority={idx < brandLogos.length}
+                  />
+                </div>
               </div>
             ))}
           </div>
