@@ -295,7 +295,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="w-full sm:w-1/2 lg:w-1/4 bg-white rounded-2xl p-6 shadow-sm"
               >
-                <div className="relative h-[300px] w-full mb-4">
+                <div className="relative h-[400px] md:h-[300px] w-full mb-4">
                   <Image
                     src={member.image}
                     alt={member.alt}

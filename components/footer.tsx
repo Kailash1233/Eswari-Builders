@@ -263,7 +263,7 @@ export default function Footer() {
                 {
                   label: "Address",
                   value:
-                    "112, Kamatchi Amman Kovil St,\nHeritage Town, Puducherry 605001",
+                    "112, First Floor, Kamatchi Amman Kovil St,\nHeritage Town, Pondicherry, 605001",
                 },
                 { label: "Phone", value: "+91 90920 97190\n+91 87784 02742" },
                 { label: "Email", value: "eswaribuilders2018@gmail.com" },

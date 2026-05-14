@@ -26,7 +26,8 @@ export default function Home() {
     priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "112, Kamatchi Amman Kovil St, Heritage Town",
+      streetAddress:
+        "112, First Floor, Kamatchi Amman Koil Street, Heritage Town",
       addressLocality: "Pondicherry",
       addressRegion: "Puducherry",
       postalCode: "605001",
@@ -224,6 +225,156 @@ export default function Home() {
                 </p>
                 <p className="text-[#666] mt-0.5">Experience</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom accent */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a97e] to-transparent opacity-40" />
+      </section>
+
+      {/* Banking Partners Section */}
+      <section className="relative bg-[#0a0a0a] py-24 overflow-hidden">
+        {/* Top accent */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c8a97e] to-transparent opacity-40" />
+
+        {/* Background text */}
+        <div
+          className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden select-none"
+          aria-hidden
+        >
+          <span
+            className="text-[10vw] font-light text-white/[0.02] leading-none tracking-widest uppercase whitespace-nowrap"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Finance Support
+          </span>
+        </div>
+
+        <div className="relative container mx-auto px-6 max-w-7xl">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="h-px w-10 bg-[#c8a97e]" />
+              <span
+                className="text-[#c8a97e] tracking-[0.25em] text-xs uppercase"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Loan Assistance
+              </span>
+              <div className="h-px w-10 bg-[#c8a97e]" />
+            </div>
+
+            <h2
+              className="text-4xl md:text-6xl font-light text-white mb-6 leading-tight"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Our Trusted
+              <span className="italic text-[#c8a97e]"> Banking Partners</span>
+            </h2>
+
+            <p
+              className="text-[#888] text-base md:text-lg max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Building your dream home should not be delayed because of
+              financing. We assist our clients in securing smooth home loan
+              approvals through trusted banking partners and NBFC housing
+              finance providers with complete support throughout the process.
+            </p>
+          </div>
+
+          {/* Bank Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-14">
+            {[
+              {
+                name: "ICICI Bank",
+                subtitle: "Housing Loan",
+                logo: "/banks/icici.webp",
+              },
+              {
+                name: "HDFC Bank",
+                subtitle: "Housing Loan",
+                logo: "/banks/hdfc.webp",
+              },
+              {
+                name: "State Bank of India",
+                subtitle: "Housing Loan",
+                logo: "/banks/sbi.webp",
+              },
+              {
+                name: "Punjab National Bank",
+                subtitle: "Housing Loan",
+                logo: "/banks/pnb.webp",
+              },
+              {
+                name: "IDFC First Bank",
+                subtitle: "Housing Loan",
+                logo: "/banks/idfc.webp",
+              },
+              {
+                name: "IDBI Bank",
+                subtitle: "Housing Loan",
+                logo: "/banks/idbi.webp",
+              },
+              {
+                name: "Canara Bank",
+                subtitle: "Housing Loan",
+                logo: "/banks/canara.webp",
+              },
+              {
+                name: "Indian Bank",
+                subtitle: "Housing Loan",
+                logo: "/banks/indian.webp",
+              },
+            ].map((bank, index) => (
+              <div
+                key={index}
+                className="group bg-white/[0.03] border border-white/10 hover:border-[#c8a97e]/30 transition-all duration-300 rounded-2xl p-6 flex flex-col items-center justify-center text-center min-h-[180px]"
+              >
+                <Image
+                  src={bank.logo}
+                  alt={bank.name}
+                  width={100}
+                  height={50}
+                  className="object-contain h-12 w-auto mb-5 opacity-90 group-hover:opacity-100 transition"
+                />
+                <h3
+                  className="text-white text-sm md:text-base font-medium"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  {bank.name}
+                </h3>
+                <p
+                  className="text-[#888] text-xs mt-2 uppercase tracking-wider"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}
+                >
+                  {bank.subtitle}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom Support Box */}
+          <div className="max-w-5xl mx-auto">
+            <div className="border border-[#c8a97e]/20 bg-gradient-to-r from-white/[0.03] to-white/[0.01] rounded-3xl p-8 md:p-12 text-center">
+              <h3
+                className="text-2xl md:text-3xl text-white font-light mb-5"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Need Flexible Financing Options?
+              </h3>
+
+              <p
+                className="text-[#888] text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Apart from traditional bank housing loans, we also support
+                clients in getting approvals through trusted NBFC housing
+                finance partners. Whether you are a salaried professional,
+                self-employed business owner, or first-time home buyer, our team
+                helps simplify the loan process.
+              </p>
             </div>
           </div>
         </div>

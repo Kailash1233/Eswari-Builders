@@ -204,8 +204,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Address</h3>
                     <p className="text-gray-700">
-                      112, Kamatchi Amman Kovil St, <br />
-                      Heritage Town, Puducherry, 605001
+                      112,First Floor, Kamatchi Amman Koil Street, <br />
+                      Heritage Town, Pondicherry, 605001
                       <br />
                       India
                     </p>

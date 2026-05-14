@@ -429,8 +429,8 @@ export default function ContactForm() {
                   icon: MapPin,
                   label: "Address",
                   lines: [
-                    "112, Kamatchi Amman Kovil St,",
-                    "Heritage Town, Puducherry 605001",
+                    "112, First Floor, Kamatchi Amman Kovil St,",
+                    "Heritage Town, Pondicherry, 605001",
                     "India",
                   ],
                 },
